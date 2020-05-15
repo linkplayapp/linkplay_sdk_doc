@@ -1,0 +1,1669 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Device_SDK · LinkPlay SDK</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LinkPlay">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../android/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html">
+            
+                    
+                    Device_SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../android/">
+            
+                <a href="../android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../android/Test.html">
+            
+                <a href="../android/Test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Device_SDK</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#devicesdk"><b>1. </b>Device_SDK</a></li><li><span class="title-icon "></span><a href="#overview"><b>2. </b>Overview</a></li><li><span class="title-icon "></span><a href="#api-reference"><b>3. </b>API Reference</a></li><ul><li><span class="title-icon "></span><a href="#lpdevicemanager"><b>3.1. </b>LPDeviceManager</a></li><ul><li><span class="title-icon "></span><a href="#function"><b>3.1.1. </b>Function</a></li><li><span class="title-icon "></span><a href="#property"><b>3.1.2. </b>Property</a></li><li><span class="title-icon "></span><a href="#function_1"><b>3.1.3. </b>Function</a></li><li><span class="title-icon "></span><a href="#function_2"><b>3.1.4. </b>Function</a></li><li><span class="title-icon "></span><a href="#property_2"><b>3.1.5. </b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpmediainfo"><b>3.2. </b>LPMediaInfo</a></li><ul><li><span class="title-icon "></span><a href="#function_3"><b>3.2.1. </b>Function</a></li><li><span class="title-icon "></span><a href="#property_3"><b>3.2.2. </b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdeviceinfo"><b>3.3. </b>LPDeviceInfo</a></li><ul><li><span class="title-icon "></span><a href="#property_4"><b>3.3.1. </b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdevicepreset"><b>3.4. </b>LPDevicePreset</a></li><li><span class="title-icon "></span><a href="#lpdevicestatus"><b>3.5. </b>LPDeviceStatus</a></li><ul><li><span class="title-icon "></span><a href="#function_4"><b>3.5.1. </b>Function</a></li><li><span class="title-icon "></span><a href="#property_5"><b>3.5.2. </b>Property</a></li><li><span class="title-icon "></span><a href="#lpdevicealarm"><b>3.5.3. </b>LPDeviceAlarm</a></li><li><span class="title-icon "></span><a href="#lpdevicetimer"><b>3.5.4. </b>LPDeviceTimer</a></li><li><span class="title-icon "></span><a href="#lpdevicemcu"><b>3.5.5. </b>LPDeviceMCU</a></li><li><span class="title-icon "></span><a href="#lpdeviceota"><b>3.5.6. </b>LPDeviceOTA</a></li></ul><li><span class="title-icon "></span><a href="#other-definitions"><b>3.6. </b>Other Definitions</a></li><ul><li><span class="title-icon "></span><a href="#delegate"><b>3.6.1. </b>Delegate</a></li><li><span class="title-icon "></span><a href="#constant"><b>3.6.2. </b>Constant</a></li><li><span class="title-icon "></span><a href="#lpplaymode"><b>3.6.3. </b>LPPlayMode</a></li><li><span class="title-icon "></span><a href="#lpspotifyplaymode"><b>3.6.4. </b>LPSpotifyPlayMode</a></li><li><span class="title-icon "></span><a href="#lpdevicechannel"><b>3.6.5. </b>LPDeviceChannel</a></li><li><span class="title-icon "></span><a href="#lpplaystatus"><b>3.6.6. </b>LPPlayStatus</a></li><li><span class="title-icon "></span><a href="#lproomstate"><b>3.6.7. </b>LPRoomState</a></li><li><span class="title-icon "></span><a href="#lpmediaobj"><b>3.6.8. </b>LPMediaObj</a></li></ul></ul></ul></div><h1 id="devicesdk"><a name="devicesdk" class="anchor-navigation-ex-anchor" href="#devicesdk"><i class="fa fa-link" aria-hidden="true"></i></a>1. Device_SDK</h1>
+<h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>2. Overview</h1>
+<p>The main Function in SDK includes device management, multi-room
+music(MRM), music control and device control and so on.</p>
+<p>Device management includes device online/offline, get the device object
+which used to communicate with the device; MRM includes room setup,
+dismiss, change room name etc.; Music control includes playview related
+information management, playlist management etc.; Device control is the
+common control function, like preset, alarm setup, OTA etc. </p>
+<p><img src="images/69731079.jpg" alt="server_error">
+<img src="images/69731080.jpg" alt="server_error"></p>
+<h1 id="api-reference"><a name="api-reference" class="anchor-navigation-ex-anchor" href="#api-reference"><i class="fa fa-link" aria-hidden="true"></i></a>3. API Reference</h1>
+<h2 id="lpdevicemanager"><a name="lpdevicemanager" class="anchor-navigation-ex-anchor" href="#lpdevicemanager"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. LPDeviceManager</h2>
+<p>Singleton, manage the device online &amp; offline.</p>
+<h3 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.1. Function</h3>
+<h4 id="-voidsearchnsstring-searchkey"><a name="-voidsearchnsstring-searchkey" class="anchor-navigation-ex-anchor" href="#-voidsearchnsstring-searchkey"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsearchnsstring-searchkey" class="plugin-anchor" href="#-voidsearchnsstring-searchkey"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)search:(NSString *)searchKey;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Start discover devices.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>NSString</td>
+<td>Default use empty string, if you want to distinguish your device from others, then this key should be the same with the firmware definition.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Return</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  [[LPDeviceManager sharedInstance] search:@&quot;&quot;];
+</code></pre>
+</li>
+</ul>
+<h4 id="stop"><a name="stop" class="anchor-navigation-ex-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop" class="plugin-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a>stop</h4>
+<ul>
+<li><p>Description</p>
+<p>  Stop discovering.</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidaddobserveridobserver"><a name="-voidaddobserveridobserver" class="anchor-navigation-ex-anchor" href="#-voidaddobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidaddobserveridobserver" class="plugin-anchor" href="#-voidaddobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)addObserver:(id<lpdevicemanagerobserver>)observer;</lpdevicemanagerobserver></h4>
+<ul>
+<li><p>Description</p>
+<p>  Add observer to receive the callback.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>observer</td>
+<td>LPDeviceManagerObserver</td>
+<td>Object to deal with the device online/offline event.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Return</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  [[LPDeviceManager sharedInstance] addObserver:self];
+</code></pre>
+</li>
+</ul>
+<h4 id="-voidremoveobserveridobserver"><a name="-voidremoveobserveridobserver" class="anchor-navigation-ex-anchor" href="#-voidremoveobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidremoveobserveridobserver" class="plugin-anchor" href="#-voidremoveobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)removeObserver:(id<lpdevicemanagerobserver>)observer;</lpdevicemanagerobserver></h4>
+<ul>
+<li><p>Description</p>
+<p>  Remove the observer.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>observer</td>
+<td>LPDeviceManagerObserver</td>
+<td>Object to deal with the device online/offline event.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Return</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  [[LPDeviceManager sharedInstance] removeObserver:self];
+</code></pre>
+</li>
+</ul>
+<h4 id="-lpdevice-deviceforidnsstring-uuid"><a name="-lpdevice-deviceforidnsstring-uuid" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceforidnsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceforidnsstring-uuid" class="plugin-anchor" href="#-lpdevice-deviceforidnsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForID:(NSString </em>)UUID;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get device object with UUID.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UUID</td>
+<td>NSString</td>
+<td>Device UUID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevice</td>
+<td>Device object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  LPDevice *device = [[LPDeviceManager sharedInstance] deviceForID:UUID];
+</code></pre>
+</li>
+</ul>
+<h4 id="-nsarray-getmasterdevices"><a name="-nsarray-getmasterdevices" class="anchor-navigation-ex-anchor" href="#-nsarray-getmasterdevices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-nsarray-getmasterdevices" class="plugin-anchor" href="#-nsarray-getmasterdevices"><i class="fa fa-link" aria-hidden="true"></i></a>- (NSArray<lpdevice *=""> *)getMasterDevices;</lpdevice></h4>
+<ul>
+<li><p>Description</p>
+<p>  Get all master devices, which is the master of the multi-room to play music synchronized.</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NSArray<lpdevice></lpdevice></td>
+<td>Device object list</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  self.deviceListArray = [[LPDeviceManager sharedInstance] getMasterDevices];
+</code></pre>
+</li>
+</ul>
+<h4 id="-lpdevice-deviceforipnsstring-ip"><a name="-lpdevice-deviceforipnsstring-ip" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceforipnsstring-ip"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceforipnsstring-ip" class="plugin-anchor" href="#-lpdevice-deviceforipnsstring-ip"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForIP:(NSString </em>)IP;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get device object with IP.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP</td>
+<td>NSString</td>
+<td>Device IP</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevice</td>
+<td>Device object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  LPDevice *device = [[LPDeviceManager sharedInstance] deviceForIP:IP];
+</code></pre>
+</li>
+</ul>
+<h4 id="-lpdevice-deviceformacnsstring-mac"><a name="-lpdevice-deviceformacnsstring-mac" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceformacnsstring-mac"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceformacnsstring-mac" class="plugin-anchor" href="#-lpdevice-deviceformacnsstring-mac"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForMAC:(NSString </em>)MAC;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get device object with MAC.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAC</td>
+<td>NSString</td>
+<td>Device MAC</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevice</td>
+<td>Device object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  LPDevice *device = [[LPDeviceManager sharedInstance] deviceForIP:MAC];
+</code></pre>
+</li>
+</ul>
+<h4 id="-voiddebugswitchboollogon"><a name="-voiddebugswitchboollogon" class="anchor-navigation-ex-anchor" href="#-voiddebugswitchboollogon"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voiddebugswitchboollogon" class="plugin-anchor" href="#-voiddebugswitchboollogon"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)debugSwitch:(BOOL)logOn;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Switch on/off for the SDK log.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>logOn</td>
+<td>BOOL</td>
+<td>log switch</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Return</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidremovedevicensstring-uuid"><a name="-voidremovedevicensstring-uuid" class="anchor-navigation-ex-anchor" href="#-voidremovedevicensstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidremovedevicensstring-uuid" class="plugin-anchor" href="#-voidremovedevicensstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)removeDevice:(NSString *)UUID;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Delete cached device with UUID. If the device is actually discoverable, then SDK would discover it again.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UUID</td>
+<td>NSString</td>
+<td>Device UUID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Return</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  [[LPDeviceManager sharedInstance] removeDevice:UUID];
+</code></pre>
+</li>
+</ul>
+<h4 id="nsarray-slavedevicearraynsstring-uuid"><a name="nsarray-slavedevicearraynsstring-uuid" class="anchor-navigation-ex-anchor" href="#nsarray-slavedevicearraynsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="nsarray-slavedevicearraynsstring-uuid" class="plugin-anchor" href="#nsarray-slavedevicearraynsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>-(NSArray<lpdevice *=""> <em>)slaveDeviceArray:(NSString </em>)UUID;</lpdevice></h4>
+<ul>
+<li><p>Description</p>
+<p>  Get master device&apos;s slave device list.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UUID</td>
+<td>NSString</td>
+<td>Device UUID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List<lpdevice></lpdevice></td>
+<td>Device object list</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  NSArray *slaveListArray = [[LPDeviceManager sharedInstance] slaveDeviceArray:UUID];
+</code></pre>
+</li>
+</ul>
+<h4 id="lpdevice-getmasterdevicewithslavedevicelpdevice-device"><a name="lpdevice-getmasterdevicewithslavedevicelpdevice-device" class="anchor-navigation-ex-anchor" href="#lpdevice-getmasterdevicewithslavedevicelpdevice-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpdevice-getmasterdevicewithslavedevicelpdevice-device" class="plugin-anchor" href="#lpdevice-getmasterdevicewithslavedevicelpdevice-device"><i class="fa fa-link" aria-hidden="true"></i></a>-(LPDevice <em>)getMasterDeviceWithSlaveDevice:(LPDevice </em>)device;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get slave device&apos;s master device.</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>device</td>
+<td>LPDevice</td>
+<td>Slave device</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevice</td>
+<td>Device object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">      // The result may be empty
+      LPDevice *masterDevice = [[LPDeviceManager sharedInstance] getMasterDeviceWithSlaveDevice:slaveDevice];
+</code></pre>
+</li>
+</ul>
+<h3 id="property"><a name="property" class="anchor-navigation-ex-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.2. Property</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devicelist</td>
+<td>array</td>
+<td>All discovered device object list</td>
+</tr>
+</tbody>
+</table>
+<p>LPDevice </p>
+<h3 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.3. Function</h3>
+<h4 id="-lpdeviceplayer-getplayer"><a name="-lpdeviceplayer-getplayer" class="anchor-navigation-ex-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeviceplayer-getplayer" class="plugin-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevicePlayer *)getPlayer;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get Device&apos;s player.</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevicePlayer</td>
+<td>Player object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-lpdevicepreset-getpreset"><a name="-lpdevicepreset-getpreset" class="anchor-navigation-ex-anchor" href="#-lpdevicepreset-getpreset"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevicepreset-getpreset" class="plugin-anchor" href="#-lpdevicepreset-getpreset"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevicePreset *)getPreset;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get Preset object</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDevicePreset</td>
+<td>Preset object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-lpdeicealarm-getalarm"><a name="-lpdeicealarm-getalarm" class="anchor-navigation-ex-anchor" href="#-lpdeicealarm-getalarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeicealarm-getalarm" class="plugin-anchor" href="#-lpdeicealarm-getalarm"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeiceAlarm *)getAlarm;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get alarm object</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDeviceAlarm</td>
+<td>Alarm object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-lpdevicetimer-gettimer"><a name="-lpdevicetimer-gettimer" class="anchor-navigation-ex-anchor" href="#-lpdevicetimer-gettimer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevicetimer-gettimer" class="plugin-anchor" href="#-lpdevicetimer-gettimer"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeviceTimer *)getTimer;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get shutdown timer object</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDeviceTimer</td>
+<td>Shutdown timer object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-lppassthrough-getpassthrough"><a name="-lppassthrough-getpassthrough" class="anchor-navigation-ex-anchor" href="#-lppassthrough-getpassthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lppassthrough-getpassthrough" class="plugin-anchor" href="#-lppassthrough-getpassthrough"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPPassthrough *)getPassthrough;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get pass through object</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mcu</td>
+<td>LPPassThrough</td>
+<td>Pass through object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-lpdeviceota-getota"><a name="-lpdeviceota-getota" class="anchor-navigation-ex-anchor" href="#-lpdeviceota-getota"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeviceota-getota" class="plugin-anchor" href="#-lpdeviceota-getota"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeviceOTA *)getOTA;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get OTA object</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Return</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPDeviceOTA</td>
+<td>OTA object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="property_1"><a name="property_1" class="anchor-navigation-ex-anchor" href="#property_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>player</td>
+<td>LPDevicePlayer</td>
+<td>Player object</td>
+</tr>
+<tr>
+<td>preset</td>
+<td>LPDevicePreset</td>
+<td>Preset object</td>
+</tr>
+<tr>
+<td>status</td>
+<td>LPDeviceStatus</td>
+<td>Device status object</td>
+</tr>
+<tr>
+<td>alarm</td>
+<td>LPDeviceAlarm</td>
+<td>Alarm object</td>
+</tr>
+<tr>
+<td>timer</td>
+<td>LPDeviceTimer</td>
+<td>Timer object</td>
+</tr>
+<tr>
+<td>mediaInfo</td>
+<td>LPMediaInfo</td>
+<td>Media info object</td>
+</tr>
+<tr>
+<td>deviceInfo</td>
+<td>LPDeviceInfo</td>
+<td>Device info object</td>
+</tr>
+</tbody>
+</table>
+<p>[LPDevicePlayer]</p>
+<h3 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.4. Function</h3>
+<h4 id="-voidplaylpplayerblock-nullablecompletionhandler"><a name="-voidplaylpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidplaylpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidplaylpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidplaylpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)play:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Play</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidpauselpplayerblock-nullablecompletionhandler"><a name="-voidpauselpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidpauselpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidpauselpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidpauselpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)pause:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Pause</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidstoplpplayerblock-nullablecompletionhandler"><a name="-voidstoplpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidstoplpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidstoplpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidstoplpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)stop:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Stop</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidnextlpplayerblock-nullablecompletionhandler"><a name="-voidnextlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidnextlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidnextlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidnextlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)next:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Next</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidpreviouslpplayerblock-nullablecompletionhandler"><a name="-voidpreviouslpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidpreviouslpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidpreviouslpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidpreviouslpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)previous:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Previous</p>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setProgress:(NSTimeInterval)progress completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Set play progress</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>progress</td>
+<td>NSTimeInterval</td>
+<td>Play progress</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-voidsetplaymodelpplaymodeplaymode"><a name="-voidsetplaymodelpplaymodeplaymode" class="anchor-navigation-ex-anchor" href="#-voidsetplaymodelpplaymodeplaymode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetplaymodelpplaymodeplaymode" class="plugin-anchor" href="#-voidsetplaymodelpplaymodeplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setPlayMode:(LPPlayMode)playMode;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Set play mode</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>playMode</td>
+<td>LPPlayMode</td>
+<td>Play mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">      if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
+          LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
+          [[device getPlayer] setSpotifyPlayMode:mode];
+      }else {
+          LPPlayMode mode = LP_SHUFFLEREPEAT;
+          [[device getPlayer] setPlayMode:mode];
+      }
+</code></pre>
+</li>
+</ul>
+<h4 id="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><a name="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode" class="anchor-navigation-ex-anchor" href="#-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode" class="plugin-anchor" href="#-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Set Spotify play mode</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spotifyPlayMode</td>
+<td>LPSpotifyPlayMode</td>
+<td>Play mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">      if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
+          LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
+          [[device getPlayer] setSpotifyPlayMode:mode];
+      }else {
+          LPPlayMode mode = LP_SHUFFLEREPEAT;
+          [[device getPlayer] setPlayMode:mode];
+      }
+</code></pre>
+</li>
+</ul>
+<h4 id="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setChannel:(LPDeviceChannel)channel completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li>Description</li>
+</ul>
+<p>Set sound channel</p>
+<ul>
+<li>Parameter</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>channel</td>
+<td>LPDeviceChannel</td>
+<td>Sound channel</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">      LPDeviceChannel channel = LPChannel_left;
+      [[device getPlayer] setChannel:channel completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+          if (isSuccess) {
+              NSLog(@&quot;Channel setup successful&quot;);
+          }
+      }];
+</code></pre>
+</li>
+</ul>
+<h4 id="-voidsetvolumecgfloatvolume-singleboolsingle"><a name="-voidsetvolumecgfloatvolume-singleboolsingle" class="anchor-navigation-ex-anchor" href="#-voidsetvolumecgfloatvolume-singleboolsingle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetvolumecgfloatvolume-singleboolsingle" class="plugin-anchor" href="#-voidsetvolumecgfloatvolume-singleboolsingle"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setVolume:(CGFloat)volume single:(BOOL)single;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Set volume</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>volume</td>
+<td>CGFloat</td>
+<td>Device&apos;s volume</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)playAudioWithMusicDictionary:(NSDictionary *)musicDictionary completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Play music</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>musicDictionary</td>
+<td>NSDictionary</td>
+<td>Media info to play</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">    [[LPMediaLibManager sharedInstance] searchSongs:nil completionHandler:^(LPPlayMusicList * _Nonnull musicListObj) {
+              musicListObj.index = index;
+              NSDictionary *info = [[LPMDPKitManager shared] playMusicSingleSource:listObj];
+              [self.devicePlayer playAudioWithMusicDictionary:info completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+                  if (isSuccess) {
+                      NSLog(@&quot;Play success&quot;);
+                  }
+              }];
+          }];
+</code></pre>
+</li>
+</ul>
+<h4 id="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)deleteWithIndex:(NSInteger)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
+<ul>
+<li><p>Description</p>
+<p>  Delete a track from current playing list</p>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>Index in the current playing list</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Sample code</p>
+<pre class="language-"><code class="lang-ObjectiveC">      [[device getPlayer] deleteWithIndex:index completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+         if (isSuccess) {
+             NSLog(@&quot;Successfully delete a song from the playlist&quot;);
+         }
+      }];
+</code></pre>
+</li>
+</ul>
+<h3 id="property_2"><a name="property_2" class="anchor-navigation-ex-anchor" href="#property_2"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.5. Property</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>Play progress</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>float</td>
+<td>Total duration</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>int</td>
+<td>Sound channel</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>int</td>
+<td>Play mode</td>
+</tr>
+<tr>
+<td>mediaInfo</td>
+<td>LPMediaInfo</td>
+<td>Media info</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lpmediainfo"><a name="lpmediainfo" class="anchor-navigation-ex-anchor" href="#lpmediainfo"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. LPMediaInfo</h2>
+<h3 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1. Function</h3>
+<p>deleteWithIndex</p>
+<pre class="language-"><code>N/A
+</code></pre><h3 id="property_3"><a name="property_3" class="anchor-navigation-ex-anchor" href="#property_3"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.2. Property</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>NSString</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>artist</td>
+<td>NSString</td>
+<td>Artist</td>
+</tr>
+<tr>
+<td>album</td>
+<td>NSString</td>
+<td>Album</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lpdeviceinfo"><a name="lpdeviceinfo" class="anchor-navigation-ex-anchor" href="#lpdeviceinfo"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. LPDeviceInfo</h2>
+<h3 id="property_4"><a name="property_4" class="anchor-navigation-ex-anchor" href="#property_4"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.1. Property</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>playStatus</td>
+<td>NSString</td>
+<td>Current play status</td>
+</tr>
+<tr>
+<td>playMode</td>
+<td>int</td>
+<td>Play mode</td>
+</tr>
+<tr>
+<td>mediaType</td>
+<td>NSString</td>
+<td>Media type</td>
+</tr>
+<tr>
+<td>trackSource</td>
+<td>NSString</td>
+<td>Track source</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lpdevicepreset"><a name="lpdevicepreset" class="anchor-navigation-ex-anchor" href="#lpdevicepreset"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. LPDevicePreset</h2>
+<ul>
+<li><a href="https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Preset+SDK" target="_blank">Linkplay Preset
+  SDK</a></li>
+</ul>
+<h2 id="lpdevicestatus"><a name="lpdevicestatus" class="anchor-navigation-ex-anchor" href="#lpdevicestatus"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. LPDeviceStatus</h2>
+<h3 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.1. Function</h3>
+<pre class="language-"><code>N/A
+</code></pre><h3 id="property_5"><a name="property_5" class="anchor-navigation-ex-anchor" href="#property_5"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.2. Property</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UUID</td>
+<td>NSString</td>
+<td>UUID</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>int</td>
+<td>IP</td>
+</tr>
+<tr>
+<td>WiFiStrength</td>
+<td>float</td>
+<td>Wi-Fi signal strength</td>
+</tr>
+<tr>
+<td>MAC</td>
+<td>NSString</td>
+<td>MAC</td>
+</tr>
+<tr>
+<td>SSID</td>
+<td>NSString</td>
+<td>SSID</td>
+</tr>
+<tr>
+<td>friendlyName</td>
+<td>NSString</td>
+<td>Device&apos;s friendly name</td>
+</tr>
+<tr>
+<td>version</td>
+<td>NSString</td>
+<td>Firmware version</td>
+</tr>
+<tr>
+<td>language</td>
+<td>int</td>
+<td>Prompt tone language</td>
+</tr>
+<tr>
+<td>release</td>
+<td>NSString</td>
+<td>Compiled date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lpdevicealarm"><a name="lpdevicealarm" class="anchor-navigation-ex-anchor" href="#lpdevicealarm"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.3. LPDeviceAlarm</h3>
+<ul>
+<li><a href="https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Alarm+SDK" target="_blank">Linkplay Alarm
+  SDK</a></li>
+</ul>
+<h3 id="lpdevicetimer"><a name="lpdevicetimer" class="anchor-navigation-ex-anchor" href="#lpdevicetimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.4. LPDeviceTimer</h3>
+<ul>
+<li><a href="https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Timer+SDK" target="_blank">iOS Linkplay Timer
+  SDK</a></li>
+</ul>
+<h3 id="lpdevicemcu"><a name="lpdevicemcu" class="anchor-navigation-ex-anchor" href="#lpdevicemcu"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.5. LPDeviceMCU</h3>
+<ul>
+<li><a href="https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Passthrough+SDK" target="_blank">Linkplay Passthrough
+  SDK</a></li>
+</ul>
+<h3 id="lpdeviceota"><a name="lpdeviceota" class="anchor-navigation-ex-anchor" href="#lpdeviceota"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.6. LPDeviceOTA</h3>
+<ul>
+<li><a href="https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Preset+SDK" target="_blank">Linkplay Preset
+  SDK</a></li>
+</ul>
+<h2 id="other-definitions"><a name="other-definitions" class="anchor-navigation-ex-anchor" href="#other-definitions"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. Other Definitions</h2>
+<h3 id="delegate"><a name="delegate" class="anchor-navigation-ex-anchor" href="#delegate"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.1. Delegate</h3>
+<ul>
+<li>LPDeviceManagerObserver</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onLPDeviceOnline</td>
+<td>LPDevice</td>
+<td>Device online notification</td>
+</tr>
+<tr>
+<td>onLPDeviceOffline</td>
+<td>LPDevice</td>
+<td>Device offline notification</td>
+</tr>
+<tr>
+<td>onLPDeviceUpdate</td>
+<td>LPDevice</td>
+<td>Device update notification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="constant"><a name="constant" class="anchor-navigation-ex-anchor" href="#constant"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.2. Constant</h3>
+<h3 id="lpplaymode"><a name="lpplaymode" class="anchor-navigation-ex-anchor" href="#lpplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.3. LPPlayMode</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP_LISTREPEAT</td>
+<td>Loop playback</td>
+</tr>
+<tr>
+<td>LP_SINGLEREPEAT</td>
+<td>Single cycle</td>
+</tr>
+<tr>
+<td>LP_SHUFFLE</td>
+<td>Shuffle</td>
+</tr>
+<tr>
+<td>LP_SHUFFLEREPEAT</td>
+<td>Shuffle repeat</td>
+</tr>
+<tr>
+<td>LP_DEFAULT</td>
+<td>Default</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lpspotifyplaymode"><a name="lpspotifyplaymode" class="anchor-navigation-ex-anchor" href="#lpspotifyplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.4. LPSpotifyPlayMode</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP_SPOTIFY_LISTREPEAT</td>
+<td>Loop playback</td>
+</tr>
+<tr>
+<td>LP_SPOTIFY_SINGLEREPEAT</td>
+<td>Single cycle</td>
+</tr>
+<tr>
+<td>LP_SPOTIFY_SHUFFLEREPEAT</td>
+<td>Shuffle repeat</td>
+</tr>
+<tr>
+<td>LP_SPOTIFY_SHUFFLE</td>
+<td>Shuffle</td>
+</tr>
+<tr>
+<td>LP_SPOTIFY_DEFAULT</td>
+<td>Default</td>
+</tr>
+<tr>
+<td>LP_SPOTIFY_SINGLE_REPEAT_SHUFFLE</td>
+<td>Shuffle single repeat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lpdevicechannel"><a name="lpdevicechannel" class="anchor-navigation-ex-anchor" href="#lpdevicechannel"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.5. LPDeviceChannel</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LPChannel_stereo</td>
+<td>Stereo</td>
+</tr>
+<tr>
+<td>LPChannel_left</td>
+<td>Left channel</td>
+</tr>
+<tr>
+<td>LPChannel_right</td>
+<td>Right channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lpplaystatus"><a name="lpplaystatus" class="anchor-navigation-ex-anchor" href="#lpplaystatus"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.6. LPPlayStatus</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP_PLAYER_STATE_PLAYING</td>
+<td>Playing</td>
+</tr>
+<tr>
+<td>LP_PLAYER_STATE_STOPPED</td>
+<td>Stop</td>
+</tr>
+<tr>
+<td>LP_PLAYER_STATE_PAUSED_PLAYBACK</td>
+<td>Pause</td>
+</tr>
+<tr>
+<td>LP_PLAYER_STATE_TRANSITIONING</td>
+<td>Transitioning</td>
+</tr>
+<tr>
+<td>LP_PLAYER_STATE_NO_MEDIA_PRESENT</td>
+<td>No media present</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lproomstate"><a name="lproomstate" class="anchor-navigation-ex-anchor" href="#lproomstate"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.7. LPRoomState</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP_ROOM_MASTER</td>
+<td>Master speaker</td>
+</tr>
+<tr>
+<td>LP_ROOM_SLAVE</td>
+<td>Slave speaker</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lpmediaobj"><a name="lpmediaobj" class="anchor-navigation-ex-anchor" href="#lpmediaobj"><i class="fa fa-link" aria-hidden="true"></i></a>3.6.8. LPMediaObj</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>Name</td>
+</tr>
+<tr>
+<td>mediaID</td>
+<td>Server ID</td>
+</tr>
+<tr>
+<td>serverIndex</td>
+<td>index</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: iOS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../android/" class="navigation navigation-next " aria-label="Next page: Android">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Device_SDK","level":"1.2.1","depth":2,"next":{"title":"Android","level":"1.3","depth":1,"path":"android/README.md","ref":"android/README.md","articles":[{"title":"测试","level":"1.3.1","depth":2,"path":"android/Test.md","ref":"android/Test.md","articles":[]}]},"previous":{"title":"iOS","level":"1.2","depth":1,"path":"iOS/README.md","ref":"iOS/README.md","articles":[{"title":"Device_SDK","level":"1.2.1","depth":2,"path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":true},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"zh-hans","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device_SDK.md","mtime":"2020-05-15T09:19:15.670Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T10:03:42.416Z"},"basePath":"..","book":{"language":"zh-hans"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
