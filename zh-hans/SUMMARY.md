@@ -1,6 +1,6 @@
 # Summary
 
-* [介绍](README.md)
+* [如何提交文章](README.md)
 * [iOS](iOS/README.md)
     * [Device_SDK](iOS/Device_SDK.md)
 * [Android](android/README.md)

@@ -22,25 +22,28 @@
         "pageview-count",
         "language-picker"
       ],
-      "pluginsConfig": {
-        "prism": {
-          "css": [
-            "prismjs/themes/prism-okaidia.css"
-          ],
-          "lang": {
-            "oc": "objectivec",
-            "objc": "objectivec",
-            "objective-c": "objectivec"
-          },
-          "ignore": [
-            "sequence"
-          ]
+    "pluginsConfig": {
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-okaidia.css"
+        ],
+        "lang": {
+          "oc": "objectivec",
+          "objc": "objectivec",
+          "objective-c": "objectivec",
+          "ObjectiveC": "objectivec"
         },
-        "github": {
-          "url": "https://github.com/linkplayapp/linkplay_sdk_doc"
-        },
-        "anchor-navigation-ex": {
-          "showGoTop": false
-        }
+        "ignore": [
+          "sequence"
+        ]
+      },
+      "github": {
+        "url": "https://github.com/linkplayapp/linkplay_sdk_doc"
+      },
+      "anchor-navigation-ex": {
+        "showGoTop": true,
+        "showLevel": false,
+        "printLog": true
       }
+    }
 }
