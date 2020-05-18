@@ -1,0 +1,46 @@
+{
+    "title": "LinkPlay SDK",
+    "author": "LinkPlay",
+    "description": "LinkPlay SDK 文档",
+    "language": "zh-hans",
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "plugins": [
+        "-sharing",
+        "js-sequence-diagram-full@>=0.3.1",
+        "prism",
+        "-highlight",
+        "anchors",
+        "splitter",
+        "github",
+        "anchor-navigation-ex",
+        "expandable-chapters-small",
+        "pageview-count",
+        "language-picker"
+      ],
+      "pluginsConfig": {
+        "prism": {
+          "css": [
+            "prismjs/themes/prism-okaidia.css"
+          ],
+          "lang": {
+            "oc": "objectivec",
+            "objc": "objectivec",
+            "objective-c": "objectivec"
+          },
+          "ignore": [
+            "sequence"
+          ]
+        },
+        "github": {
+          "url": "https://github.com/linkplayapp/linkplay_sdk_doc"
+        },
+        "anchor-navigation-ex": {
+          "showGoTop": false
+        }
+      }
+}

@@ -20,7 +20,8 @@
         "anchor-navigation-ex",
         "expandable-chapters-small",
         "pageview-count",
-        "language-picker"
+        "language-picker",
+        "-livereload"
       ],
     "pluginsConfig": {
       "prism": {
