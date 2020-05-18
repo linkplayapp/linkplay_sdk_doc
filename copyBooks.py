@@ -32,5 +32,7 @@ if(os.path.exists(book_path)):
     os.system("git add .")
     os.system("git commit -m 'update'")
     os.system("git push origin gh-pages")
+    print("*** Checkout master... ***")
+    os.system("git checkout master")
 else:
     print("*** _book is not exists*** ")
