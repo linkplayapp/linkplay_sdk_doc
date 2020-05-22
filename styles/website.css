@@ -1,4 +1,8 @@
 .book .markdown-section table {
-    margin-left: 3.5%;
-    width: 96.5%;
+    margin-left: 4%;
+    width: 96%;
+}
+
+.markdown-section h4 {
+    font-size: 1.1em;
 }
