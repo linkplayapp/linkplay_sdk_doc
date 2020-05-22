@@ -86,7 +86,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../android/" />
+    <link rel="next" href="Device_SDK.html" />
     
     
     <link rel="prev" href="./" />
@@ -155,6 +155,90 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#设备搜索">
+            
+                    
+                    设备搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#添加代理">
+            
+                    
+                    添加代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#获取设备">
+            
+                    
+                    获取设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#删除单独设备">
+            
+                    
+                    删除单独设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#设备上下线代理">
+            
+                    
+                    设备上下线代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#多设备同步播放音乐">
+            
+                    
+                    多设备同步播放音乐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -240,493 +324,586 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#devicesdk"><b></b>Device_SDK</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><li><span class="title-icon "></span><a href="#api-reference"><b></b>API Reference</a></li><ul><li><span class="title-icon "></span><a href="#lpdevicemanager"><b></b>LPDeviceManager</a></li><ul><li><span class="title-icon "></span><a href="#function"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property"><b></b>Property</a></li><li><span class="title-icon "></span><a href="#function_1"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#function_2"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_2"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpmediainfo"><b></b>LPMediaInfo</a></li><ul><li><span class="title-icon "></span><a href="#function_3"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_3"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdeviceinfo"><b></b>LPDeviceInfo</a></li><ul><li><span class="title-icon "></span><a href="#property_4"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdevicepreset"><b></b>LPDevicePreset</a></li><li><span class="title-icon "></span><a href="#lpdevicestatus"><b></b>LPDeviceStatus</a></li><ul><li><span class="title-icon "></span><a href="#function_4"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_5"><b></b>Property</a></li><li><span class="title-icon "></span><a href="#lpdevicealarm"><b></b>LPDeviceAlarm</a></li><li><span class="title-icon "></span><a href="#lpdevicetimer"><b></b>LPDeviceTimer</a></li><li><span class="title-icon "></span><a href="#lpdevicemcu"><b></b>LPDeviceMCU</a></li><li><span class="title-icon "></span><a href="#lpdeviceota"><b></b>LPDeviceOTA</a></li></ul><li><span class="title-icon "></span><a href="#other-definitions"><b></b>Other Definitions</a></li><ul><li><span class="title-icon "></span><a href="#delegate"><b></b>Delegate</a></li><li><span class="title-icon "></span><a href="#constant"><b></b>Constant</a></li><li><span class="title-icon "></span><a href="#lpplaymode"><b></b>LPPlayMode</a></li><li><span class="title-icon "></span><a href="#lpspotifyplaymode"><b></b>LPSpotifyPlayMode</a></li><li><span class="title-icon "></span><a href="#lpdevicechannel"><b></b>LPDeviceChannel</a></li><li><span class="title-icon "></span><a href="#lpplaystatus"><b></b>LPPlayStatus</a></li><li><span class="title-icon "></span><a href="#lproomstate"><b></b>LPRoomState</a></li><li><span class="title-icon "></span><a href="#lpmediaobj"><b></b>LPMediaObj</a></li></ul></ul></ul></div><a href="#devicesdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="devicesdk"><a name="devicesdk" class="anchor-navigation-ex-anchor" href="#devicesdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="devicesdk" class="plugin-anchor" href="#devicesdk"><i class="fa fa-link" aria-hidden="true"></i></a>Device_SDK</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#devicesdk"><b></b>Device_SDK</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><li><span class="title-icon "></span><a href="#api-reference"><b></b>API Reference</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x641C;&#x7D22;"><b></b>&#x8BBE;&#x5907;&#x641C;&#x7D22;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x4EE3;&#x7406;"><b></b>&#x6DFB;&#x52A0;&#x4EE3;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><b></b>&#x83B7;&#x53D6;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;"><b></b>&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;"><b></b>&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;"><b></b>&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;</a></li><li><span class="title-icon "></span><a href="#function"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_1"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpmediainfo"><b></b>LPMediaInfo</a></li><ul><li><span class="title-icon "></span><a href="#function_1"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_2"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdeviceinfo"><b></b>LPDeviceInfo</a></li><ul><li><span class="title-icon "></span><a href="#property_3"><b></b>Property</a></li></ul><li><span class="title-icon "></span><a href="#lpdevicepreset"><b></b>LPDevicePreset</a></li><li><span class="title-icon "></span><a href="#lpdevicestatus"><b></b>LPDeviceStatus</a></li><ul><li><span class="title-icon "></span><a href="#function_2"><b></b>Function</a></li><li><span class="title-icon "></span><a href="#property_4"><b></b>Property</a></li><li><span class="title-icon "></span><a href="#lpdevicealarm"><b></b>LPDeviceAlarm</a></li><li><span class="title-icon "></span><a href="#lpdevicetimer"><b></b>LPDeviceTimer</a></li><li><span class="title-icon "></span><a href="#lpdevicemcu"><b></b>LPDeviceMCU</a></li><li><span class="title-icon "></span><a href="#lpdeviceota"><b></b>LPDeviceOTA</a></li></ul><li><span class="title-icon "></span><a href="#other-definitions"><b></b>Other Definitions</a></li><ul><li><span class="title-icon "></span><a href="#delegate"><b></b>Delegate</a></li><li><span class="title-icon "></span><a href="#constant"><b></b>Constant</a></li><li><span class="title-icon "></span><a href="#lpplaymode"><b></b>LPPlayMode</a></li><li><span class="title-icon "></span><a href="#lpspotifyplaymode"><b></b>LPSpotifyPlayMode</a></li><li><span class="title-icon "></span><a href="#lpdevicechannel"><b></b>LPDeviceChannel</a></li><li><span class="title-icon "></span><a href="#lpplaystatus"><b></b>LPPlayStatus</a></li><li><span class="title-icon "></span><a href="#lproomstate"><b></b>LPRoomState</a></li><li><span class="title-icon "></span><a href="#lpmediaobj"><b></b>LPMediaObj</a></li></ul></ul></ul></div><a href="#devicesdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="devicesdk"><a name="devicesdk" class="anchor-navigation-ex-anchor" href="#devicesdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="devicesdk" class="plugin-anchor" href="#devicesdk"><i class="fa fa-link" aria-hidden="true"></i></a>Device_SDK</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
-<p>The main Function in SDK includes device management, multi-room
-music(MRM), music control and device control and so on.</p>
-<p>Device management includes device online/offline, get the device object
-which used to communicate with the device; MRM includes room setup,
-dismiss, change room name etc.; Music control includes playview related
-information management, playlist management etc.; Device control is the
-common control function, like preset, alarm setup, OTA etc. </p>
+<p>&#x8BBE;&#x5907;&#x7BA1;&#x7406;&#x5305;&#x542B;&#x4E86;&#xFF0C;&#x8BBE;&#x5907;&#x7684;&#x4E0A;&#x7EBF;&#x3001;&#x4E0B;&#x7EBF;&#x3001;&#x5220;&#x9664;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Id&#x6765;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;, LPDeviceManager &#x63D0;&#x4F9B;&#x4E86;&#x7BA1;&#x7406;&#x8BBE;&#x5907;&#x7684;API</p>
 <p><img src="images/69731079.jpg" alt="server_error">
 <img src="images/69731080.jpg" alt="server_error"></p>
 <h1 id="api-reference"><a name="api-reference" class="anchor-navigation-ex-anchor" href="#api-reference"><i class="fa fa-link" aria-hidden="true"></i></a><a name="api-reference" class="plugin-anchor" href="#api-reference"><i class="fa fa-link" aria-hidden="true"></i></a>API Reference</h1>
-<h2 id="lpdevicemanager"><a name="lpdevicemanager" class="anchor-navigation-ex-anchor" href="#lpdevicemanager"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpdevicemanager" class="plugin-anchor" href="#lpdevicemanager"><i class="fa fa-link" aria-hidden="true"></i></a>LPDeviceManager</h2>
-<p>Singleton, manage the device online &amp; offline.</p>
-<h3 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
-<h4 id="-voidsearchnsstring-searchkey"><a name="-voidsearchnsstring-searchkey" class="anchor-navigation-ex-anchor" href="#-voidsearchnsstring-searchkey"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsearchnsstring-searchkey" class="plugin-anchor" href="#-voidsearchnsstring-searchkey"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)search:(NSString *)searchKey;</h4>
+<h3 id="&#x8BBE;&#x5907;&#x641C;&#x7D22;"><a name="&#x8BBE;&#x5907;&#x641C;&#x7D22;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x641C;&#x7D22;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x641C;&#x7D22;</h3>
+<h4 id="&#x641C;&#x7D22;&#x8BBE;&#x5907;"><a name="&#x641C;&#x7D22;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x641C;&#x7D22;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x641C;&#x7D22;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x641C;&#x7D22;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x641C;&#x7D22;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Start discover devices.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<p>  &#x641C;&#x7D22;&#x5468;&#x8FB9;&#x7684;&#x8BBE;&#x5907;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>search<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>searchKey<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>key</td>
-<td>NSString</td>
-<td>Default use empty string, if you want to distinguish your device from others, then this key should be the same with the firmware definition.</td>
+<td style="text-align:left">key</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x9ED8;&#x8BA4;&#x4F20;&#x7A7A;&#xFF0C;&#x5BA2;&#x6237;&#x5982;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x64AD;&#x641C;&#x7D22;&#x8BBE;&#x5907;&#x5173;&#x952E;&#x5B57;&#x5219;&#x4F20;&#x5165;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Return</p>
-<p>  N/A</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> search<span class="token punctuation">:</span><span class="token string">@&quot;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="stop"><a name="stop" class="anchor-navigation-ex-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop" class="plugin-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a>stop</h4>
+<h4 id="&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;"><a name="&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x505C;&#x6B62;&#x641C;&#x7D22;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Stop discovering.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>stop<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
-<h4 id="-voidaddobserveridobserver"><a name="-voidaddobserveridobserver" class="anchor-navigation-ex-anchor" href="#-voidaddobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidaddobserveridobserver" class="plugin-anchor" href="#-voidaddobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)addObserver:(id<lpdevicemanagerobserver>)observer;</lpdevicemanagerobserver></h4>
+<h3 id="&#x6DFB;&#x52A0;&#x4EE3;&#x7406;"><a name="&#x6DFB;&#x52A0;&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6DFB;&#x52A0;&#x4EE3;&#x7406;" class="plugin-anchor" href="#&#x6DFB;&#x52A0;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x4EE3;&#x7406;</h3>
+<h4 id="&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;"><a name="&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;" class="plugin-anchor" href="#&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Add observer to receive the callback.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>addObserver<span class="token punctuation">:</span><span class="token punctuation">(</span>id<span class="token operator">&lt;</span>LPDeviceManagerObserver<span class="token operator">&gt;</span><span class="token punctuation">)</span>observer<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>observer</td>
 <td>LPDeviceManagerObserver</td>
-<td>Object to deal with the device online/offline event.</td>
+<td>&#x8981;&#x63A5;&#x6536;&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x901A;&#x77E5;&#x7684;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Return</p>
-<p>  N/A</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-voidremoveobserveridobserver"><a name="-voidremoveobserveridobserver" class="anchor-navigation-ex-anchor" href="#-voidremoveobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidremoveobserveridobserver" class="plugin-anchor" href="#-voidremoveobserveridobserver"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)removeObserver:(id<lpdevicemanagerobserver>)observer;</lpdevicemanagerobserver></h4>
+<h4 id="&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;"><a name="&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;" class="anchor-navigation-ex-anchor" href="#&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;" class="plugin-anchor" href="#&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Remove the observer.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>removeObserver<span class="token punctuation">:</span><span class="token punctuation">(</span>id<span class="token operator">&lt;</span>LPDeviceManagerObserver<span class="token operator">&gt;</span><span class="token punctuation">)</span>observer<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>observer</td>
 <td>LPDeviceManagerObserver</td>
-<td>Object to deal with the device online/offline event.</td>
+<td>&#x8981;&#x63A5;&#x6536;&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x901A;&#x77E5;&#x7684;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Return</p>
-<p>  N/A</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> removeObserver<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-lpdevice-deviceforidnsstring-uuid"><a name="-lpdevice-deviceforidnsstring-uuid" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceforidnsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceforidnsstring-uuid" class="plugin-anchor" href="#-lpdevice-deviceforidnsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForID:(NSString </em>)UUID;</h4>
+<h3 id="&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><a name="&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x8BBE;&#x5907;</h3>
+<h4 id="&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x8BBE;&#x5907;Id&#x83B7;&#x53D6;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get device object with UUID.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>LPDevice <span class="token operator">*</span><span class="token punctuation">)</span>deviceForID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>UUID</td>
-<td>NSString</td>
-<td>Device UUID</td>
+<td style="text-align:left">UUID</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x8BBE;&#x5907;UUID</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Return</li>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LPDevice</td>
-<td>Device object</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span>UUID<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-nsarray-getmasterdevices"><a name="-nsarray-getmasterdevices" class="anchor-navigation-ex-anchor" href="#-nsarray-getmasterdevices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-nsarray-getmasterdevices" class="plugin-anchor" href="#-nsarray-getmasterdevices"><i class="fa fa-link" aria-hidden="true"></i></a>- (NSArray<lpdevice *=""> *)getMasterDevices;</lpdevice></h4>
+<h4 id="&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get all master devices, which is the master of the multi-room to play music synchronized.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>LPDevice <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>getMasterDevices<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>NSArray<lpdevice></lpdevice></td>
-<td>Device object list</td>
+<td style="text-align:left">NSArray<lpdevice></lpdevice></td>
+<td style="text-align:left">&#x4E3B;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  <span class="token keyword">self</span><span class="token punctuation">.</span>deviceListArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> getMasterDevices<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-lpdevice-deviceforipnsstring-ip"><a name="-lpdevice-deviceforipnsstring-ip" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceforipnsstring-ip"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceforipnsstring-ip" class="plugin-anchor" href="#-lpdevice-deviceforipnsstring-ip"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForIP:(NSString </em>)IP;</h4>
+<h4 id="&#x6839;&#x636E;&#x8BBE;&#x5907;ip&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;ip&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;ip&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;ip&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;ip&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x8BBE;&#x5907;IP&#x83B7;&#x53D6;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get device object with IP.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>LPDevice <span class="token operator">*</span><span class="token punctuation">)</span>deviceForIP<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>IP<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>IP</td>
-<td>NSString</td>
-<td>Device IP</td>
+<td style="text-align:left">IP</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x8BBE;&#x5907;IP</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Return</li>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LPDevice</td>
-<td>Device object</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForIP<span class="token punctuation">:</span>IP<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-lpdevice-deviceformacnsstring-mac"><a name="-lpdevice-deviceformacnsstring-mac" class="anchor-navigation-ex-anchor" href="#-lpdevice-deviceformacnsstring-mac"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevice-deviceformacnsstring-mac" class="plugin-anchor" href="#-lpdevice-deviceformacnsstring-mac"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevice <em>)deviceForMAC:(NSString </em>)MAC;</h4>
+<h4 id="&#x6839;&#x636E;&#x8BBE;&#x5907;mac&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;mac&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;mac&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x8BBE;&#x5907;mac&#x83B7;&#x53D6;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x8BBE;&#x5907;mac&#x83B7;&#x53D6;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x8BBE;&#x5907;MAC&#x83B7;&#x53D6;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get device object with MAC.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>LPDevice <span class="token operator">*</span><span class="token punctuation">)</span>deviceForMAC<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>MAC<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MAC</td>
-<td>NSString</td>
-<td>Device MAC</td>
+<td style="text-align:left">MAC</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x8BBE;&#x5907;MAC</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Return</li>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LPDevice</td>
-<td>Device object</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForIP<span class="token punctuation">:</span>MAC<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="-voiddebugswitchboollogon"><a name="-voiddebugswitchboollogon" class="anchor-navigation-ex-anchor" href="#-voiddebugswitchboollogon"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voiddebugswitchboollogon" class="plugin-anchor" href="#-voiddebugswitchboollogon"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)debugSwitch:(BOOL)logOn;</h4>
+<h4 id="&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><a name="&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;&#x4E3B;&#x8BBE;&#x5907;Id&#x83B7;&#x53D6;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Switch on/off for the SDK log.</p>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>logOn</td>
-<td>BOOL</td>
-<td>log switch</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Return</p>
-<p>  N/A</p>
-</li>
-</ul>
-<h4 id="-voidremovedevicensstring-uuid"><a name="-voidremovedevicensstring-uuid" class="anchor-navigation-ex-anchor" href="#-voidremovedevicensstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidremovedevicensstring-uuid" class="plugin-anchor" href="#-voidremovedevicensstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)removeDevice:(NSString *)UUID;</h4>
-<ul>
-<li><p>Description</p>
-<p>  Delete cached device with UUID. If the device is actually discoverable, then SDK would discover it again.</p>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>UUID</td>
-<td>NSString</td>
-<td>Device UUID</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Return</p>
-<p>  N/A</p>
-</li>
-<li><p>Sample code</p>
-<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> removeDevice<span class="token punctuation">:</span>UUID<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>LPDevice <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>slaveDeviceArray<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID<span class="token punctuation">;</span>
 </code></pre>
 </li>
-</ul>
-<h4 id="nsarray-slavedevicearraynsstring-uuid"><a name="nsarray-slavedevicearraynsstring-uuid" class="anchor-navigation-ex-anchor" href="#nsarray-slavedevicearraynsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="nsarray-slavedevicearraynsstring-uuid" class="plugin-anchor" href="#nsarray-slavedevicearraynsstring-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>-(NSArray<lpdevice *=""> <em>)slaveDeviceArray:(NSString </em>)UUID;</lpdevice></h4>
-<ul>
-<li><p>Description</p>
-<p>  Get master device&apos;s slave device list.</p>
-</li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>UUID</td>
-<td>NSString</td>
-<td>Device UUID</td>
+<td style="text-align:left">UUID</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x8BBE;&#x5907;UUID</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Return</li>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>List<lpdevice></lpdevice></td>
-<td>Device object list</td>
+<td style="text-align:left">NSArray<lpdevice></lpdevice></td>
+<td style="text-align:left">&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">  NSArray <span class="token operator">*</span>slaveListArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> slaveDeviceArray<span class="token punctuation">:</span>UUID<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h4 id="lpdevice-getmasterdevicewithslavedevicelpdevice-device"><a name="lpdevice-getmasterdevicewithslavedevicelpdevice-device" class="anchor-navigation-ex-anchor" href="#lpdevice-getmasterdevicewithslavedevicelpdevice-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpdevice-getmasterdevicewithslavedevicelpdevice-device" class="plugin-anchor" href="#lpdevice-getmasterdevicewithslavedevicelpdevice-device"><i class="fa fa-link" aria-hidden="true"></i></a>-(LPDevice <em>)getMasterDeviceWithSlaveDevice:(LPDevice </em>)device;</h4>
+<h4 id="&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x5176;&#x4E3B;&#x8BBE;&#x5907;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get slave device&apos;s master device.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span><span class="token punctuation">(</span>LPDevice <span class="token operator">*</span><span class="token punctuation">)</span>getMasterDeviceWithSlaveDevice<span class="token punctuation">:</span><span class="token punctuation">(</span>LPDevice <span class="token operator">*</span><span class="token punctuation">)</span>device<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>device</td>
-<td>LPDevice</td>
-<td>Slave device</td>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Return</li>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LPDevice</td>
-<td>Device object</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">      <span class="token comment">// The result may be empty</span>
       LPDevice <span class="token operator">*</span>masterDevice <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> getMasterDeviceWithSlaveDevice<span class="token punctuation">:</span>slaveDevice<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
-<h3 id="property"><a name="property" class="anchor-navigation-ex-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>devicelist</td>
-<td>array</td>
-<td>All discovered device object list</td>
-</tr>
-</tbody>
-</table>
-<p>LPDevice </p>
-<h3 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
-<h4 id="-lpdeviceplayer-getplayer"><a name="-lpdeviceplayer-getplayer" class="anchor-navigation-ex-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeviceplayer-getplayer" class="plugin-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevicePlayer *)getPlayer;</h4>
+<h4 id="app-log&#x8F93;&#x51FA;&#x5F00;&#x5173;"><a name="app-log&#x8F93;&#x51FA;&#x5F00;&#x5173;" class="anchor-navigation-ex-anchor" href="#app-log&#x8F93;&#x51FA;&#x5F00;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="app-log&#x8F93;&#x51FA;&#x5F00;&#x5173;" class="plugin-anchor" href="#app-log&#x8F93;&#x51FA;&#x5F00;&#x5173;"><i class="fa fa-link" aria-hidden="true"></i></a>App Log&#x8F93;&#x51FA;&#x5F00;&#x5173;</h4>
 <ul>
-<li><p>Description</p>
-<p>  Get Device&apos;s player.</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>debugSwitch<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>logOn<span class="token punctuation">;</span>
+</code></pre>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
-</li>
-<li><p>Return</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">logOn</td>
+<td style="text-align:left">BOOL</td>
+<td style="text-align:left">log&#x5F00;&#x5173;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+</ul>
+<h3 id="&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;"><a name="&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5355;&#x72EC;&#x8BBE;&#x5907;</h3>
+<h4 id="&#x5220;&#x9664;&#x8BBE;&#x5907;"><a name="&#x5220;&#x9664;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5220;&#x9664;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x8BBE;&#x5907;</h4>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>removeDevice<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UUID</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">&#x8BBE;&#x5907;UUID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> removeDevice<span class="token punctuation">:</span>UUID<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<p>LPDevice </p>
+<h3 id="&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;"><a name="&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x4E0A;&#x4E0B;&#x7EBF;&#x4EE3;&#x7406;</h3>
+<ul>
+<li>LPDeviceManagerObserver</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">onLPDeviceOnline</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x4E0A;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:left">onLPDeviceOffline</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x4E0B;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:left">onLPDeviceUpdate</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x66F4;&#x65B0;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;"><a name="&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;" class="plugin-anchor" href="#&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;</h3>
+<p>Multi-Room Music &#x662F;&#x6307;&#x540C;&#x4E00;&#x4E2A;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#x7684;&#x591A;&#x53F0;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x3001;&#x64CD;&#x63A7;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x623F;&#x95F4;&#x6709;&#x4E00;&#x4E2A;&#x201C;&#x4E3B;&#x8BBE;&#x5907;&#x201D;&#xFF08;master device&#xFF09;&#xFF0C;&#x7528;&#x6765;&#x540C;&#x6B65;&#x623F;&#x95F4;&#x5185;&#x7684;&#x64AD;&#x653E;&#x3001;&#x63A7;&#x5236;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x88AB;&#x52A8;&#x63A5;&#x6536;&#x540C;&#x6B65;&#x6307;&#x4EE4;&#x7684;&#x8BBE;&#x5907;&#x79F0;&#x4E3A;&#x201C;&#x5B50;&#x8BBE;&#x5907;&#x201D;(slave device)&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;LPMultiroomManager &#x6765;&#x7BA1;&#x7406;&#x591A;&#x53F0;&#x8BBE;&#x5907;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;</p>
+<h4 id="&#x591A;&#x53F0;&#x8BBE;&#x5907;multi-room"><a name="&#x591A;&#x53F0;&#x8BBE;&#x5907;multi-room" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x53F0;&#x8BBE;&#x5907;multi-room"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x591A;&#x53F0;&#x8BBE;&#x5907;multi-room" class="plugin-anchor" href="#&#x591A;&#x53F0;&#x8BBE;&#x5907;multi-room"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x53F0;&#x8BBE;&#x5907;Multi-Room</h4>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<p>  &#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x7EC4;&#x6210;&#x623F;&#x95F4;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x7684;&#x76EE;&#x7684;</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deviceMultiroomWithDeviceList<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>LPDevice <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>deviceList handler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPMultiroomBlock<span class="token punctuation">)</span>handler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">deviceList</td>
+<td style="text-align:left">NSArray</td>
+<td style="text-align:left">&#x9700;&#x8981;&#x8FDB;&#x884C;Multiroom&#x7EC4;&#x7F51;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+</ul>
+<h4 id="&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;multi-room"><a name="&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;multi-room" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;multi-room"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;multi-room" class="plugin-anchor" href="#&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;multi-room"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x62E9;&#x8BBE;&#x5907;&#x4E3A;&#x4E3B;&#x7684;Multi-Room</h4>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<p>  masterDevice &#x201C;&#x4E3B;&#x8BBE;&#x5907;&#x201D;&#xFF0C;slaveDeviceList &#x662F;&#x623F;&#x95F4;&#x5185;&#x201C;&#x5B50;&#x8BBE;&#x5907;&#x201D;&#x5217;&#x8868;&#x3002;<br></p>
+<p>  &#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;masterDevice &#x4E3A;nil&#xFF0C;&#x5219;slaveDeviceList&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x4F1A;&#x4ECE;&#x623F;&#x95F4;&#x5185;&#x5220;&#x9664;&#xFF0C;&#x4E0D;&#x518D;&#x540C;&#x6B65;&#x64AD;&#x653E;masterDevice&#x8BBE;&#x5907;&#x7684;&#x97F3;&#x4E50;&#x3002;<br></p>
+<p>  &#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;masterDevice &#x4E0D;&#x4E3A;nil&#xFF0C;&#x5219;slaveDeviceList&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x4F1A;&#x548C;masterDevice&#x7EC4;&#x6210;&#x623F;&#x95F4;&#xFF0C;&#x540C;&#x6B65;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;<br></p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deviceMultiroomWithDeviceList<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>LPDevice <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>deviceList handler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPMultiroomBlock<span class="token punctuation">)</span>handler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">slaveDeviceList</td>
+<td style="text-align:left">NSArray</td>
+<td style="text-align:left">&#x5982;&#x679C;masterDevice&#x4E3A;nil,&#x5217;&#x8868;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x4ECE;&#x623F;&#x95F4;&#x5185;&#x5220;&#x9664;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x4F1A;&#x548C;masterDevice&#x7EC4;&#x6210;&#x623F;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">masterDevice</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+</ul>
+<h4 id="-lpdeviceplayer-getplayer"><a name="-lpdeviceplayer-getplayer" class="anchor-navigation-ex-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeviceplayer-getplayer" class="plugin-anchor" href="#-lpdeviceplayer-getplayer"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevicePlayer *)getPlayer;</h4>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<p>  Get Device&apos;s player.</p>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
+</li>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -738,20 +915,20 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-lpdevicepreset-getpreset"><a name="-lpdevicepreset-getpreset" class="anchor-navigation-ex-anchor" href="#-lpdevicepreset-getpreset"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevicepreset-getpreset" class="plugin-anchor" href="#-lpdevicepreset-getpreset"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDevicePreset *)getPreset;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Get Preset object</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -763,20 +940,20 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-lpdeicealarm-getalarm"><a name="-lpdeicealarm-getalarm" class="anchor-navigation-ex-anchor" href="#-lpdeicealarm-getalarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeicealarm-getalarm" class="plugin-anchor" href="#-lpdeicealarm-getalarm"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeiceAlarm *)getAlarm;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Get alarm object</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -788,20 +965,20 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-lpdevicetimer-gettimer"><a name="-lpdevicetimer-gettimer" class="anchor-navigation-ex-anchor" href="#-lpdevicetimer-gettimer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdevicetimer-gettimer" class="plugin-anchor" href="#-lpdevicetimer-gettimer"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeviceTimer *)getTimer;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Get shutdown timer object</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -813,21 +990,21 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-lppassthrough-getpassthrough"><a name="-lppassthrough-getpassthrough" class="anchor-navigation-ex-anchor" href="#-lppassthrough-getpassthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lppassthrough-getpassthrough" class="plugin-anchor" href="#-lppassthrough-getpassthrough"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPPassthrough *)getPassthrough;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Get pass through object</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -840,20 +1017,20 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-lpdeviceota-getota"><a name="-lpdeviceota-getota" class="anchor-navigation-ex-anchor" href="#-lpdeviceota-getota"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-lpdeviceota-getota" class="plugin-anchor" href="#-lpdeviceota-getota"><i class="fa fa-link" aria-hidden="true"></i></a>- (LPDeviceOTA *)getOTA;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Get OTA object</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
-<li><p>Return</p>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -863,13 +1040,13 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tr>
 </tbody>
 </table>
-<h4 id="property_1"><a name="property_1" class="anchor-navigation-ex-anchor" href="#property_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h4>
+<h4 id="property"><a name="property" class="anchor-navigation-ex-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h4>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -911,66 +1088,66 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <p>[LPDevicePlayer]</p>
-<h3 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
+<h3 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
 <h4 id="-voidplaylpplayerblock-nullablecompletionhandler"><a name="-voidplaylpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidplaylpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidplaylpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidplaylpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)play:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Play</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
 <h4 id="-voidpauselpplayerblock-nullablecompletionhandler"><a name="-voidpauselpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidpauselpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidpauselpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidpauselpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)pause:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Pause</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
 <h4 id="-voidstoplpplayerblock-nullablecompletionhandler"><a name="-voidstoplpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidstoplpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidstoplpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidstoplpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)stop:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Stop</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
 <h4 id="-voidnextlpplayerblock-nullablecompletionhandler"><a name="-voidnextlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidnextlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidnextlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidnextlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)next:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Next</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
 <h4 id="-voidpreviouslpplayerblock-nullablecompletionhandler"><a name="-voidpreviouslpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidpreviouslpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidpreviouslpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidpreviouslpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)previous:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Previous</p>
 </li>
-<li><p>Parameter</p>
-<p>  N/A</p>
+<li><p>&#x53C2;&#x6570;</p>
+<p>  &#x65E0;</p>
 </li>
 </ul>
 <h4 id="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidsetprogressnstimeintervalprogress-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setProgress:(NSTimeInterval)progress completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Set play progress</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -983,18 +1160,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-voidsetplaymodelpplaymodeplaymode"><a name="-voidsetplaymodelpplaymodeplaymode" class="anchor-navigation-ex-anchor" href="#-voidsetplaymodelpplaymodeplaymode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetplaymodelpplaymodeplaymode" class="plugin-anchor" href="#-voidsetplaymodelpplaymodeplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setPlayMode:(LPPlayMode)playMode;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Set play mode</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1006,8 +1183,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
-<pre class="language-"><code class="lang-ObjectiveC">      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>device<span class="token punctuation">.</span>mediaInfo<span class="token punctuation">.</span>mediaType isEqualToString<span class="token punctuation">:</span>SPOTIFY_SOURCE<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-ObjectiveC">      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>device<span class="token punctuation">.</span>mediaInfo<span class="token punctuation">.</span>media&#x7C7B;&#x578B; isEqualToString<span class="token punctuation">:</span>SPOTIFY_SOURCE<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           LPSpotifyPlayMode mode <span class="token operator">=</span> LP_SPOTIFY_LISTREPEAT<span class="token punctuation">;</span>
           <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> setSpotifyPlayMode<span class="token punctuation">:</span>mode<span class="token punctuation">]</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
@@ -1019,18 +1196,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </ul>
 <h4 id="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><a name="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode" class="anchor-navigation-ex-anchor" href="#-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode" class="plugin-anchor" href="#-voidsetspotifyplaymodelpspotifyplaymodespotifyplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Set Spotify play mode</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1042,8 +1219,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
-<pre class="language-"><code class="lang-ObjectiveC">      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>device<span class="token punctuation">.</span>mediaInfo<span class="token punctuation">.</span>mediaType isEqualToString<span class="token punctuation">:</span>SPOTIFY_SOURCE<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-ObjectiveC">      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>device<span class="token punctuation">.</span>mediaInfo<span class="token punctuation">.</span>media&#x7C7B;&#x578B; isEqualToString<span class="token punctuation">:</span>SPOTIFY_SOURCE<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           LPSpotifyPlayMode mode <span class="token operator">=</span> LP_SPOTIFY_LISTREPEAT<span class="token punctuation">;</span>
           <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> setSpotifyPlayMode<span class="token punctuation">:</span>mode<span class="token punctuation">]</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
@@ -1055,18 +1232,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </ul>
 <h4 id="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidsetchannellpdevicechannelchannel-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setChannel:(LPDeviceChannel)channel completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li>Description</li>
+<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</li>
 </ul>
 <p>Set sound channel</p>
 <ul>
-<li>Parameter</li>
+<li>&#x53C2;&#x6570;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1078,7 +1255,7 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">      LPDeviceChannel channel <span class="token operator">=</span> LPChannel_left<span class="token punctuation">;</span>
       <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> setChannel<span class="token punctuation">:</span>channel completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1090,18 +1267,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </ul>
 <h4 id="-voidsetvolumecgfloatvolume-singleboolsingle"><a name="-voidsetvolumecgfloatvolume-singleboolsingle" class="anchor-navigation-ex-anchor" href="#-voidsetvolumecgfloatvolume-singleboolsingle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidsetvolumecgfloatvolume-singleboolsingle" class="plugin-anchor" href="#-voidsetvolumecgfloatvolume-singleboolsingle"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)setVolume:(CGFloat)volume single:(BOOL)single;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Set volume</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1114,18 +1291,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </table>
 <h4 id="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voidplayaudiowithmusicdictionarynsdictionary-musicdictionary-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)playAudioWithMusicDictionary:(NSDictionary *)musicDictionary completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Play music</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1137,7 +1314,7 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">    <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaLibManager sharedInstance<span class="token punctuation">]</span> searchSongs<span class="token punctuation">:</span>nil completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPPlayMusicList <span class="token operator">*</span> _Nonnull musicListObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
               musicListObj<span class="token punctuation">.</span>index <span class="token operator">=</span> index<span class="token punctuation">;</span>
               NSDictionary <span class="token operator">*</span>info <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> playMusicSingleSource<span class="token punctuation">:</span>listObj<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -1152,18 +1329,18 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </ul>
 <h4 id="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><a name="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler" class="anchor-navigation-ex-anchor" href="#-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a><a name="-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler" class="plugin-anchor" href="#-voiddeletewithindexnsintegerindex-completionhandlerlpplayerblock-nullablecompletionhandler"><i class="fa fa-link" aria-hidden="true"></i></a>- (void)deleteWithIndex:(NSInteger)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;</h4>
 <ul>
-<li><p>Description</p>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
 <p>  Delete a track from current playing list</p>
 </li>
-<li><p>Parameter</p>
+<li><p>&#x53C2;&#x6570;</p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1175,7 +1352,7 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <ul>
-<li><p>Sample code</p>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-ObjectiveC">      <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> deleteWithIndex<span class="token punctuation">:</span>index completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Successfully delete a song from the playlist&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1184,13 +1361,13 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </code></pre>
 </li>
 </ul>
-<h3 id="property_2"><a name="property_2" class="anchor-navigation-ex-anchor" href="#property_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
+<h3 id="property_1"><a name="property_1" class="anchor-navigation-ex-anchor" href="#property_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1222,16 +1399,16 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <h2 id="lpmediainfo"><a name="lpmediainfo" class="anchor-navigation-ex-anchor" href="#lpmediainfo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmediainfo" class="plugin-anchor" href="#lpmediainfo"><i class="fa fa-link" aria-hidden="true"></i></a>LPMediaInfo</h2>
-<h3 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
+<h3 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
 <p>deleteWithIndex</p>
-<pre class="language-"><code>N/A
-</code></pre><h3 id="property_3"><a name="property_3" class="anchor-navigation-ex-anchor" href="#property_3"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
+<pre class="language-"><code>&#x65E0;
+</code></pre><h3 id="property_2"><a name="property_2" class="anchor-navigation-ex-anchor" href="#property_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1258,13 +1435,13 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </tbody>
 </table>
 <h2 id="lpdeviceinfo"><a name="lpdeviceinfo" class="anchor-navigation-ex-anchor" href="#lpdeviceinfo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpdeviceinfo" class="plugin-anchor" href="#lpdeviceinfo"><i class="fa fa-link" aria-hidden="true"></i></a>LPDeviceInfo</h2>
-<h3 id="property_4"><a name="property_4" class="anchor-navigation-ex-anchor" href="#property_4"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
+<h3 id="property_3"><a name="property_3" class="anchor-navigation-ex-anchor" href="#property_3"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1279,9 +1456,9 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <td>Play mode</td>
 </tr>
 <tr>
-<td>mediaType</td>
+<td>media&#x7C7B;&#x578B;</td>
 <td>NSString</td>
-<td>Media type</td>
+<td>Media &#x7C7B;&#x578B;</td>
 </tr>
 <tr>
 <td>trackSource</td>
@@ -1301,15 +1478,15 @@ common control function, like preset, alarm setup, OTA etc. </p>
   SDK</a></li>
 </ul>
 <h2 id="lpdevicestatus"><a name="lpdevicestatus" class="anchor-navigation-ex-anchor" href="#lpdevicestatus"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpdevicestatus" class="plugin-anchor" href="#lpdevicestatus"><i class="fa fa-link" aria-hidden="true"></i></a>LPDeviceStatus</h2>
-<h3 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
-<pre class="language-"><code>N/A
-</code></pre><h3 id="property_5"><a name="property_5" class="anchor-navigation-ex-anchor" href="#property_5"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
+<h3 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function" class="plugin-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h3>
+<pre class="language-"><code>&#x65E0;
+</code></pre><h3 id="property_4"><a name="property_4" class="anchor-navigation-ex-anchor" href="#property_4"><i class="fa fa-link" aria-hidden="true"></i></a><a name="property" class="plugin-anchor" href="#property"><i class="fa fa-link" aria-hidden="true"></i></a>Property</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1339,9 +1516,9 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <td>SSID</td>
 </tr>
 <tr>
-<td>friendlyName</td>
+<td>friendly&#x540D;&#x79F0;</td>
 <td>NSString</td>
-<td>Device&apos;s friendly name</td>
+<td>Device&apos;s friendly &#x540D;&#x79F0;</td>
 </tr>
 <tr>
 <td>version</td>
@@ -1382,42 +1559,13 @@ common control function, like preset, alarm setup, OTA etc. </p>
 </ul>
 <h2 id="other-definitions"><a name="other-definitions" class="anchor-navigation-ex-anchor" href="#other-definitions"><i class="fa fa-link" aria-hidden="true"></i></a><a name="other-definitions" class="plugin-anchor" href="#other-definitions"><i class="fa fa-link" aria-hidden="true"></i></a>Other Definitions</h2>
 <h3 id="delegate"><a name="delegate" class="anchor-navigation-ex-anchor" href="#delegate"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delegate" class="plugin-anchor" href="#delegate"><i class="fa fa-link" aria-hidden="true"></i></a>Delegate</h3>
-<ul>
-<li>LPDeviceManagerObserver</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onLPDeviceOnline</td>
-<td>LPDevice</td>
-<td>Device online notification</td>
-</tr>
-<tr>
-<td>onLPDeviceOffline</td>
-<td>LPDevice</td>
-<td>Device offline notification</td>
-</tr>
-<tr>
-<td>onLPDeviceUpdate</td>
-<td>LPDevice</td>
-<td>Device update notification</td>
-</tr>
-</tbody>
-</table>
 <h3 id="constant"><a name="constant" class="anchor-navigation-ex-anchor" href="#constant"><i class="fa fa-link" aria-hidden="true"></i></a><a name="constant" class="plugin-anchor" href="#constant"><i class="fa fa-link" aria-hidden="true"></i></a>Constant</h3>
 <h3 id="lpplaymode"><a name="lpplaymode" class="anchor-navigation-ex-anchor" href="#lpplaymode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpplaymode" class="plugin-anchor" href="#lpplaymode"><i class="fa fa-link" aria-hidden="true"></i></a>LPPlayMode</h3>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1447,8 +1595,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1482,8 +1630,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1505,8 +1653,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1536,8 +1684,8 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -1555,14 +1703,14 @@ common control function, like preset, alarm setup, OTA etc. </p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Description</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>title</td>
-<td>Name</td>
+<td>&#x540D;&#x79F0;</td>
 </tr>
 <tr>
 <td>mediaID</td>
@@ -1606,7 +1754,7 @@ common control function, like preset, alarm setup, OTA etc. </p>
                 </a>
                 
                 
-                <a href="../android/" class="navigation navigation-next " aria-label="Next page: Android">
+                <a href="Device_SDK.html#设备搜索" class="navigation navigation-next " aria-label="Next page: 设备搜索">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1617,7 +1765,7 @@ common control function, like preset, alarm setup, OTA etc. </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设备管理","level":"1.2.1","depth":2,"next":{"title":"Android","level":"1.3","depth":1,"path":"android/README.md","ref":"android/README.md","articles":[{"title":"测试","level":"1.3.1","depth":2,"path":"android/Test.md","ref":"android/Test.md","articles":[]}]},"previous":{"title":"iOS","level":"1.2","depth":1,"path":"iOS/README.md","ref":"iOS/README.md","articles":[{"title":"设备管理","level":"1.2.1","depth":2,"path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"zh-hans","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device_SDK.md","mtime":"2020-05-21T08:25:40.315Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-21T09:03:41.981Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"设备管理","level":"1.2.1","depth":2,"next":{"title":"设备搜索","level":"1.2.1.1","depth":3,"anchor":"#设备搜索","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#设备搜索","articles":[]},"previous":{"title":"iOS","level":"1.2","depth":1,"path":"iOS/README.md","ref":"iOS/README.md","articles":[{"title":"设备管理","level":"1.2.1","depth":2,"path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md","articles":[{"title":"设备搜索","level":"1.2.1.1","depth":3,"anchor":"#设备搜索","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#设备搜索","articles":[]},{"title":"添加代理","level":"1.2.1.2","depth":3,"anchor":"#添加代理","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#添加代理","articles":[]},{"title":"获取设备","level":"1.2.1.3","depth":3,"anchor":"#获取设备","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#获取设备","articles":[]},{"title":"删除单独设备","level":"1.2.1.4","depth":3,"anchor":"#删除单独设备","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#删除单独设备","articles":[]},{"title":"设备上下线代理","level":"1.2.1.5","depth":3,"anchor":"#设备上下线代理","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#设备上下线代理","articles":[]},{"title":"多设备同步播放音乐","level":"1.2.1.6","depth":3,"anchor":"#多设备同步播放音乐","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#多设备同步播放音乐","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"zh-hans","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device_SDK.md","mtime":"2020-05-22T03:47:32.765Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T03:53:14.199Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>

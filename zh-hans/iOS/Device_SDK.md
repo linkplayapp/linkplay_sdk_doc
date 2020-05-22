@@ -2,398 +2,472 @@
 
 # Overview 
 
-The main Function in SDK includes device management, multi-room
-music(MRM), music control and device control and so on.
-
-Device management includes device online/offline, get the device object
-which used to communicate with the device; MRM includes room setup,
-dismiss, change room name etc.; Music control includes playview related
-information management, playlist management etc.; Device control is the
-common control function, like preset, alarm setup, OTA etc. 
+设备管理包含了，设备的上线、下线、删除等操作，同时也可以通过Id来获取到对应的设备, LPDeviceManager 提供了管理设备的API
 
 ![server_error](./images/69731079.jpg)
 ![server_error](./images/69731080.jpg)
 
 # API Reference 
 
-## LPDeviceManager 
+### 设备搜索
 
-Singleton, manage the device online & offline.
+#### 搜索设备
+- 接口说明
 
-### Function 
+    搜索周边的设备
+    
+    ``` ObjectiveC
+    - (void)search:(NSString *)searchKey;
+    ```
 
-#### - (void)search:(NSString *)searchKey;
+- 参数
 
-- Description
+| 名称      | 类型                     | 接口说明                                                   |
+| :--------| :----------------------- | :---------------------------------------------------- |
+| key      | NSString                 | 默认传空，客户如有自定义组播搜索设备关键字则传入              |
 
-    Start discover devices.
+- 返回值
 
-- Parameter
+    无
 
-| Name | Type     | Description                                                                                                                                  |
-| ---- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| key  | NSString | Default use empty string, if you want to distinguish your device from others, then this key should be the same with the firmware definition. |
-
-- Return
-
-    N/A
-
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     [[LPDeviceManager sharedInstance] search:@""];
     ```
 
-#### stop
+#### 停止搜索设备
 
-- Description
+- 接口说明
 
-    Stop discovering.
+    ``` ObjectiveC
+    - (void)stop;
+    ```
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-#### - (void)addObserver:(id<LPDeviceManagerObserver>)observer;
+### 添加代理
 
-- Description
+#### 添加观察者
 
-    Add observer to receive the callback.
+- 接口说明
 
-- Parameter
+    ``` ObjectiveC
+    - (void)addObserver:(id<LPDeviceManagerObserver>)observer;
+    ```
 
-| Name     | Type                    | Description                                          |
+- 参数
+
+| 名称     | 类型                     | 接口说明                                               |
 | -------- | ----------------------- | ---------------------------------------------------- |
-| observer | LPDeviceManagerObserver | Object to deal with the device online/offline event. |
+| observer | LPDeviceManagerObserver | 要接收设备上下线通知的对象                                |
 
-- Return
+- 返回值
 
-    N/A
+    无
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     [[LPDeviceManager sharedInstance] addObserver:self];
     ```
 
-#### - (void)removeObserver:(id<LPDeviceManagerObserver>)observer;
+#### 移除观察者
 
-- Description
+- 接口说明
 
-    Remove the observer.
+    ``` ObjectiveC
+    - (void)removeObserver:(id<LPDeviceManagerObserver>)observer;
+    ```
 
-- Parameter
+- 参数
 
-| Name     | Type                    | Description                                          |
-| -------- | ----------------------- | ---------------------------------------------------- |
-| observer | LPDeviceManagerObserver | Object to deal with the device online/offline event. |
+| 名称      | 类型                    | 接口说明                                          |
+| -------- | ----------------------- | ----------------------------------------------  |
+| observer | LPDeviceManagerObserver | 要接收设备上下线通知的对象                           |
 
-- Return
+- 返回值
 
-    N/A
+    无
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     [[LPDeviceManager sharedInstance] removeObserver:self];
     ```
 
-#### - (LPDevice *)deviceForID:(NSString *)UUID;
+### 获取设备
 
-- Description
+#### 根据设备Id获取设备
 
-    Get device object with UUID.
+- 接口说明
 
-- Parameter
+    ``` ObjectiveC
+    - (LPDevice *)deviceForID:(NSString *)UUID;
+    ```
 
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| UUID | NSString | Device UUID |
+- 参数
 
-- Return
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| UUID      | NSString                  | 设备UUID                                         |
 
-| Type     | Description   |
-| -------- | ------------- |
-| LPDevice | Device object |
+- 返回值
+
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| LPDevice          | 设备对象                                  |
 
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     LPDevice *device = [[LPDeviceManager sharedInstance] deviceForID:UUID];
     ```
 
-#### - (NSArray<LPDevice *> *)getMasterDevices;
+#### 获取主设备列表
 
-- Description
+- 接口说明
 
-    Get all master devices, which is the master of the multi-room to play music synchronized.
+    ``` ObjectiveC
+    - (NSArray<LPDevice *> *)getMasterDevices;
+    ```
+- 参数
 
-- Parameter
+    无
 
-    N/A
+- 返回值
 
-- Return
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| NSArray<LPDevice> | 主设备列表                                 |
 
-| Type              | Description        |
-| ----------------- | ------------------ |
-| NSArray<LPDevice> | Device object list |
-
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     self.deviceListArray = [[LPDeviceManager sharedInstance] getMasterDevices];
     ```
 
-#### - (LPDevice *)deviceForIP:(NSString *)IP;
+#### 根据设备IP获取设备
 
-- Description
+- 接口说明
 
-    Get device object with IP.
+    ``` ObjectiveC
+    - (LPDevice *)deviceForIP:(NSString *)IP;
+    ```
 
-- Parameter
+- 参数
 
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| IP   | NSString | Device IP   |
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| IP        | NSString                 | 设备IP                                            |
 
-- Return
+- 返回值
 
-| Type     | Description   |
-| -------- | ------------- |
-| LPDevice | Device object |
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| LPDevice          | 设备对象                                  |
 
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     LPDevice *device = [[LPDeviceManager sharedInstance] deviceForIP:IP];
     ```
 
-#### - (LPDevice *)deviceForMAC:(NSString *)MAC;
+#### 根据设备MAC获取设备
 
-- Description
+- 接口说明
 
-    Get device object with MAC.
+    ``` ObjectiveC
+    - (LPDevice *)deviceForMAC:(NSString *)MAC;
+    ```
 
-- Parameter
+- 参数
 
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| MAC  | NSString | Device MAC  |
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| MAC       | NSString                 | 设备MAC                                           |
 
 
-- Return
+- 返回值
 
-| Type     | Description   |
-| -------- | ------------- |
-| LPDevice | Device object |
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| LPDevice          | 设备对象                                  |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
     LPDevice *device = [[LPDeviceManager sharedInstance] deviceForIP:MAC];
     ```
 
-#### - (void)debugSwitch:(BOOL)logOn;
+#### 根据主设备Id获取子设备列表
 
-- Description
-
-    Switch on/off for the SDK log.
-
-- Parameter
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| logOn | BOOL | log switch  |
-
-
-- Return
-
-    N/A
-
-#### - (void)removeDevice:(NSString *)UUID;
-
-- Description
-
-    Delete cached device with UUID. If the device is actually discoverable, then SDK would discover it again.
-
-- Parameter
-
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| UUID | NSString | Device UUID |
-
-- Return
-
-    N/A
-
-- Sample code
+- 接口说明
 
     ``` ObjectiveC
-    [[LPDeviceManager sharedInstance] removeDevice:UUID];
+    -(NSArray<LPDevice *> *)slaveDeviceArray:(NSString *)UUID;
     ```
 
-#### -(NSArray<LPDevice *> *)slaveDeviceArray:(NSString *)UUID;
+- 参数
 
-- Description
-
-    Get master device's slave device list.
-
-- Parameter
-
-| Name | Type     | Description |
-| ---- | -------- | ----------- |
-| UUID | NSString | Device UUID |
-
-- Return
-
-| Type           | Description        |
-| -------------- | ------------------ |
-| List<LPDevice> | Device object list |
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| UUID      | NSString                  | 设备UUID                                         |
 
 
-- Sample code
+- 返回值
+
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| NSArray<LPDevice> | 子设备列表                                 |
+
+- 示例代码
 
     ``` ObjectiveC
     NSArray *slaveListArray = [[LPDeviceManager sharedInstance] slaveDeviceArray:UUID];
     ```
 
-#### -(LPDevice *)getMasterDeviceWithSlaveDevice:(LPDevice *)device;
+#### 子设备获取其主设备
 
-- Description
+- 接口说明
 
-    Get slave device's master device.
+    ``` ObjectiveC
+    -(LPDevice *)getMasterDeviceWithSlaveDevice:(LPDevice *)device;
+    ```
 
-- Parameter
+- 参数
 
-| Name   | Type     | Description  |
-| ------ | -------- | ------------ |
-| device | LPDevice | Slave device |
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| device      | LPDevice               | 设备                                             |
 
-- Return
+- 返回值
 
-| Type     | Description   |
-| -------- | ------------- |
-| LPDevice | Device object |
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| LPDevice          | 设备对象                                  |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
         // The result may be empty
         LPDevice *masterDevice = [[LPDeviceManager sharedInstance] getMasterDeviceWithSlaveDevice:slaveDevice];
     ```
 
-### Property 
+#### App Log输出开关
 
-| Name       | Type  | Description                       |
-| ---------- | ----- | --------------------------------- |
-| devicelist | array | All discovered device object list |
+- 接口说明
 
+    ``` ObjectiveC
+    - (void)debugSwitch:(BOOL)logOn;
+    ```
+
+- 参数
+
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| logOn      | BOOL                  | log开关                                         |
+
+
+- 返回值
+
+    无
+
+### 删除单独设备
+
+#### 删除设备
+
+- 接口说明
+
+    ``` ObjectiveC
+    - (void)removeDevice:(NSString *)UUID;
+    ```
+
+- 参数
+
+| 名称       | 类型                      | 接口说明                                          |
+| :-------- | :----------------------- | :----------------------------------------------  |
+| UUID      | NSString                  | 设备UUID                                         |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` ObjectiveC
+    [[LPDeviceManager sharedInstance] removeDevice:UUID];
+    ```
 
 LPDevice 
 
-### Function 
+### 设备上下线代理
+
+- LPDeviceManagerObserver
+
+| 名称                | 类型      | 接口说明                       |
+| :----------------- | :-------- | :--------------------------- |
+| onLPDeviceOnline   | LPDevice  | 设备上线                       |
+| onLPDeviceOffline  | LPDevice  | 设备下线                       |
+| onLPDeviceUpdate   | LPDevice  | 设备更新                       |
+
+
+### 多设备同步播放音乐
+
+Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控的技术。
+
+每个房间有一个“主设备”（master device），用来同步房间内的播放、控制信息，而其他被动接收同步指令的设备称为“子设备”(slave device)。
+
+你可以通过LPMultiroomManager 来管理多台设备同步播放音乐
+
+#### 多台设备Multi-Room
+
+- 接口说明
+
+    多个设备组成房间，以达到同步播放音乐的目的
+
+    ``` ObjectiveC
+    - (void)deviceMultiroomWithDeviceList:(NSArray<LPDevice *> * _Nonnull)deviceList handler:(LPMultiroomBlock)handler;
+    ```
+
+- 参数
+
+| 名称          | 类型                      | 接口说明                                          |
+| :----------- | :-----------------------  | :----------------------------------------------  |
+| deviceList   | NSArray                   | 需要进行Multiroom组网的设备列表                     |
+
+- 返回值
+
+    无
+
+#### 选择设备为主的Multi-Room
+
+- 接口说明
+
+    masterDevice “主设备”，slaveDeviceList 是房间内“子设备”列表。<br>
+
+    如果传入的masterDevice 为nil，则slaveDeviceList中的设备，会从房间内删除，不再同步播放masterDevice设备的音乐。<br>
+
+    如果传入的masterDevice 不为nil，则slaveDeviceList中的设备，会和masterDevice组成房间，同步播放音乐。<br>
+
+    ``` ObjectiveC
+    - (void)deviceMultiroomWithDeviceList:(NSArray<LPDevice *> * _Nonnull)deviceList handler:(LPMultiroomBlock)handler;
+    ```
+
+- 参数
+
+| 名称            | 类型           | 接口说明                                                                           |
+| :-----------   | :--------------| :------------------------------------------------------------------------------- |
+| slaveDeviceList | NSArray       | 如果masterDevice为nil,列表中的设备从房间内删除，否则，列表中的设备会和masterDevice组成房间  |
+| masterDevice    | LPDevice      | 设备对象                                                                            |
+
+- 返回值
+
+    无
 
 #### - (LPDevicePlayer *)getPlayer;
 
-- Description
+- 接口说明
 
     Get Device's player.
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Type           | Description   |
+| 类型           | 接口说明   |
 | -------------- | ------------- |
 | LPDevicePlayer | Player object |
 
 #### - (LPDevicePreset *)getPreset;
 
-- Description
+- 接口说明
 
     Get Preset object
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Type           | Description   |
+| 类型           | 接口说明   |
 | -------------- | ------------- |
 | LPDevicePreset | Preset object |
 
 #### - (LPDeiceAlarm *)getAlarm;
 
-- Description
+- 接口说明
 
     Get alarm object
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Type          | Description  |
+| 类型          | 接口说明  |
 | ------------- | ------------ |
 | LPDeviceAlarm | Alarm object |
 
 #### - (LPDeviceTimer *)getTimer;
 
-- Description
+- 接口说明
 
     Get shutdown timer object
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Type          | Description           |
+| 类型          | 接口说明           |
 | ------------- | --------------------- |
 | LPDeviceTimer | Shutdown timer object |
 
 #### - (LPPassthrough *)getPassthrough;
 
-- Description
+- 接口说明
 
     Get pass through object
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Name | Type          | Description         |
+| 名称 | 类型          | 接口说明         |
 | ---- | ------------- | ------------------- |
 | mcu  | LPPassThrough | Pass through object |
 
 #### - (LPDeviceOTA *)getOTA;
 
-- Description
+- 接口说明
 
     Get OTA object
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
-- Return
+- 返回值
 
-| Type        | Description |
+| 类型        | 接口说明 |
 | ----------- | ----------- |
 | LPDeviceOTA | OTA object  |
 
 #### Property
 
-| Name       | Type           | Description          |
+| 名称       | 类型           | 接口说明          |
 | ---------- | -------------- | -------------------- |
 | player     | LPDevicePlayer | Player object        |
 | preset     | LPDevicePreset | Preset object        |
@@ -410,83 +484,83 @@ LPDevice
 
 #### - (void)play:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Play
 
-- Parameter
+- 参数
   
-    N/A
+    无
 
 #### - (void)pause:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Pause
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
 #### - (void)stop:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Stop
 
-- Parameter
+- 参数
   
-    N/A
+    无
 
 #### - (void)next:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Next
 
-- Parameter
+- 参数
   
-    N/A
+    无
 
 #### - (void)previous:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Previous
 
-- Parameter
+- 参数
 
-    N/A
+    无
 
 #### - (void)setProgress:(NSTimeInterval)progress completionHandler:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
     
     Set play progress
 
-- Parameter
+- 参数
 
-| Name     | Type           | Description   |
+| 名称     | 类型           | 接口说明   |
 | -------- | -------------- | ------------- |
 | progress | NSTimeInterval | Play progress |
 
 
 #### - (void)setPlayMode:(LPPlayMode)playMode;
 
-- Description
+- 接口说明
 
     Set play mode
 
-- Parameter
+- 参数
 
-| Name     | Type       | Description |
+| 名称     | 类型       | 接口说明 |
 | -------- | ---------- | ----------- |
 | playMode | LPPlayMode | Play mode   |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
-        if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
+        if ([device.mediaInfo.media类型 isEqualToString:SPOTIFY_SOURCE]) {
             LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
             [[device getPlayer] setSpotifyPlayMode:mode];
         }else {
@@ -497,20 +571,20 @@ LPDevice
 
 #### - (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;
 
-- Description
+- 接口说明
 
     Set Spotify play mode
 
-- Parameter
+- 参数
 
-| Name            | Type              | Description |
+| 名称            | 类型              | 接口说明 |
 | --------------- | ----------------- | ----------- |
 | spotifyPlayMode | LPSpotifyPlayMode | Play mode   |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
-        if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
+        if ([device.mediaInfo.media类型 isEqualToString:SPOTIFY_SOURCE]) {
             LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
             [[device getPlayer] setSpotifyPlayMode:mode];
         }else {
@@ -521,17 +595,17 @@ LPDevice
 
 #### - (void)setChannel:(LPDeviceChannel)channel completionHandler:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
 Set sound channel
 
-- Parameter
+- 参数
 
-| Name    | Type            | Description   |
+| 名称    | 类型            | 接口说明   |
 | ------- | --------------- | ------------- |
 | channel | LPDeviceChannel | Sound channel |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
         LPDeviceChannel channel = LPChannel_left;
@@ -544,29 +618,29 @@ Set sound channel
 
 #### - (void)setVolume:(CGFloat)volume single:(BOOL)single;
 
-- Description
+- 接口说明
 
     Set volume
 
-- Parameter
+- 参数
 
-| Name   | Type    | Description     |
+| 名称   | 类型    | 接口说明     |
 | ------ | ------- | --------------- |
 | volume | CGFloat | Device's volume |
 
 #### - (void)playAudioWithMusicDictionary:(NSDictionary *)musicDictionary completionHandler:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Play music
 
-- Parameter
+- 参数
 
-| Name            | Type         | Description        |
+| 名称            | 类型         | 接口说明        |
 | --------------- | ------------ | ------------------ |
 | musicDictionary | NSDictionary | Media info to play |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
       [[LPMediaLibManager sharedInstance] searchSongs:nil completionHandler:^(LPPlayMusicList * _Nonnull musicListObj) {
@@ -582,17 +656,17 @@ Set sound channel
 
 #### - (void)deleteWithIndex:(NSInteger)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
 
-- Description
+- 接口说明
 
     Delete a track from current playing list
 
-- Parameter
+- 参数
 
-| Name  | Type | Description                       |
+| 名称  | 类型 | 接口说明                       |
 | ----- | ---- | --------------------------------- |
 | index | int  | Index in the current playing list |
 
-- Sample code
+- 示例代码
 
     ``` ObjectiveC
         [[device getPlayer] deleteWithIndex:index completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
@@ -604,7 +678,7 @@ Set sound channel
 
 ### Property 
 
-| Name      | Type        | Description    |
+| 名称      | 类型        | 接口说明    |
 | --------- | ----------- | -------------- |
 | index     | int         | Play progress  |
 | duration  | float       | Total duration |
@@ -618,11 +692,11 @@ Set sound channel
 
 deleteWithIndex
 
-    N/A
+    无
 
 ### Property 
 
-| Name   | Type     | Description |
+| 名称   | 类型     | 接口说明 |
 | ------ | -------- | ----------- |
 | title  | NSString | Title       |
 | artist | NSString | Artist      |
@@ -633,11 +707,11 @@ deleteWithIndex
 
 ### Property 
 
-| Name        | Type     | Description         |
+| 名称        | 类型     | 接口说明         |
 | ----------- | -------- | ------------------- |
 | playStatus  | NSString | Current play status |
 | playMode    | int      | Play mode           |
-| mediaType   | NSString | Media type          |
+| media类型   | NSString | Media 类型          |
 | trackSource | NSString | Track source        |
 | ...         | ...      | ...                 |
 
@@ -651,18 +725,18 @@ deleteWithIndex
 
 ### Function 
 
-    N/A
+    无
 
 ### Property 
 
-| Name         | Type     | Description            |
+| 名称         | 类型     | 接口说明            |
 | ------------ | -------- | ---------------------- |
 | UUID         | NSString | UUID                   |
 | IP           | int      | IP                     |
 | WiFiStrength | float    | Wi-Fi signal strength  |
 | MAC          | NSString | MAC                    |
 | SSID         | NSString | SSID                   |
-| friendlyName | NSString | Device's friendly name |
+| friendly名称 | NSString | Device's friendly 名称 |
 | version      | NSString | Firmware version       |
 | language     | int      | Prompt tone language   |
 | release      | NSString | Compiled date          |
@@ -691,20 +765,14 @@ deleteWithIndex
 
 ### Delegate 
 
-- LPDeviceManagerObserver
 
-| Name              | Type     | Description                 |
-| ----------------- | -------- | --------------------------- |
-| onLPDeviceOnline  | LPDevice | Device online notification  |
-| onLPDeviceOffline | LPDevice | Device offline notification |
-| onLPDeviceUpdate  | LPDevice | Device update notification  |
 
 
 ### Constant 
 
 ### LPPlayMode
 
-| Type             | Description    |
+| 类型             | 接口说明    |
 | ---------------- | -------------- |
 | LP_LISTREPEAT    | Loop playback  |
 | LP_SINGLEREPEAT  | Single cycle   |
@@ -714,7 +782,7 @@ deleteWithIndex
 
 ### LPSpotifyPlayMode
 
-| Type                             | Description           |
+| 类型                             | 接口说明           |
 | -------------------------------- | --------------------- |
 | LP_SPOTIFY_LISTREPEAT            | Loop playback         |
 | LP_SPOTIFY_SINGLEREPEAT          | Single cycle          |
@@ -726,7 +794,7 @@ deleteWithIndex
 
 ### LPDeviceChannel
 
-| Type             | Description   |
+| 类型             | 接口说明   |
 | ---------------- | ------------- |
 | LPChannel_stereo | Stereo        |
 | LPChannel_left   | Left channel  |
@@ -735,7 +803,7 @@ deleteWithIndex
 
 ### LPPlayStatus
 
-| Type                             | Description      |
+| 类型                             | 接口说明      |
 | -------------------------------- | ---------------- |
 | LP_PLAYER_STATE_PLAYING          | Playing          |
 | LP_PLAYER_STATE_STOPPED          | Stop             |
@@ -746,7 +814,7 @@ deleteWithIndex
 
 ### LPRoomState
 
-| Type           | Description    |
+| 类型           | 接口说明    |
 | -------------- | -------------- |
 | LP_ROOM_MASTER | Master speaker |
 | LP_ROOM_SLAVE  | Slave speaker  |
@@ -754,9 +822,9 @@ deleteWithIndex
 
 ### LPMediaObj
 
-| Type        | Description |
+| 类型        | 接口说明 |
 | ----------- | ----------- |
-| title       | Name        |
+| title       | 名称        |
 | mediaID     | Server ID   |
 | serverIndex | index       |
 
