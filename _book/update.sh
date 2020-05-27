@@ -5,7 +5,7 @@ git add .
 stash_result=`git stash`
 
 git checkout gh-pages
-rm -rf ./*
+# rm -rf ./*
 mv /tmp/_book/* .
 
 git add .
