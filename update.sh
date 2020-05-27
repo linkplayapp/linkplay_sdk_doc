@@ -6,7 +6,7 @@ stash_result=`git stash`
 
 git checkout gh-pages
 # rm -rf ./*
-mv -f /tmp/_book/* .
+cp -rf /tmp/_book/* .
 
 git add .
 time_stamp=`date +"%Y-%m-%d %H:%M:%S"`
