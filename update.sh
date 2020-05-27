@@ -17,5 +17,3 @@ git checkout master
 if [[ "$stash_result" != "No local changes to save" ]]; then
     git stash pop
 fi
-
-echo "Update success!"
