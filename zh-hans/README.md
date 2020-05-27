@@ -59,18 +59,9 @@
     ```
 
 4.  提交SDK文档并构建：
-   
-    gitbook serve时，本地会生成_book文件夹，里面就是网站的静态资源文件，我们的网站实际上加载的就是这个文件夹。
-    但是我们的网站不是加载master分支的_book，而是新建了一个gh-pages分支，来单独装载_book。
-
-    >因此在写好文档，并提交至master后，还需要2步操作：
-    >>这一步暂时没有什么好的方式，其实可以放在jenkins上去处理，或者让<font color=red>帅哥</font>来弄（<font color=red>强烈建议🤩</font>）
-
-    1. 切换至gh-pages分支
-    2. gh-pages分支下有个 `copyBooks.py` 的python3脚本，执行它，即可自动完成构建，实际上就是自动化了以下几步：
-       1. gf & gr
-       2. 将master的_book内容，覆盖到当前分支下
-       3. push
-    >如果上述脚本失败，那只能自行手动去拷贝master下_book的内容，然后手动覆盖至gh-pages下。或者确认哪步失败，自己手动进行下去。
+    ```shell
+    chmod +x update.sh
+    ./update.sh
+    ```
 
 
