@@ -64,4 +64,19 @@
     ./update.sh
     ```
 
-
+    也可以将下面的脚本放到你自己的配置文件里：
+    ```shell
+    gitbook() {
+    if [ "$1" = "push" ]; then
+        chmod +x update.sh
+        ./update.sh
+    else
+        /usr/local/bin/gitbook "$@"
+    fi
+    }
+    ```
+    这样就可以通过：
+    ```shell
+    gitbook push
+    ```
+    来更新远端文档。
