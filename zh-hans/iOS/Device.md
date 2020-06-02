@@ -5,7 +5,7 @@
 设备对象包含了播控、设备设置、预置、闹钟等有关设备的功能
 
 
-### 设备音乐控制
+### 播放控制
 
 #### 获取设备播控对象
 
@@ -25,21 +25,6 @@
 | :-----------------| :--------------------------------------- |
 | LPDevicePlayer    | 设备播控对象                               |
 
-#### - (LPDevicePreset *)getPreset;
-
-- 接口说明
-
-    Get Preset object
-
-- 参数
-
-    无
-
-- 返回值
-
-| 类型           | 接口说明   |
-| -------------- | ------------- |
-| LPDevicePreset | Preset object |
 
 #### 播放
 
@@ -123,6 +108,8 @@
 
 #### 播放音乐
 
+播放音乐指的是从音源SDK中获取要播放的信息 musicDictionary, 然后传递给设备，从而让设备播放音源信息，从音源中获得 LPPlayMusicList 对象后，可以通过 LPMDPKitManager SDK 转换成接口需要的播放信息 musicDictionary
+
 - 接口说明
 
     ``` ObjectiveC
@@ -184,7 +171,7 @@
     }];
     ```
 
-#### 删除歌单中的歌曲
+#### 删除当前播放歌单中的歌曲
 
 从正在播放的歌单列表中，删除指定的歌曲。
 
@@ -207,169 +194,20 @@
 - 示例代码
 
     ``` ObjectiveC
-    ```
-
-### 设备信息设置
-
-#### 设置播放进度
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setProgress:(NSTimeInterval)progress completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-    ```
-
-- 参数
-
-| 名称           | 类型                     | 接口说明                                         |
-| :-------------| :----------------------- | :---------------------------------------------- |
-| progress      | NSTimeInterval           | 播放进度                                         |
-
-- 返回值
-
-    无
-
-
-#### 设置播放声道
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setChannel:(LPDeviceChannel)channel completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-    ```
-
-- 参数
-
-| 名称           | 类型                     | 接口说明                                         |
-| :-------------| :----------------------- | :----------------------------------------------|
-| channel       | LPDeviceChannel          | 播放声道                                        |
-
-- 返回值
-
-    无
-
-- 示例代码
-
-    ``` ObjectiveC
-    LPDeviceChannel channel = LPChannel_left;
-    [[device getPlayer] setChannel:channel completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-        if (isSuccess) {
-            NSLog(@"Channel setup successful");
-        }
-    }];
-    
-    ```
-
-#### 设置播放模式
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setPlayMode:(LPPlayMode)playMode;
-    ```
-
-- 参数
-
-| 名称           | 类型                     | 接口说明                                         |
-| :-------------| :----------------------- | :----------------------------------------------|
-| playMode      | LPPlayMode                | 播放模式                                       |
-
-- 返回值
-
-    无
-
-- 示例代码
-
-    ``` ObjectiveC
-    if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
-        LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-        [[device getPlayer] setSpotifyPlayMode:mode];
-    }else {
-        LPPlayMode mode = LP_SHUFFLEREPEAT;
-        [[device getPlayer] setPlayMode:mode];
-    }
-    ```
-
-#### 设置Spotify播放模式
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;
-    ```
-
-- 参数
-
-| 名称              | 类型                      | 接口说明                                         |
-| :-------------    | :----------------------- | :----------------------------------------------|
-| spotifyPlayMode   | LPSpotifyPlayMode        | Spotify播放模式                                  |
-
-- 返回值
-
-    无
-
-- 示例代码
-
-    ``` ObjectiveC
-    if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
-        LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-        [[device getPlayer] setSpotifyPlayMode:mode];
-    }else {
-        LPPlayMode mode = LP_SHUFFLEREPEAT;
-        [[device getPlayer] setPlayMode:mode];
-    }
-    ```
-
-#### 设置设备音量
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setVolume:(CGFloat)volume single:(BOOL)single;
-    ```
-
-- 参数
-
-| 名称           | 类型                     | 接口说明                                         |
-| :-------------| :----------------------- | :----------------------------------------------|
-| volume        | CGFloat                  | 设备音量                                         |
-
-- 返回值
-
-    无
-
-### 设置设备名称
-
-#### 设置设备名称
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)setDeviceName:(NSString *)deviceName deviceID:(NSString *)UUID completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
-    ```
-
-- 参数
-
-| 名称           | 类型                    | 接口说明                                         |
-| :-------------| :-----------------------| :---------------------------------------------- |
-| deviceName    | NSString                | 设备名称                                         |
-| UUID          | NSString                | 设备UUID                                         |
-
-- 返回值
-
-    无
-
-- 示例代码
-
-    ``` ObjectiveC
-    [[LPDeviceSettingsManager sharedInstance] setDeviceName:@"Music" deviceID:device.deviceStatus.UUID completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
-           NSLog(@"Set device name successfully");
-        }
+    [[device getPlayer] browseCurrentQueueWithcompletionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+        LPPlayMusicList *musicListObj = [[LPMDPKitManager shared] getBrowseListWithString:result];
+        NSLog(@"Current list = %@", musicListObj.list);
+        [[device getPlayer] deleteWithIndex:index completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            if (isSuccess) {
+                NSLog(@"Delete index success");
+            }
+        }];
+        
     }];
     ```
 
-### 设备恢复出厂设置
+
+### 恢复出厂设置
 
 #### 恢复出厂设置
 
