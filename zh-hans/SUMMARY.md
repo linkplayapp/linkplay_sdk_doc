@@ -1,6 +1,7 @@
 # Summary
 
 * [如何提交文章](README.md)
+* [前言](introduction.md)
 * [iOS](iOS/README.md)
     * [设备配网](iOS/DeviceSetup.md)
       - [BLE 配网模式](iOS/DeviceSetup.md#ble-配网模式)
