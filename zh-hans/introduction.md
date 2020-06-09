@@ -2,17 +2,17 @@ Linkplay Music Kit
 =================
 Linkplay Music Kit是Linkplay Home Audio方案的app端SDK；通过它，您可以快速的将我们的解决方案实现到您的产品里。
 
-![introduction](./images/introduction-1.png)
+![introduction](../images/introduction-1.png)
 
 MusicKit主要解决了两方面的问题：
 1. 维护与固件的通讯协议，使您可以简洁的与设备进行交互而不必关心琐碎的通讯技术问题
 2. 封装了网络服务（音乐服务、智能语音服务等）的复杂度，使您可以快速接入它们而不必关心实现细节
 
-# 设备管理
-即app发现周围的设备，包括OOBE与日常设备发现。
-![introduction](./images/introduction-discover.png)
+而从流程的维度讲，用户将产品带回家之后可以做如下归结：
 
-## OOBE
+![introduction](../images/introduction-discover.png)
+
+# OOBE
 Out-of-box experience，用户首次将产品买回家之后的开箱流程。这个流程的体验需要尽可能简单与健壮。
 可以看到，设置的流程是由下网上，由硬件向软件，由底层服务向高层服务的：
 
@@ -42,26 +42,41 @@ Out-of-box experience，用户首次将产品买回家之后的开箱流程。�
   - 语言
   - 时区
   - 静默升级时间段
-
+  
 - Service Setup
 
   再之后，就需要提供之上的应用层服务了：
-  - 音乐服务，例如Tunein, Amazon Music
-  - 语音服务，例如[Alexa](./iOS/Alexa.md)
+  - 音乐服务，例如 Tunein, Amazon Music
+  - 语音服务，例如 [Alexa](./iOS/Alexa.md)
+  
+这样，OOBE的流程就结束了，用户可以开始设备的使用。
 
-## 设备管理
-   发现设备是控制设备的前提：[Device Management](./iOS/Device_SDK.md)
+# 设备发现
+
+设备发现是设备控制的前提：[Device Discover](./iOS/Device_SDK.md)
+
+在我们的方案中，设备发现主要基于目前最流行的两个局域网设备发现协议：
+- [mDNS](https://tools.ietf.org/html/rfc6762)
+- [SSDP](https://openconnectivity.org/upnp-specs/UPnP-arch-DeviceArchitecture-v2.0-20200417.pdf)
+
+以此来提高设备发现的稳定性。
 
 # 设备交互
-1. 
+## 播放控制 ##
 
+[播放控制](./iOS/MusicSetting.html)是该方案的主要能力。
 
-# 网络服务
-![introduction](./images/introduction-3.png)
+## 其他功能 ##
 
-## 音源服务
-## 智能音源服务
+- 闹钟
+- 预置
+- OTA
 
+# 音源接入
 
+我们已经为您集成了很多流行的音源，包括但不限于：
+- Amazon Music
+- TuneIn
+- iHeartRadio
 
-
+请与您的接口人联系获得对应的SDK以及文档。
