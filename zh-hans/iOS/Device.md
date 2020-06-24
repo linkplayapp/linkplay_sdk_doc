@@ -623,18 +623,17 @@ Timer SDK 提供了设置休眠倒计时时间，获取休眠倒计时时间的A
 
     设备OTA需要配置升级的时间
 
-| 名称                    | 类型             | 描述                                                         |
-| ---------------------- | -----------------| ----------------------------------------------------------- |
-| FWDownloadTimeout      | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| FWWriteTimeout         | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| FWRebootTimeout        | int              | 固件下载阶段需要的时间, 默认 120s                                |
-| MCUDownloadTimeout     | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| MCUWriteTimeout        | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| MCURebootTimeout       | int              | 固件下载阶段需要的时间, 默认 120s                                |
-| DSPDownloadTimeout     | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| DSPWriteTimeout        | int              | 固件下载阶段需要的时间, 默认 120s                               |
-| DSPRebootTimeout       | int              | 固件下载阶段需要的时间, 默认 120s                                |
-
+| 名称                   | 类型              | 描述                                                        |
+| ---------------------- | ----------------- | ----------------------------------------------------------- |
+| FWDownloadTimeout      | int               | 固件下载阶段需要的时间, 默认 120s                           |
+| FWWriteTimeout         | int               | 固件升级阶段需要的时间, 默认 120s                           |
+| FWRebootTimeout        | int               | 固件重启阶段需要的时间, 默认 120s                           |
+| MCUDownloadTimeout     | int               | MCU下载阶段需要的时间, 默认 120s                            |
+| MCUWriteTimeout        | int               | MCU升级阶段需要的时间, 默认 120s                            |
+| MCURebootTimeout       | int               | MCU重启阶段需要的时间, 默认 120s                            |
+| DSPDownloadTimeout     | int               | DSP下载阶段需要的时间, 默认 120s                            |
+| DSPWriteTimeout        | int               | DSP升级阶段需要的时间, 默认 120s                            |
+| DSPRebootTimeout       | int               | DSP重启阶段需要的时间, 默认 120s                            |
 
 - `LPOTAPercentObj` 数据模型
 
@@ -684,7 +683,7 @@ Timer SDK 提供了设置休眠倒计时时间，获取休眠倒计时时间的A
 
 - 返回值
 
-    布尔类型 true/false
+    BOOL
 
 - 注意
 
@@ -837,7 +836,7 @@ Passthrough SDK 共有两个通知，用来传递数据和标识长连接状态�
 - 接口说明
 
     ``` ObjectiveC
-    - (void)connect;
+    - (void)disConnect;
     ```
 
 - 参数

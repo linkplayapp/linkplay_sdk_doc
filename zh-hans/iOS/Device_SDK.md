@@ -1,4 +1,4 @@
-# Device_SDK
+# 设备发现
 
 # Overview 
 
@@ -302,8 +302,6 @@
     ``` ObjectiveC
     [[LPDeviceManager sharedInstance] removeDevice:UUID];
     ```
-
-LPDevice 
 
 ### 设备上下线代理
 
@@ -709,13 +707,6 @@ deleteWithIndex
     SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Preset+SDK)
 
 ## Other Definitions
-
-### Delegate 
-
-
-
-
-### Constant 
 
 ### LPPlayMode
 

@@ -94,7 +94,7 @@ Splash 网页点击返回按键或者Skip按键对应的代理方法。
 
 - 接口说明
 
-    加载Alexa Splash网页
+    加载Alexa Login网页
 
     ``` ObjectiveC
     - (instancetype)initAlexaLoginViewWithFrame:(CGRect)frame device:(LPDevice *)device isBeta:(BOOL)isBeta;

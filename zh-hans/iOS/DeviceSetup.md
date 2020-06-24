@@ -2,16 +2,18 @@
 
 # Overview 
 
-设备配网SDK提供了把设备配置到路由器的能力，iOS13及以上需要提供定位权限，拿到手机所连的Wi-Fi的名称，目前提供以下两种配网方式：
+设备配网是用户配置设备的第一步。设备配网SDK提供了把设备配置到路由器的能力，目前提供以下两种配网方式：
 
 - BLE配网模式
 
-- Wi-Fi配网模式
+- SoftAP配网模式
+
+> iOS13及以上需要提供定位权限，拿到手机所连的Wi-Fi的名称。
 
 
 ### BLE 配网模式
 
-BLE SDK 中提供了配网功能，通过与设备建立BLE连接，发送配网信息至设备，设备连接Wi-Fi之后发送连接结果给App。LPBLEManager 提供了相应的API。
+BLE SDK 中提供了配网功能，通过与设备建立BLE连接，发送配网信息至设备，设备连接Wi-Fi之后发送连接结果给App。
 
 - `LP_CONNECT_AP_STATE`
 
@@ -56,10 +58,10 @@ BLE SDK 中提供了配网功能，通过与设备建立BLE连接，发送配网
 
 - 接口说明
 
-    配网失败后，如果手机所连WiFi和选择的目标路由器Wi-Fi不一致，可调用此方法重新检测配网结果
+    开始扫描BLE设备
 
     ``` ObjectiveC
-    - (void)retryCheckWithTime:(int)time success:(LPWiFiSetupSuccess)success failed:(LPWiFiSetupFailed)failed;
+    - (void)startScan:(void (^)(LPPeripheral *peripheral))callback;
     ```
 
 - 参数
@@ -184,7 +186,7 @@ BLE SDK 中提供了配网功能，通过与设备建立BLE连接，发送配网
 
 - 接口说明
 
-    与设备建立BLE连接。
+    发送配网指令。
 
     ``` ObjectiveC
     - (void)connectWLAN:(NSString *)ssid password:(NSString *)password auth:(NSString *)auth encry:(NSString *)encry
@@ -236,11 +238,11 @@ BLE SDK 中提供了配网功能，通过与设备建立BLE连接，发送配网
     }];
     ```
 
-### Wi-Fi 配网模式
+### SoftAP 配网模式
 
 LPWiFiSetupManager 提供了Wi-Fi配网的能力。
 
-- `LPApItem` 数据模型
+- `LPApItem`
 
     getApList 返回的Wi-Fi对象，包含以下信息
 
@@ -283,7 +285,7 @@ LPWiFiSetupManager 提供了Wi-Fi配网的能力。
 
 - 返回值
 
-    布尔类型，true/false
+    BOOL
 
 - 示例代码
 
