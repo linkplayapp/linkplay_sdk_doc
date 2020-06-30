@@ -40,4 +40,9 @@
       - [Alexa 网页登录](iOS/Alexa.md#alexa-网页登录)
       - [Alexa 登出](iOS/Alexa.md#alexa-登出)
       - [Alexa 设置](iOS/Alexa.md#alexa-设置)
+
 * [Android](android/README.md)
+
+* [Other](other/README.md)
+    * [Wi-Fi配网方式](other/wifisetup.md)
+

@@ -40,3 +40,6 @@
       - [Alexa Logout](iOS/Alexa.md#alexa-logout)
       - [Alexa Setting](iOS/Alexa.md#alexa-setting)
 * [Android](android/README.md)
+
+* [Other](other/README.md)
+    * [Wi-Fi Setup Methods](other/wifisetup.md)
