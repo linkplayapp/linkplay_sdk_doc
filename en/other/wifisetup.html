@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Android · LinkPlay SDK</title>
+        <title>Wi-Fi Setup Methods · LinkPlay SDK</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -86,10 +86,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../other/" />
     
-    
-    <link rel="prev" href="../iOS/Alexa.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -679,9 +677,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../android/">
             
-                <a href="./">
+                <a href="../android/">
             
                     
                     Android
@@ -692,9 +690,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../other/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../other/">
+                <a href="./">
             
                     
                     Other
@@ -706,9 +704,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../other/wifisetup.html">
+        <li class="chapter active" data-level="1.4.1" data-path="wifisetup.html">
             
-                <a href="../other/wifisetup.html">
+                <a href="wifisetup.html">
             
                     
                     Wi-Fi Setup Methods
@@ -754,7 +752,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Android</a>
+        <a href=".." >Wi-Fi Setup Methods</a>
     </h1>
 </div>
 
@@ -769,8 +767,79 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#android"><b></b>Android</a></li></ul></div><a href="#android" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="android"><a name="android" class="anchor-navigation-ex-anchor" href="#android"><i class="fa fa-link" aria-hidden="true"></i></a><a name="android" class="plugin-anchor" href="#android"><i class="fa fa-link" aria-hidden="true"></i></a>Android</h1>
-<p>hello world Android3</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wi-fi-setup-methods"><b></b>Wi-Fi Setup Methods</a></li><li><span class="title-icon "></span><a href="#summary"><b></b>Summary</a></li><li><span class="title-icon "></span><a href="#wac"><b></b>WAC</a></li><li><span class="title-icon "></span><a href="#why-we-recommend-ble-instead-of-softap"><b></b>Why we recommend BLE instead of SoftAP</a></li></ul></div><a href="#wi-fi-setup-methods" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="wi-fi-setup-methods"><a name="wi-fi-setup-methods" class="anchor-navigation-ex-anchor" href="#wi-fi-setup-methods"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wi-fi-setup-methods" class="plugin-anchor" href="#wi-fi-setup-methods"><i class="fa fa-link" aria-hidden="true"></i></a>Wi-Fi Setup Methods</h1>
+<h1 id="summary"><a name="summary" class="anchor-navigation-ex-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h1>
+<p>As the first step to setup any IoT devices, the UE for this step can be simplified to 2 words: simple, steady. Any other design is unnecessary. Currently we suppliy these following methods:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">WAC (iOS only)</td>
+<td style="text-align:left">If your device supports Airplay2, you can use this way</td>
+</tr>
+<tr>
+<td style="text-align:left">BLE</td>
+<td style="text-align:left">If your model supports BLE, we recommend you to use this way</td>
+</tr>
+<tr>
+<td style="text-align:left">SoftAP</td>
+<td style="text-align:left">If your model doesn&apos;t support BLE, you can use this</td>
+</tr>
+</tbody>
+</table>
+<h1 id="wac"><a name="wac" class="anchor-navigation-ex-anchor" href="#wac"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wac" class="plugin-anchor" href="#wac"><i class="fa fa-link" aria-hidden="true"></i></a>WAC</h1>
+<p>WAC, Wireless Accessory Configuration, is introduced by Apple in <a href="https://developer.apple.com/videos/play/wwdc2013/700/" target="_blank">2013</a> which used to configure Wi-Fi product. You need to join Apple MFi program and implement specific hardware in your embedded device.</p>
+<p>The benefit of this method is that user can connect the device to the iPhone&apos;s connected AP directly without entering password. The flow is like this:</p>
+<p><img src="images/WAC.png" alt="introduction"></p>
+<h1 id="why-we-recommend-ble-instead-of-softap"><a name="why-we-recommend-ble-instead-of-softap" class="anchor-navigation-ex-anchor" href="#why-we-recommend-ble-instead-of-softap"><i class="fa fa-link" aria-hidden="true"></i></a><a name="why-we-recommend-ble-instead-of-softap" class="plugin-anchor" href="#why-we-recommend-ble-instead-of-softap"><i class="fa fa-link" aria-hidden="true"></i></a>Why we recommend BLE instead of SoftAP</h1>
+<p>In short:</p>
+<ol>
+<li><p>App can&apos;t discover the un-setup devices around (not like BLE), app can only use tooltip text to lead user to setup the device.</p>
+</li>
+<li><p>There&apos;re some cases that app can&apos;t decide if the device is setup successfully. In contrary, BLE setup can know clearly what the result is, if it&apos;s success or fail, the reason for the failure is password incorrect, protocol issues or others. SoftAP setup can&apos;t get the clearly result, actually when the connect command has sent out, then the app starts to guess what the state of the device is.</p>
+</li>
+<li><p>When Android phone connects to device&apos;s hotspot, the system would make a misleading alert which would interrupt our setup process and we can&apos;t do anything about it.</p>
+</li>
+</ol>
+<p>More details:</p>
+<ul>
+<li><p>Can&apos;t notify user the unpaired devices around</p>
+<p>  <img src="images/softap-1.png" alt="introduction"></p>
+<p>  If using BLE, the app can tell user &quot;Found new device xxx&quot;;
+  But if we use softAP to setup device, we can only using sentences like &quot;Open your phone settings and tap on Wi-F, tap on xxx and come back to this app&quot;; and we have to tell the user to confirm that Wi-Fi indicator blinks which means the device is in setup mode</p>
+</li>
+<li><p>When Android phone connected to the device&apos;s AP, it&apos;ll pop up an alert which would mislead the user</p>
+<p>  <img src="images/softap-2.png" alt="introduction"></p>
+<p>  You can see there&apos;re 2 options, &quot;Switch to mobile data&quot; and &quot;Another network&quot;. We have many customer complains about this, because customer may not know clearly what this means and chooses one of them, then the setup process would be interrupt. </p>
+<p>  <img src="images/softap-8.png" alt="introduction"></p>
+</li>
+<li><p>Device tries to connect to router, app disconnects from device, the system enters an uncertain state.</p>
+<p>  <img src="images/softap-3.png" alt="introduction"></p>
+<p>  Now the device is in an unknown state:</p>
+<ul>
+<li><p><span style="color:green">Success</span></p>
+<p>  <img src="images/softap-4.png" alt="introduction"></p>
+</li>
+<li><p><span style="color:green">There&apos;re multiple AP around, and bridge together</span></p>
+<p>  <img src="images/softap-5.png" alt="introduction"></p>
+<p>  Maybe device and phone are not in same router, they still can contact with each other. Success.</p>
+</li>
+<li><p><span style="color:red">Password incorrect, or other reasons,  anyway device doesn&apos;t connect to router successfully</span></p>
+<p>  <img src="images/softap-6.png" alt="introduction"></p>
+<p>  Phone disconnects from the device, and connects to a router around randomly. After timeout the phone can&apos;t discover the device, fail.</p>
+</li>
+<li><p><span style="color:red">There&apos;re multiple AP around and isolate</span></p>
+<p>  <img src="images/softap-7.png" alt="introduction"></p>
+<p>  App can&apos;t discover the device, timeout and fail.</p>
+</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -798,14 +867,10 @@
 
             
                 
-                <a href="../iOS/Alexa.html#alexa-setting" class="navigation navigation-prev " aria-label="Previous page: Alexa Setting">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Other">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../other/" class="navigation navigation-next " aria-label="Next page: Other">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -814,7 +879,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android","level":"1.3","depth":1,"next":{"title":"Other","level":"1.4","depth":1,"path":"other/README.md","ref":"other/README.md","articles":[{"title":"Wi-Fi Setup Methods","level":"1.4.1","depth":2,"path":"other/wifisetup.md","ref":"other/wifisetup.md","articles":[]}]},"previous":{"title":"Alexa Setting","level":"1.2.8.4","depth":3,"anchor":"#alexa-setting","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#alexa-setting","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/README.md","mtime":"2020-06-28T03:09:03.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T08:21:58.593Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Wi-Fi Setup Methods","level":"1.4.1","depth":2,"previous":{"title":"Other","level":"1.4","depth":1,"path":"other/README.md","ref":"other/README.md","articles":[{"title":"Wi-Fi Setup Methods","level":"1.4.1","depth":2,"path":"other/wifisetup.md","ref":"other/wifisetup.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"other/wifisetup.md","mtime":"2020-06-30T08:21:54.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T08:21:58.593Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
