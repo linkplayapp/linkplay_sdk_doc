@@ -205,34 +205,6 @@ Insert song to next play
     ```
 
 
-### Restore
-
-#### Restore
-
-- Description
-
-    ``` ObjectiveC
-    - (void)resetDeviceWithDeviceID:(NSString *)UUID completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
-    ```
-
-- Parameter
-
-| Name           | Type                     | Description                                     |
-| :------------- | :----------------------- | :---------------------------------------------- |
-| UUID           | NSString                 | Device UUID                                     |
-
-- Response
-
-    N/A
-
-- Sample Code
-
-    ``` ObjectiveC
-    [[LPDeviceSettingsManager sharedInstance] resetDeviceWithDeviceID:device.deviceStatus.UUID completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-    }];
-    ```
-
 ### Alarm
 
 We wrapper the alarm related functions of the device here. <br>

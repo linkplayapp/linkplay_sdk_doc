@@ -1,13 +1,14 @@
+#!/bin/sh
+
+script_dir=$(dirname $0)
+cd $script_dir
+
 rm -rf /tmp/_book
 cp -r _book /tmp
-
-git add .
-stash_result=`git stash`
 
 git checkout gh-pages
 git fetch
 git rebase
-# rm -rf ./*
 cp -rf /tmp/_book/* .
 
 git add .

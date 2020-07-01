@@ -207,34 +207,6 @@
     ```
 
 
-### 恢复出厂设置
-
-#### 恢复出厂设置
-
-- 接口说明
-
-    ``` ObjectiveC
-    - (void)resetDeviceWithDeviceID:(NSString *)UUID completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
-    ```
-
-- 参数
-
-| 名称           | 类型                    | 接口说明                                         |
-| :-------------| :-----------------------| :---------------------------------------------- |
-| UUID          | NSString                | 设备UUID                                         |
-
-- 返回值
-
-    无
-
-- 示例代码
-
-    ``` ObjectiveC
-    [[LPDeviceSettingsManager sharedInstance] resetDeviceWithDeviceID:device.deviceStatus.UUID completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-    }];
-    ```
-
 ### 闹钟
 
 闹钟SDK实现了设备本地闹钟的功能。通过时间、周期、音乐的设定，来实现定时音箱闹铃功能。<br>
