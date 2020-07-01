@@ -385,9 +385,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.2" data-path="DeviceInfoSetting.html">
+        <li class="chapter " data-level="1.2.4.2" data-path="Device.html">
             
-                <a href="DeviceInfoSetting.html#restore">
+                <a href="Device.html#restore">
             
                     
                     Restore
@@ -398,20 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.3" data-path="DeviceInfoSetting.html">
-            
-                <a href="DeviceInfoSetting.html#switch-input-source">
-            
-                    
-                    Switch input source
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.4.4" data-path="Device.html">
+        <li class="chapter " data-level="1.2.4.3" data-path="Device.html">
             
                 <a href="Device.html#schedule-shutdown">
             
@@ -782,18 +769,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#restore"><b></b>Restore</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>This SDK implements most of the device related functions, includes play control, settings, preset, alarm and so on.</p>
 <h3 id="play-control"><a name="play-control" class="anchor-navigation-ex-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-control" class="plugin-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a>Play Control</h3>
 <h4 id="get-play-control-object"><a name="get-play-control-object" class="anchor-navigation-ex-anchor" href="#get-play-control-object"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-play-control-object" class="plugin-anchor" href="#get-play-control-object"><i class="fa fa-link" aria-hidden="true"></i></a>Get Play Control Object</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span>LPDevicePlayer <span class="token operator">*</span><span class="token punctuation">)</span>getPlayer<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>LPDevicePlayer <span class="token operator">*</span><span class="token punctuation">)</span>getPlayer<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
 </li>
@@ -815,73 +802,73 @@
 <h4 id="play"><a name="play" class="anchor-navigation-ex-anchor" href="#play"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play" class="plugin-anchor" href="#play"><i class="fa fa-link" aria-hidden="true"></i></a>Play</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>play<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>play<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="pause"><a name="pause" class="anchor-navigation-ex-anchor" href="#pause"><i class="fa fa-link" aria-hidden="true"></i></a><a name="pause" class="plugin-anchor" href="#pause"><i class="fa fa-link" aria-hidden="true"></i></a>Pause</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>pause<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>pause<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="stop"><a name="stop" class="anchor-navigation-ex-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop" class="plugin-anchor" href="#stop"><i class="fa fa-link" aria-hidden="true"></i></a>Stop</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>stop<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>stop<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="next"><a name="next" class="anchor-navigation-ex-anchor" href="#next"><i class="fa fa-link" aria-hidden="true"></i></a><a name="next" class="plugin-anchor" href="#next"><i class="fa fa-link" aria-hidden="true"></i></a>Next</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>next<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>next<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="previous"><a name="previous" class="anchor-navigation-ex-anchor" href="#previous"><i class="fa fa-link" aria-hidden="true"></i></a><a name="previous" class="plugin-anchor" href="#previous"><i class="fa fa-link" aria-hidden="true"></i></a>Previous</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>previous<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>previous<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="play-music"><a name="play-music" class="anchor-navigation-ex-anchor" href="#play-music"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-music" class="plugin-anchor" href="#play-music"><i class="fa fa-link" aria-hidden="true"></i></a>Play Music</h4>
 <p>Get the play info from music source SDK and pass it to device withi this function. You can use LPMDPKitManager SDK to translate LPPlayMusicList object to musicDictionary</p>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playAudioWithMusicDictionary<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>musicDictionary completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playAudioWithMusicDictionary<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>musicDictionary completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -891,32 +878,32 @@
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
+<th>Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">musicDictionary</td>
-<td style="text-align:left">NSDictionary</td>
+<td>NSDictionary</td>
 <td style="text-align:left">Music info to play</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaLibManager sharedInstance<span class="token punctuation">]</span> searchSongs<span class="token punctuation">:</span>nil completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPPlayMusicList <span class="token operator">*</span> _Nonnull musicListObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      musicListObj<span class="token punctuation">.</span>index <span class="token operator">=</span> index<span class="token punctuation">;</span>
-      NSDictionary <span class="token operator">*</span>info <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> playMusicSingleSource<span class="token punctuation">:</span>listObj<span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer playAudioWithMusicDictionary<span class="token punctuation">:</span>info completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaLibManager sharedInstance<span class="token punctuation">]</span> searchSongs<span class="token punctuation">:</span>nil completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPPlayMusicList <span class="token operator">*</span> _Nonnull musicListObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        musicListObj<span class="token punctuation">.</span>index <span class="token operator">=</span> index<span class="token punctuation">;</span>
+        NSDictionary <span class="token operator">*</span>info <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> playMusicSingleSource<span class="token punctuation">:</span>listObj<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer playAudioWithMusicDictionary<span class="token punctuation">:</span>info completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -924,7 +911,7 @@
 <p>Insert song to next play</p>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>nextPlay<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>musicDictionary completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>nextPlay<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>musicDictionary completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -934,36 +921,80 @@
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
+<th>Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">musicDictionary</td>
-<td style="text-align:left">NSDictionary</td>
+<td>NSDictionary</td>
 <td style="text-align:left">Music content to play</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPMediaSourceAction <span class="token operator">*</span>action <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaSourceAction alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> addToNextPlayWithDeviceId<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>uuid playMusicList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj deviceAction<span class="token punctuation">:</span>action block<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span> _Nonnull dictionary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer nextPlay<span class="token punctuation">:</span>dictionary completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPMediaSourceAction <span class="token operator">*</span>action <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaSourceAction alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> addToNextPlayWithDeviceId<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>uuid playMusicList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj deviceAction<span class="token punctuation">:</span>action block<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span> _Nonnull dictionary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer nextPlay<span class="token punctuation">:</span>dictionary completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="remove-music-from-current-playlist"><a name="remove-music-from-current-playlist" class="anchor-navigation-ex-anchor" href="#remove-music-from-current-playlist"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-music-from-current-playlist" class="plugin-anchor" href="#remove-music-from-current-playlist"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Music from Current Playlist</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deleteWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deleteWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th>Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td>NSInteger</td>
+<td style="text-align:left">Index in current playlist</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> browseCurrentQueueWithcompletionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      LPPlayMusicList <span class="token operator">*</span>musicListObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getBrowseListWithString<span class="token punctuation">:</span>result<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Current list = %@&quot;</span><span class="token punctuation">,</span> musicListObj<span class="token punctuation">.</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> deleteWithIndex<span class="token punctuation">:</span>index completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Delete index success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="restore"><a name="restore" class="anchor-navigation-ex-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a><a name="restore" class="plugin-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a>Restore</h3>
+<h4 id="restore_1"><a name="restore_1" class="anchor-navigation-ex-anchor" href="#restore_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="restore" class="plugin-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a>Restore</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>resetDeviceWithDeviceID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -979,27 +1010,20 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">index</td>
-<td style="text-align:left">NSInteger</td>
-<td style="text-align:left">Index in current playlist</td>
+<td style="text-align:left">UUID</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">Device UUID</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> browseCurrentQueueWithcompletionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    LPPlayMusicList <span class="token operator">*</span>musicListObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getBrowseListWithString<span class="token punctuation">:</span>result<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Current list = %@&quot;</span><span class="token punctuation">,</span> musicListObj<span class="token punctuation">.</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPlayer<span class="token punctuation">]</span> deleteWithIndex<span class="token punctuation">:</span>index completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Delete index success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceSettingsManager sharedInstance<span class="token punctuation">]</span> resetDeviceWithDeviceID<span class="token punctuation">:</span>device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>UUID completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -1010,26 +1034,26 @@
 <h4 id="alarm-list"><a name="alarm-list" class="anchor-navigation-ex-anchor" href="#alarm-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alarm-list" class="plugin-anchor" href="#alarm-list"><i class="fa fa-link" aria-hidden="true"></i></a>Alarm List</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getAlarms<span class="token punctuation">:</span><span class="token punctuation">(</span>LPGetAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getAlarms<span class="token punctuation">:</span><span class="token punctuation">(</span>LPGetAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span>device<span class="token punctuation">.</span>getAlarm getAlarms<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span> _Nullable alarmString<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    NSArray <span class="token operator">*</span>alarmList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getAlarmDataWithString<span class="token punctuation">:</span>alarmString<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span>device<span class="token punctuation">.</span>getAlarm getAlarms<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span> _Nullable alarmString<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      NSArray <span class="token operator">*</span>alarmList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getAlarmDataWithString<span class="token punctuation">:</span>alarmString<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="create-alarm"><a name="create-alarm" class="anchor-navigation-ex-anchor" href="#create-alarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-alarm" class="plugin-anchor" href="#create-alarm"><i class="fa fa-link" aria-hidden="true"></i></a>Create Alarm</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>addAlarmWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>addAlarmWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1053,33 +1077,33 @@
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPAlarmList <span class="token operator">*</span>tempObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPAlarmList alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
-tempObj<span class="token punctuation">.</span>clockName <span class="token operator">=</span> <span class="token operator">@</span>&#x201C;&#x201D;<span class="token punctuation">;</span>
-tempObj<span class="token punctuation">.</span>trigger <span class="token operator">=</span> LP_ALARM_TRIGGER_ONCE<span class="token punctuation">;</span>
-tempObj<span class="token punctuation">.</span>type <span class="token operator">=</span> LP_ALARM_PLAYQUEUE<span class="token punctuation">;</span>
-tempObj<span class="token punctuation">.</span>volume <span class="token operator">=</span> <span class="token string">@&quot;50&quot;</span><span class="token punctuation">;</span>
-tempObj<span class="token punctuation">.</span>enable <span class="token operator">=</span> YES<span class="token punctuation">;</span>
-NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> addAlarmDataWithClockList<span class="token punctuation">:</span>tempObj<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>alarm addAlarmWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Add Alarm successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Add Alarm failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPAlarmList <span class="token operator">*</span>tempObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPAlarmList alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  tempObj<span class="token punctuation">.</span>clockName <span class="token operator">=</span> <span class="token operator">@</span>&#x201C;&#x201D;<span class="token punctuation">;</span>
+  tempObj<span class="token punctuation">.</span>trigger <span class="token operator">=</span> LP_ALARM_TRIGGER_ONCE<span class="token punctuation">;</span>
+  tempObj<span class="token punctuation">.</span>type <span class="token operator">=</span> LP_ALARM_PLAYQUEUE<span class="token punctuation">;</span>
+  tempObj<span class="token punctuation">.</span>volume <span class="token operator">=</span> <span class="token string">@&quot;50&quot;</span><span class="token punctuation">;</span>
+  tempObj<span class="token punctuation">.</span>enable <span class="token operator">=</span> YES<span class="token punctuation">;</span>
+  NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> addAlarmDataWithClockList<span class="token punctuation">:</span>tempObj<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>alarm addAlarmWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Add Alarm successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Add Alarm failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Note</p>
-<p>If the wakeup sound is an online music, and device can&apos;t play it (for example the token is invalid), then the device would play with the default ring sound.</p>
+<p>  If the wakeup sound is an online music, and device can&apos;t play it (for example the token is invalid), then the device would play with the default ring sound.</p>
 </li>
 </ul>
 <h4 id="edit-alarm"><a name="edit-alarm" class="anchor-navigation-ex-anchor" href="#edit-alarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="edit-alarm" class="plugin-anchor" href="#edit-alarm"><i class="fa fa-link" aria-hidden="true"></i></a>Edit Alarm</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>editAlarmWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandle<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>editAlarmWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandle<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1103,28 +1127,28 @@ NSDictionary <span class="token operator">*</span>alarmDict <span class="token o
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPAlarmList <span class="token operator">*</span>Alarm <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>tempObj<span class="token punctuation">;</span>
-Alarm<span class="token punctuation">.</span>trigger <span class="token operator">=</span> LP_ALARM_TRIGGER_ONCE<span class="token punctuation">;</span>
-Alarm<span class="token punctuation">.</span>type <span class="token operator">=</span> LP_ALARM_PLAYQUEUE<span class="token punctuation">;</span>
-Alarm<span class="token punctuation">.</span>volume <span class="token operator">=</span> <span class="token string">@&quot;60&quot;</span><span class="token punctuation">;</span>
-NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> editAlarmDataWithClockList<span class="token punctuation">:</span>Alarm<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>alarm editAlarmWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Edit Alarm successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Edit Alarm failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPAlarmList <span class="token operator">*</span>Alarm <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>tempObj<span class="token punctuation">;</span>
+  Alarm<span class="token punctuation">.</span>trigger <span class="token operator">=</span> LP_ALARM_TRIGGER_ONCE<span class="token punctuation">;</span>
+  Alarm<span class="token punctuation">.</span>type <span class="token operator">=</span> LP_ALARM_PLAYQUEUE<span class="token punctuation">;</span>
+  Alarm<span class="token punctuation">.</span>volume <span class="token operator">=</span> <span class="token string">@&quot;60&quot;</span><span class="token punctuation">;</span>
+  NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> editAlarmDataWithClockList<span class="token punctuation">:</span>Alarm<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>alarm editAlarmWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Edit Alarm successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Edit Alarm failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="remove-alarm"><a name="remove-alarm" class="anchor-navigation-ex-anchor" href="#remove-alarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-alarm" class="plugin-anchor" href="#remove-alarm"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Alarm</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deleteAlarmWithName<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>name completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deleteAlarmWithName<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>name completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1148,42 +1172,42 @@ NSDictionary <span class="token operator">*</span>alarmDict <span class="token o
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPAlarmList <span class="token operator">*</span>Alarm <span class="token operator">=</span> alarmArray<span class="token punctuation">[</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDeiceAlarm <span class="token operator">*</span>alarm <span class="token operator">=</span> device<span class="token punctuation">.</span>getAlarm<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>alarm deleteAlarmWithName<span class="token punctuation">:</span>Alarm<span class="token punctuation">.</span>clockName completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;successfully deleted&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPAlarmList <span class="token operator">*</span>Alarm <span class="token operator">=</span> alarmArray<span class="token punctuation">[</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDeiceAlarm <span class="token operator">*</span>alarm <span class="token operator">=</span> device<span class="token punctuation">.</span>getAlarm<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>alarm deleteAlarmWithName<span class="token punctuation">:</span>Alarm<span class="token punctuation">.</span>clockName completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;successfully deleted&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="max-alarm-support"><a name="max-alarm-support" class="anchor-navigation-ex-anchor" href="#max-alarm-support"><i class="fa fa-link" aria-hidden="true"></i></a><a name="max-alarm-support" class="plugin-anchor" href="#max-alarm-support"><i class="fa fa-link" aria-hidden="true"></i></a>Max Alarm Support</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>getAlarmMaxNum<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>getAlarmMaxNum<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>int num&#xFF0C;max alarm number device support</p>
+<p>  int num&#xFF0C;max alarm number device support</p>
 </li>
 <li><p>Note</p>
-<p>You shouldn&apos;t create more alarms than the device support.</p>
+<p>  You shouldn&apos;t create more alarms than the device support.</p>
 </li>
 </ul>
 <h4 id="enabledisable-alarm"><a name="enabledisable-alarm" class="anchor-navigation-ex-anchor" href="#enabledisable-alarm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="enabledisable-alarm" class="plugin-anchor" href="#enabledisable-alarm"><i class="fa fa-link" aria-hidden="true"></i></a>Enable/Disable Alarm</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setAlarmSwitchOnWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setAlarmSwitchOnWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPAlarmBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1207,13 +1231,13 @@ LPDeiceAlarm <span class="token operator">*</span>alarm <span class="token opera
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> setAlarmStatusWithOpen<span class="token punctuation">:</span>switchButton<span class="token punctuation">.</span>on clockList<span class="token punctuation">:</span>Alarm<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>alarm setAlarmSwitchOnWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-ObjectiveC">  NSDictionary <span class="token operator">*</span>alarmDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> setAlarmStatusWithOpen<span class="token punctuation">:</span>switchButton<span class="token punctuation">.</span>on clockList<span class="token punctuation">:</span>Alarm<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>alarm setAlarmSwitchOnWithInfomation<span class="token punctuation">:</span>alarmDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -1224,35 +1248,35 @@ LPDeiceAlarm <span class="token operator">*</span>alarm <span class="token opera
 <h4 id="list"><a name="list" class="anchor-navigation-ex-anchor" href="#list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="list" class="plugin-anchor" href="#list"><i class="fa fa-link" aria-hidden="true"></i></a>List</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getPresets<span class="token punctuation">:</span><span class="token punctuation">(</span>LPGetPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getPresets<span class="token punctuation">:</span><span class="token punctuation">(</span>LPGetPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>devicePreset getPresets<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token keyword">int</span> presetNumber<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable presetString<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-   <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
-       <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getPresetListDataWithNumber<span class="token punctuation">:</span>presetNumber presetString<span class="token punctuation">:</span>presetString<span class="token punctuation">]</span><span class="token punctuation">;</span>
-       <span class="token keyword">for</span> <span class="token punctuation">(</span>LPPlayMusicList <span class="token operator">*</span>listObj <span class="token keyword">in</span> <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-           LPPlayHeader <span class="token operator">*</span>header <span class="token operator">=</span> listObj<span class="token punctuation">.</span>header<span class="token punctuation">;</span>
-           <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;title = %@&quot;</span><span class="token punctuation">,</span> header<span class="token punctuation">.</span>headTitle<span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token punctuation">}</span>
-       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;preset list = %@&quot;</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>devicePreset getPresets<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token keyword">int</span> presetNumber<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable presetString<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+         <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getPresetListDataWithNumber<span class="token punctuation">:</span>presetNumber presetString<span class="token punctuation">:</span>presetString<span class="token punctuation">]</span><span class="token punctuation">;</span>
+         <span class="token keyword">for</span> <span class="token punctuation">(</span>LPPlayMusicList <span class="token operator">*</span>listObj <span class="token keyword">in</span> <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             LPPlayHeader <span class="token operator">*</span>header <span class="token operator">=</span> listObj<span class="token punctuation">.</span>header<span class="token punctuation">;</span>
+             <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;title = %@&quot;</span><span class="token punctuation">,</span> header<span class="token punctuation">.</span>headTitle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+         <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;preset list = %@&quot;</span><span class="token punctuation">,</span> <span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="update"><a name="update" class="anchor-navigation-ex-anchor" href="#update"><i class="fa fa-link" aria-hidden="true"></i></a><a name="update" class="plugin-anchor" href="#update"><i class="fa fa-link" aria-hidden="true"></i></a>Update</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setPresetWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setPresetWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1276,34 +1300,34 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPPlayMusicList <span class="token operator">*</span>musicList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPPlayMusicList alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPPlayHeader <span class="token operator">*</span>header <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>header<span class="token punctuation">;</span>
-musicList<span class="token punctuation">.</span>header <span class="token operator">=</span> header<span class="token punctuation">;</span>
-<span class="token comment">//Need preset songs</span>
-LPPlayItem <span class="token operator">*</span>item <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
-musicList<span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">;</span>
-musicList<span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">;</span>
-musicList<span class="token punctuation">.</span>account <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>account<span class="token punctuation">;</span>
-NSDictionary <span class="token operator">*</span>presetDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> updataPresetDataWithPlayMusicList<span class="token punctuation">:</span>musicList devicePresetList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>devicePreset setPresetWithInfomation<span class="token punctuation">:</span>presetDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
-         <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-             <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Set preset successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-         <span class="token punctuation">}</span>
-     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPPlayMusicList <span class="token operator">*</span>musicList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPPlayMusicList alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPPlayHeader <span class="token operator">*</span>header <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>header<span class="token punctuation">;</span>
+  musicList<span class="token punctuation">.</span>header <span class="token operator">=</span> header<span class="token punctuation">;</span>
+  <span class="token comment">//Need preset songs</span>
+  LPPlayItem <span class="token operator">*</span>item <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+  musicList<span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  musicList<span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">;</span>
+  musicList<span class="token punctuation">.</span>account <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>account<span class="token punctuation">;</span>
+  NSDictionary <span class="token operator">*</span>presetDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> updataPresetDataWithPlayMusicList<span class="token punctuation">:</span>musicList devicePresetList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>devicePreset setPresetWithInfomation<span class="token punctuation">:</span>presetDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+           <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Set preset successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="remove"><a name="remove" class="anchor-navigation-ex-anchor" href="#remove"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove" class="plugin-anchor" href="#remove"><i class="fa fa-link" aria-hidden="true"></i></a>Remove</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deletePresetWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>deletePresetWithInfomation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>infomation completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1327,26 +1351,26 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">NSDictionary <span class="token operator">*</span>presetDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> deletePresetDataWithIndex<span class="token punctuation">:</span>index devicePresetList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>devicePreset deletePresetWithInfomation<span class="token punctuation">:</span>presetDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Delete preset successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  NSDictionary <span class="token operator">*</span>presetDict <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> deletePresetDataWithIndex<span class="token punctuation">:</span>index devicePresetList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>keyArray<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>devicePreset deletePresetWithInfomation<span class="token punctuation">:</span>presetDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Delete preset successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="play_1"><a name="play_1" class="anchor-navigation-ex-anchor" href="#play_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play" class="plugin-anchor" href="#play"><i class="fa fa-link" aria-hidden="true"></i></a>Play</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playPresetWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playPresetWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPresetBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1370,18 +1394,18 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
-LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>devicePreset playPresetWithIndex<span class="token punctuation">:</span>indexPath<span class="token punctuation">.</span>row <span class="token operator">+</span> <span class="token number">1</span> completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPDevice <span class="token operator">*</span>device <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPDevicePreset <span class="token operator">*</span>devicePreset <span class="token operator">=</span> device<span class="token punctuation">.</span>getPreset<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>devicePreset playPresetWithIndex<span class="token punctuation">:</span>indexPath<span class="token punctuation">.</span>row <span class="token operator">+</span> <span class="token number">1</span> completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -1390,8 +1414,8 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 <h4 id="enable"><a name="enable" class="anchor-navigation-ex-anchor" href="#enable"><i class="fa fa-link" aria-hidden="true"></i></a><a name="enable" class="plugin-anchor" href="#enable"><i class="fa fa-link" aria-hidden="true"></i></a>Enable</h4>
 <ul>
 <li><p>Description</p>
-<p>Schedule shutdown timer.</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setTimerWithTime<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>time completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<p>  Schedule shutdown timer.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setTimerWithTime<span class="token punctuation">:</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">)</span>time completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1415,28 +1439,28 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="get-scheduled-shutdown-timer"><a name="get-scheduled-shutdown-timer" class="anchor-navigation-ex-anchor" href="#get-scheduled-shutdown-timer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-scheduled-shutdown-timer" class="plugin-anchor" href="#get-scheduled-shutdown-timer"><i class="fa fa-link" aria-hidden="true"></i></a>Get Scheduled Shutdown Timer</h4>
 <ul>
 <li><p>Description</p>
-<p>Get current timer</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getTimer<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<p>  Get current timer</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getTimer<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h3 id="ota"><a name="ota" class="anchor-navigation-ex-anchor" href="#ota"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ota" class="plugin-anchor" href="#ota"><i class="fa fa-link" aria-hidden="true"></i></a>OTA</h3>
-<p>OTA SDK implments check, trigger function. When in OTA, there&apos;re 3 steps: download, updating, rebooting, which state is MV_UP_STATUS_DOWNLOAD_START, MV_UP_STATUS_WRITE_START, MV_UP_STATUS_REBOOT</p>
+<p> OTA SDK implments check, trigger function. When in OTA, there&apos;re 3 steps: download, updating, rebooting, which state is MV_UP_STATUS_DOWNLOAD_START, MV_UP_STATUS_WRITE_START, MV_UP_STATUS_REBOOT</p>
 <ul>
 <li><p><code>LPOTATimeoutObj</code></p>
-<p>You should config timeout for each step.</p>
+<p>  You should config timeout for each step.</p>
 </li>
 </ul>
 <table>
@@ -1497,7 +1521,7 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p><code>LPOTAPercentObj</code></p>
-<p>Response object return in OTA process</p>
+<p>  Response object return in OTA process</p>
 </li>
 </ul>
 <table>
@@ -1543,7 +1567,7 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p><code>OTAStatus</code></p>
-<p>OTA status</p>
+<p>  OTA status</p>
 </li>
 </ul>
 <table>
@@ -1595,24 +1619,24 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 <h4 id="check-new-version"><a name="check-new-version" class="anchor-navigation-ex-anchor" href="#check-new-version"><i class="fa fa-link" aria-hidden="true"></i></a><a name="check-new-version" class="plugin-anchor" href="#check-new-version"><i class="fa fa-link" aria-hidden="true"></i></a>Check New Version</h4>
 <ul>
 <li><p>Description</p>
-<p>Check if there&apos;s new version</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>checkUpdate<span class="token punctuation">;</span>
+<p>  Check if there&apos;s new version</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>checkUpdate<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>BOOL</p>
+<p>  BOOL</p>
 </li>
 <li><p>Note</p>
-<p>Don&apos;t call this function immediately after Wi-Fi setup; firmware needs time to check if there&apos;s new version</p>
+<p>  Don&apos;t call this function immediately after Wi-Fi setup; firmware needs time to check if there&apos;s new version</p>
 </li>
 </ul>
 <h4 id="start-ota"><a name="start-ota" class="anchor-navigation-ex-anchor" href="#start-ota"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-ota" class="plugin-anchor" href="#start-ota"><i class="fa fa-link" aria-hidden="true"></i></a>Start OTA</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>firmwareStartUpdate<span class="token punctuation">:</span><span class="token punctuation">(</span>LPOTATimeoutObj <span class="token operator">*</span><span class="token punctuation">)</span>timeoutObj completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPFirmwareUpdateResultBlock<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>firmwareStartUpdate<span class="token punctuation">:</span><span class="token punctuation">(</span>LPOTATimeoutObj <span class="token operator">*</span><span class="token punctuation">)</span>timeoutObj completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPFirmwareUpdateResultBlock<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1636,14 +1660,14 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="ota-delegate"><a name="ota-delegate" class="anchor-navigation-ex-anchor" href="#ota-delegate"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ota-delegate" class="plugin-anchor" href="#ota-delegate"><i class="fa fa-link" aria-hidden="true"></i></a>OTA Delegate</h4>
 <ul>
 <li><p>Description</p>
-<p>OTA status, progress notify</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>LPOTAPercentUpdate<span class="token punctuation">:</span><span class="token punctuation">(</span>LPOTAPercentObj <span class="token operator">*</span><span class="token punctuation">)</span>percentObj<span class="token punctuation">;</span>
+<p>  OTA status, progress notify</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>LPOTAPercentUpdate<span class="token punctuation">:</span><span class="token punctuation">(</span>LPOTAPercentObj <span class="token operator">*</span><span class="token punctuation">)</span>percentObj<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1667,10 +1691,10 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Note</p>
-<p>Start OTA. Please tell user not to cut off the power on UI.</p>
+<p>  Start OTA. Please tell user not to cut off the power on UI.</p>
 </li>
 </ul>
 <h3 id="mcu-passthrough"><a name="mcu-passthrough" class="anchor-navigation-ex-anchor" href="#mcu-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mcu-passthrough" class="plugin-anchor" href="#mcu-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a>MCU Passthrough</h3>
@@ -1680,8 +1704,8 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 <h4 id="lppassthroughconnectionstatechanged"><a name="lppassthroughconnectionstatechanged" class="anchor-navigation-ex-anchor" href="#lppassthroughconnectionstatechanged"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lppassthroughconnectionstatechanged" class="plugin-anchor" href="#lppassthroughconnectionstatechanged"><i class="fa fa-link" aria-hidden="true"></i></a>LPPassthroughConnectionStateChanged</h4>
 <ul>
 <li><p>Description</p>
-<p>Passthrough connection status</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassthroughConnectionStateChanged object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<p>  Passthrough connection status</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassthroughConnectionStateChanged object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1705,24 +1729,24 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassthroughConnectionStateChanged object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassthroughConnectionStateChanged object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<span class="token comment">// LPPassthroughConnectionStateChanged</span>
-<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notificaiton <span class="token punctuation">{</span>
-    NSDictionary <span class="token operator">*</span>dictionary <span class="token operator">=</span> notificaiton<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;isConnected = %@&quot;</span><span class="token punctuation">,</span> dictionary<span class="token punctuation">[</span><span class="token string">@&quot;isConnected&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+  <span class="token comment">// LPPassthroughConnectionStateChanged</span>
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>passthroughConnectionStateChanged<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notificaiton <span class="token punctuation">{</span>
+      NSDictionary <span class="token operator">*</span>dictionary <span class="token operator">=</span> notificaiton<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;isConnected = %@&quot;</span><span class="token punctuation">,</span> dictionary<span class="token punctuation">[</span><span class="token string">@&quot;isConnected&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="lppassthroughmessagecome"><a name="lppassthroughmessagecome" class="anchor-navigation-ex-anchor" href="#lppassthroughmessagecome"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lppassthroughmessagecome" class="plugin-anchor" href="#lppassthroughmessagecome"><i class="fa fa-link" aria-hidden="true"></i></a>LPPassThroughMessageCome</h4>
 <ul>
 <li><p>Description</p>
-<p>Passthrough data received</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassThroughMessageCome object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<p>  Passthrough data received</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassThroughMessageCome object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1746,54 +1770,54 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassThroughMessageCome object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span>LPPassThroughMessageCome object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<span class="token comment">// LPPassThroughMessageCome</span>
-<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notificaiton <span class="token punctuation">{</span>
-    NSDictionary <span class="token operator">*</span>dictionary <span class="token operator">=</span> notificaiton<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;response = %@&quot;</span><span class="token punctuation">,</span> dictionary<span class="token punctuation">[</span><span class="token string">@&quot;response&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+  <span class="token comment">// LPPassThroughMessageCome</span>
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>passThroughMessageCome<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notificaiton <span class="token punctuation">{</span>
+      NSDictionary <span class="token operator">*</span>dictionary <span class="token operator">=</span> notificaiton<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;response = %@&quot;</span><span class="token punctuation">,</span> dictionary<span class="token punctuation">[</span><span class="token string">@&quot;response&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="establish-connection"><a name="establish-connection" class="anchor-navigation-ex-anchor" href="#establish-connection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="establish-connection" class="plugin-anchor" href="#establish-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Establish Connection</h4>
 <ul>
 <li><p>Description</p>
-<p>Establish connection for passthrough.</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>connect<span class="token punctuation">;</span>
+<p>  Establish connection for passthrough.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>connect<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>device getPassthrough<span class="token punctuation">]</span> connect<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>device getPassthrough<span class="token punctuation">]</span> connect<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
 <h4 id="disconnect"><a name="disconnect" class="anchor-navigation-ex-anchor" href="#disconnect"><i class="fa fa-link" aria-hidden="true"></i></a><a name="disconnect" class="plugin-anchor" href="#disconnect"><i class="fa fa-link" aria-hidden="true"></i></a>Disconnect</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>disConnect<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>disConnect<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 <h4 id="send-data"><a name="send-data" class="anchor-navigation-ex-anchor" href="#send-data"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-data" class="plugin-anchor" href="#send-data"><i class="fa fa-link" aria-hidden="true"></i></a>Send Data</h4>
 <ul>
 <li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>write<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>cmd<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>write<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>cmd<span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>Parameter</p>
@@ -1817,7 +1841,7 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
 </table>
 <ul>
 <li><p>Response</p>
-<p>N/A</p>
+<p>  N/A</p>
 </li>
 </ul>
 
@@ -1863,7 +1887,7 @@ LPDevicePreset <span class="token operator">*</span>devicePreset <span class="to
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.3","depth":2,"next":{"title":"Play Control","level":"1.2.3.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Online/Offline Delegate","level":"1.2.2.5","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-07-01T11:24:07.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T11:24:49.191Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.3","depth":2,"next":{"title":"Play Control","level":"1.2.3.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Online/Offline Delegate","level":"1.2.2.5","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-06-28T03:09:03.746Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T08:21:58.593Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
