@@ -385,9 +385,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.2" data-path="Device.html">
+        <li class="chapter " data-level="1.2.4.2" data-path="DeviceInfoSetting.html">
             
-                <a href="Device.html#restore">
+                <a href="DeviceInfoSetting.html#restore">
             
                     
                     Restore
@@ -398,7 +398,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.3" data-path="Device.html">
+        <li class="chapter " data-level="1.2.4.3" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#switch-input-source">
+            
+                    
+                    Switch input source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="Device.html">
             
                 <a href="Device.html#schedule-shutdown">
             
@@ -769,7 +782,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#restore"><b></b>Restore</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>This SDK implements most of the device related functions, includes play control, settings, preset, alarm and so on.</p>
 <h3 id="play-control"><a name="play-control" class="anchor-navigation-ex-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-control" class="plugin-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a>Play Control</h3>
@@ -985,43 +998,6 @@
               <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Delete index success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span>
       <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="restore"><a name="restore" class="anchor-navigation-ex-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a><a name="restore" class="plugin-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a>Restore</h3>
-<h4 id="restore_1"><a name="restore_1" class="anchor-navigation-ex-anchor" href="#restore_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="restore" class="plugin-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a>Restore</h4>
-<ul>
-<li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>resetDeviceWithDeviceID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">UUID</td>
-<td style="text-align:left">NSString</td>
-<td style="text-align:left">Device UUID</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceSettingsManager sharedInstance<span class="token punctuation">]</span> resetDeviceWithDeviceID<span class="token punctuation">:</span>device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>UUID completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
   <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1887,7 +1863,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.3","depth":2,"next":{"title":"Play Control","level":"1.2.3.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Online/Offline Delegate","level":"1.2.2.5","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-06-28T03:09:03.746Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T08:21:58.593Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.3","depth":2,"next":{"title":"Play Control","level":"1.2.3.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Online/Offline Delegate","level":"1.2.2.5","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-07-01T11:56:46.421Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-01T11:56:59.875Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
