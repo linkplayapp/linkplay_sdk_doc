@@ -693,11 +693,6 @@ You can schedule shutdown timer.
 
     N/A
 
-- Note
-
-    Start OTA. Please tell user not to cut off the power on UI.
-
-
 ### MCU Passthrough
 
 Firmware establish a TCP connection with app to communicate with the MCU directly.

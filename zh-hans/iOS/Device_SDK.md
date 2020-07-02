@@ -423,219 +423,9 @@
 | deviceInfo | LPDeviceInfo   | Device info object   |
 
 
-[LPDevicePlayer]
-
-### Function 
-
-#### - (void)play:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Play
-
-- 参数
-  
-    无
-
-#### - (void)pause:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Pause
-
-- 参数
-
-    无
-
-#### - (void)stop:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Stop
-
-- 参数
-  
-    无
-
-#### - (void)next:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Next
-
-- 参数
-  
-    无
-
-#### - (void)previous:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Previous
-
-- 参数
-
-    无
-
-#### - (void)setProgress:(NSTimeInterval)progress completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-    
-    Set play progress
-
-- 参数
-
-| 名称     | 类型           | 接口说明   |
-| -------- | -------------- | ------------- |
-| progress | NSTimeInterval | Play progress |
-
-
-#### - (void)setPlayMode:(LPPlayMode)playMode;
-
-- 接口说明
-
-    Set play mode
-
-- 参数
-
-| 名称     | 类型       | 接口说明 |
-| -------- | ---------- | ----------- |
-| playMode | LPPlayMode | Play mode   |
-
-- 示例代码
-
-    ``` ObjectiveC
-        if ([device.mediaInfo.media类型 isEqualToString:SPOTIFY_SOURCE]) {
-            LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-            [[device getPlayer] setSpotifyPlayMode:mode];
-        }else {
-            LPPlayMode mode = LP_SHUFFLEREPEAT;
-            [[device getPlayer] setPlayMode:mode];
-        }
-    ```
-
-#### - (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;
-
-- 接口说明
-
-    Set Spotify play mode
-
-- 参数
-
-| 名称            | 类型              | 接口说明 |
-| --------------- | ----------------- | ----------- |
-| spotifyPlayMode | LPSpotifyPlayMode | Play mode   |
-
-- 示例代码
-
-    ``` ObjectiveC
-        if ([device.mediaInfo.media类型 isEqualToString:SPOTIFY_SOURCE]) {
-            LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-            [[device getPlayer] setSpotifyPlayMode:mode];
-        }else {
-            LPPlayMode mode = LP_SHUFFLEREPEAT;
-            [[device getPlayer] setPlayMode:mode];
-        }
-    ```
-
-#### - (void)setChannel:(LPDeviceChannel)channel completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-Set sound channel
-
-- 参数
-
-| 名称    | 类型            | 接口说明   |
-| ------- | --------------- | ------------- |
-| channel | LPDeviceChannel | Sound channel |
-
-- 示例代码
-
-    ``` ObjectiveC
-        LPDeviceChannel channel = LPChannel_left;
-        [[device getPlayer] setChannel:channel completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-            if (isSuccess) {
-                NSLog(@"Channel setup successful");
-            }
-        }];
-    ```
-
-#### - (void)setVolume:(CGFloat)volume single:(BOOL)single;
-
-- 接口说明
-
-    Set volume
-
-- 参数
-
-| 名称   | 类型    | 接口说明     |
-| ------ | ------- | --------------- |
-| volume | CGFloat | Device's volume |
-
-#### - (void)playAudioWithMusicDictionary:(NSDictionary *)musicDictionary completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Play music
-
-- 参数
-
-| 名称            | 类型         | 接口说明        |
-| --------------- | ------------ | ------------------ |
-| musicDictionary | NSDictionary | Media info to play |
-
-- 示例代码
-
-    ``` ObjectiveC
-      [[LPMediaLibManager sharedInstance] searchSongs:nil completionHandler:^(LPPlayMusicList * _Nonnull musicListObj) {
-                musicListObj.index = index;
-                NSDictionary *info = [[LPMDPKitManager shared] playMusicSingleSource:listObj];
-                [self.devicePlayer playAudioWithMusicDictionary:info completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-                    if (isSuccess) {
-                        NSLog(@"Play success");
-                    }
-                }];
-            }];
-    ```
-
-#### - (void)deleteWithIndex:(NSInteger)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
-
-- 接口说明
-
-    Delete a track from current playing list
-
-- 参数
-
-| 名称  | 类型 | 接口说明                       |
-| ----- | ---- | --------------------------------- |
-| index | int  | Index in the current playing list |
-
-- 示例代码
-
-    ``` ObjectiveC
-        [[device getPlayer] deleteWithIndex:index completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-           if (isSuccess) {
-               NSLog(@"Successfully delete a song from the playlist");
-           }
-        }];
-    ```
-
-### Property 
-
-| 名称      | 类型        | 接口说明    |
-| --------- | ----------- | -------------- |
-| index     | int         | Play progress  |
-| duration  | float       | Total duration |
-| channel   | int         | Sound channel  |
-| mode      | int         | Play mode      |
-| mediaInfo | LPMediaInfo | Media info     |
-
 ## LPMediaInfo
 
 ### Function 
-
-deleteWithIndex
 
     无
 
@@ -652,19 +442,14 @@ deleteWithIndex
 
 ### Property 
 
-| 名称        | 类型     | 接口说明         |
+| 名称        | 类型     | 接口说明            |
 | ----------- | -------- | ------------------- |
 | playStatus  | NSString | Current play status |
 | playMode    | int      | Play mode           |
-| media类型   | NSString | Media 类型          |
+| mediaType   | NSString | Media Type          |
 | trackSource | NSString | Track source        |
 | ...         | ...      | ...                 |
 
-
-## LPDevicePreset
-
-- [Linkplay Preset
-    SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Preset+SDK)
 
 ## LPDeviceStatus 
 
@@ -674,43 +459,24 @@ deleteWithIndex
 
 ### Property 
 
-| 名称         | 类型     | 接口说明            |
+| 名称         | 类型     | 接口说明               |
 | ------------ | -------- | ---------------------- |
 | UUID         | NSString | UUID                   |
 | IP           | int      | IP                     |
 | WiFiStrength | float    | Wi-Fi signal strength  |
 | MAC          | NSString | MAC                    |
 | SSID         | NSString | SSID                   |
-| friendly名称 | NSString | Device's friendly 名称 |
+| friendlyName | NSString | Device's friendly name |
 | version      | NSString | Firmware version       |
 | language     | int      | Prompt tone language   |
 | release      | NSString | Compiled date          |
 
-### LPDeviceAlarm 
-
-- [Linkplay Alarm
-    SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Alarm+SDK)
-
-### LPDeviceTimer 
-
-- [iOS Linkplay Timer
-    SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Timer+SDK)
-
-### LPDeviceMCU 
-
-- [Linkplay Passthrough
-    SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Passthrough+SDK)
-
-### LPDeviceOTA 
-
-- [Linkplay Preset
-    SDK](https://confluence.linkplay.co/display/AT/en+iOS+Linkplay+Preset+SDK)
 
 ## Other Definitions
 
 ### LPPlayMode
 
-| 类型             | 接口说明    |
+| 类型             | 接口说明       |
 | ---------------- | -------------- |
 | LP_LISTREPEAT    | Loop playback  |
 | LP_SINGLEREPEAT  | Single cycle   |

@@ -1,0 +1,465 @@
+# 设备设置
+
+# Overview 
+
+设备对象包含了播控、设备设置、预置、闹钟等有关设备的功能
+
+
+### 播放控制
+
+#### 获取设备播控对象
+
+- 接口说明
+
+    ``` Java
+    getPlayer()
+    ```
+
+- 参数
+
+    无
+
+- 返回值
+
+| 类型               | 接口说明                                  |
+| :-----------------| :--------------------------------------- |
+| LPDevicePlayer    | 设备播控对象                               |
+
+
+#### 播放
+
+- 接口说明
+
+    ``` Java
+    play(LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称         | 类型                     | 描述                                            |
+| :----------- | :----------------------- | :---------------------------------------------- |
+| listener     | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+#### 暂停
+
+- 接口说明
+
+    ``` Java
+    pause(LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称         | 类型                     | 描述                                            |
+| :----------- | :----------------------- | :---------------------------------------------- |
+| listener     | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+#### 停止播放
+
+- 接口说明
+
+    ``` Java
+    - (void)stop:(LPPlayerBlock _Nullable)completionHandler;
+    ```
+
+- 参数
+
+| 名称         | 类型                     | 描述                                            |
+| :----------- | :----------------------- | :---------------------------------------------- |
+| listener     | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+#### 下一首
+
+- 接口说明
+
+    ``` Java
+    next(LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称         | 类型                     | 描述                                            |
+| :----------- | :----------------------- | :---------------------------------------------- |
+| listener     | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+#### 上一首
+
+- 接口说明
+
+    ``` Java
+    previous(LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称         | 类型                     | 描述                                            |
+| :----------- | :----------------------- | :---------------------------------------------- |
+| listener     | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+
+#### 删除当前播放歌单中的歌曲
+
+从正在播放的歌单列表中，删除指定的歌曲。
+
+- 接口说明
+
+    ``` Java
+    deleteWithIndex(int index, LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| index            | int                        | 歌曲在歌单列表中的位置                          |
+| listener         | LPDevicePlayerListener     | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+    currDevice.getPlayer().delWithIndex(0,
+                new LPDevicePlayerListener() {
+            @Override
+            public void onSuccess(String result) {
+ 
+            }
+ 
+            @Override
+            public void onFailure(Exception e) {
+ 
+            }
+        });
+    ```
+
+### 预置
+
+预置是指将歌曲或者歌单信息保存到设备的存储空间中，可通过设备上的某些物理按键播放这些音乐，用户可以将喜爱的一些音乐通过预置保存在设备中，就可以更快速，更便捷的在设备上播放音乐。<br>
+
+Preset SDK 提供了添加预置，删除预置，获取预置，播放预置的功能。<br>
+
+SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参数，也都是通过LPMDPKit SDK 获得。<br>
+
+#### 预置列表
+
+- 接口说明
+
+    ``` Java
+    getPresets(LPPresetListListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| listener         | LPPresetListListener       | Callback                                        |
+
+- 返回值
+
+    无
+
+####  设置预置
+
+- 接口说明
+
+    ``` Java
+    setPreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| presetItems     | List                     | 预置列表                                        |
+| index           | int                      | 预置索引                                        |
+| listener        | LPPresetListener         | 回调                                            |
+
+- 返回值
+
+    无
+
+####  删除预置
+
+- 接口说明
+
+    ``` Java
+    deletePreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| presetItems     | List                     | 预置列表                                        |
+| index           | int                      | 预置索引                                        |
+| listener        | LPPresetListener         | 回调                                            |
+
+- 返回值
+
+    无
+
+####  播放预置
+
+- 接口说明
+
+    ``` Java
+    playPreset(int index, LPPresetListener listener)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| index           | int                      | 预置对象的索引                                  |
+| listener        | LPPresetListener         | 回调                                            |
+
+- 返回值
+
+    无
+
+### 定时关机
+
+Timer SDK 提供了设置休眠倒计时时间，获取休眠倒计时时间的API
+
+####  设置时间
+
+- 接口说明
+
+    设置设备定时关机的时间
+
+    ``` Java
+    setTimer(int time, LPTimerListener listener)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| time            | int                      | 休眠倒计时时间(s)；-1表示取消                   |
+| listener        | LPTimerListener          | 回调                                            |
+
+- 返回值
+
+    无
+
+
+####  获取设备定时关机时间
+
+- 接口说明
+
+    获取设备当前已经设置的timer
+
+    ``` Java
+    getTimer(LPTimerListener listener)
+    ```
+
+- 参数
+
+    无
+
+- 返回值
+
+    无
+
+
+### 固件升级
+
+当固件有新版本更新的时候，可以通过OTA实现设备固件更新的功能。 <br>
+ OTA  SDK 提供了检测固件是否有升级，升级的功能，OTA SDK 会经历固件下载、设备升级、设备重启三个阶段，分别对应 MV_UP_STATUS_DOWNLOAD_START、MV_UP_STATUS_WRITE_START、MV_UP_STATUS_REBOOT三个状态，每个阶段都会有超时判断，防止卡死在OTA流程中。 <br>
+
+
+- `OTAStatus` 数据模型
+
+    OTA升级过程中所对应的状态
+
+| 名称                            | 描述                                                         |
+| ------------------------------ | -----------------------------------------------------------  |
+| MV_UP_STATUS_UNKNOWN           | 未知状态                                                      |
+| MV_UP_STATUS_DOWNLOAD_START    | 开始下载                                                      |
+| MV_UP_STATUS_DOWNLOAD_FAILED   | 下载失败                                                      |
+| MV_UP_STATUS_WRITE_START       | 开始升级                                                      |
+| MV_UP_STATUS_WRITE_FINISH      | 升级结束                                                      |
+| MV_UP_STATUS_WRITE_FAILED      | 升级失败                                                      |
+| MV_UP_STATUS_COMPLETE          | 升级成功                                                      |
+| MV_UP_STATUS_REBOOT            | 设备重启                                                      |
+| MV_UP_STATUS_NOT_IN_OTA        | 设备没有处于升级状态                                            |
+
+
+
+####  检测固件升级状态
+
+- 接口说明
+
+    检测设备是否有固件新版本
+
+    ``` Java
+    checkUpdate()
+    ```
+
+- 参数
+
+    无
+
+- 返回值
+
+    BOOL
+
+- 注意
+
+    建议：配网完成后不要立即调用此接口；设备需要时间查询是否有OTA。
+
+
+####  开始设备升级
+
+- 接口说明
+
+    ``` Java
+    firmwareStartUpdate(LPOTAConfiguration config, LPOTAListener listener)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| config          | LPOTAConfiguration       | OTA 升级过程中三个阶段所需要的时间对象          |
+| listener        | LPOTAListener            | 回调                                            |
+
+- 返回值
+
+    无
+
+####  设备升级监听
+
+- 接口说明
+
+    升级过程中返回状态、进度等属性的代理方法
+
+    ``` Java
+    otaStatusUpdated(OTAStatus status)
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| status          | OTAStatus                | 升级进度信息                                    |
+
+- 返回值
+
+    无
+
+### MCU 交互
+
+Passthrough SDK 提供了与设备建立长连接，发送透传指令，并接收设备透传指令的功能。
+
+
+#### Listener
+
+Passthrough SDK 共有两个监听，用来传递数据和标识长连接状态。
+
+#### connectionStateChanged(boolean isConnected)
+
+- 接口说明
+
+    Passthrough 长连接状态监听
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| isConnected     | boolean                  | 是否连接成功                                    |
+
+- 返回值
+
+    无
+
+####  passThroughMessageCome(String response)
+
+- 接口说明
+
+    Passthrough 数据通讯监听
+
+- 参数
+
+| 名称            | 类型                     | 接口说明                                        |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| response        | String                   | 设备发送过来的透传数据                          |
+
+- 返回值
+
+    无
+
+####  建立连接
+
+- 接口说明
+
+    建立与MCU的透传连接。
+
+    ``` Java
+    connect()
+    ```
+
+- 参数
+
+    无
+
+- 返回值
+
+    无
+
+####  断开连接
+
+- 接口说明
+
+    ``` Java
+    disConnect()
+    ```
+
+- 参数
+
+    无
+
+- 返回值
+
+    无
+
+#### 发送数据
+
+- 接口说明
+
+    ``` Java
+    write(String cmd)
+    ```
+
+- 参数
+
+| 名称      | 类型                     | 接口说明                                        |
+| :-------- | :----------------------- | :---------------------------------------------- |
+| cmd       | String                   | 与MCU交互的数据                                 |
+
+- 返回值
+
+    无

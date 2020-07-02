@@ -104,8 +104,8 @@ Show Alexa login page with related delegate.
 | Name         | Type                     | Description                                     |
 | :----------- | :----------------------- | :---------------------------------------------- |
 | device       | LPDevice                 | Device object                                   |
-| frame        | CGRect                   | Splash UI frame                                 |
-| isBeta       | BOOL                     | Whether beta version for Amazon certification           |
+| frame        | CGRect                   | UI frame                                        |
+| isBeta       | BOOL                     | Whether beta version for Amazon certification   |
 
 - Response
 
