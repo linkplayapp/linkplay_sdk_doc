@@ -3,6 +3,7 @@
 -   [如何提交文章](README.md)
 -   [前言](introduction.md)
 -   [iOS](iOS/README.md)
+    -   [集成SDK](iOS/Integrated.md)
     -   [设备配网](iOS/DeviceSetup.md)
         -   [BLE 配网模式](iOS/DeviceSetup.md#ble-配网模式)
         -   [SoftAP 配网模式](iOS/DeviceSetup.md#softap-配网模式)
