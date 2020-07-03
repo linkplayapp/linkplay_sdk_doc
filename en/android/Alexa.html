@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Android · LinkPlay SDK</title>
+        <title>Alexa · LinkPlay SDK</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -86,10 +86,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="DeviceSetup.html" />
+    <link rel="next" href="Alexa.html" />
     
     
-    <link rel="prev" href="../iOS/Alexa.html" />
+    <link rel="prev" href="MusicSetting.html" />
     
 
     </head>
@@ -679,7 +679,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -1054,7 +1054,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.7" data-path="Alexa.html">
+        <li class="chapter active" data-level="1.3.7" data-path="Alexa.html">
             
                 <a href="Alexa.html">
             
@@ -1192,7 +1192,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Android</a>
+        <a href=".." >Alexa</a>
     </h1>
 </div>
 
@@ -1207,7 +1207,471 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#ios"><b></b>iOS</a></li></ul></div><a href="#ios" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="ios"><a name="ios" class="anchor-navigation-ex-anchor" href="#ios"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ios" class="plugin-anchor" href="#ios"><i class="fa fa-link" aria-hidden="true"></i></a>iOS</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#alexa"><b></b>Alexa</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#alexa-splash"><b></b>Alexa Splash</a></li><li><span class="title-icon "></span><a href="#login-with-amazon"><b></b>Login with Amazon</a></li><li><span class="title-icon "></span><a href="#alexa-logout"><b></b>Alexa Logout</a></li><li><span class="title-icon "></span><a href="#alexa-setting"><b></b>Alexa Setting</a></li></ul></ul></ul></div><a href="#alexa" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="alexa"><a name="alexa" class="anchor-navigation-ex-anchor" href="#alexa"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alexa" class="plugin-anchor" href="#alexa"><i class="fa fa-link" aria-hidden="true"></i></a>Alexa</h1>
+<h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
+<p>This SDK implements Alexa related functions, such as login, get login status, language settings, audio cues etc.</p>
+<h3 id="alexa-splash"><a name="alexa-splash" class="anchor-navigation-ex-anchor" href="#alexa-splash"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alexa-splash" class="plugin-anchor" href="#alexa-splash"><i class="fa fa-link" aria-hidden="true"></i></a>Alexa Splash</h3>
+<h4 id="show-alexa-splash"><a name="show-alexa-splash" class="anchor-navigation-ex-anchor" href="#show-alexa-splash"><i class="fa fa-link" aria-hidden="true"></i></a><a name="show-alexa-splash" class="plugin-anchor" href="#show-alexa-splash"><i class="fa fa-link" aria-hidden="true"></i></a>Show Alexa Splash</h4>
+<p>This function shows Alexa Splash UI for you, and deals with related touch delegate.</p>
+<ul>
+<li><p>Description</p>
+<p>  Load Alexa Splash UI</p>
+<pre class="language-"><code class="lang-Java">  initSplashView(LPDevice device, WebView splashWebView, LPAlexaSplashListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">splashWebView</td>
+<td style="text-align:left">WebView</td>
+<td style="text-align:left">Webview object&#xFF0C;which to show Splash web</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaSplashListener</td>
+<td style="text-align:left">Load Alexa Splash callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java">  lpDeviceManager.initSplashView(currDevice,
+      splashWebView, new LPAlexaSplashListener() {
+          @Override
+          public void skipAlexa() {
+
+          }
+
+          @Override
+          public void setupAlexa() {
+
+          }
+
+          @Override
+          public void onFailed(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
+<h3 id="login-with-amazon"><a name="login-with-amazon" class="anchor-navigation-ex-anchor" href="#login-with-amazon"><i class="fa fa-link" aria-hidden="true"></i></a><a name="login-with-amazon" class="plugin-anchor" href="#login-with-amazon"><i class="fa fa-link" aria-hidden="true"></i></a>Login with Amazon</h3>
+<h4 id="get-alexa-login-status"><a name="get-alexa-login-status" class="anchor-navigation-ex-anchor" href="#get-alexa-login-status"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-alexa-login-status" class="plugin-anchor" href="#get-alexa-login-status"><i class="fa fa-link" aria-hidden="true"></i></a>Get Alexa login status</h4>
+<ul>
+<li><p>Description</p>
+<p>  Check if device is login with Alexa account</p>
+<pre class="language-"><code class="lang-Java">  - (void)getAlexaStatus:(LPDevice *)device completionHandler:(LPSDKReturnBlock _Nullable)completionHandler
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java">  [[LPAlexaManager sharedInstance] getAlexaStatus:self.device completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+      NSLog(@&quot;%@&quot;,responseObject);
+  }];
+</code></pre>
+</li>
+</ul>
+<h4 id="alexa-login-page"><a name="alexa-login-page" class="anchor-navigation-ex-anchor" href="#alexa-login-page"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alexa-login-page" class="plugin-anchor" href="#alexa-login-page"><i class="fa fa-link" aria-hidden="true"></i></a>Alexa Login Page</h4>
+<p>Show Alexa login page with related delegate.</p>
+<ul>
+<li><p>Description</p>
+<p>  Load Alexa login page.</p>
+<pre class="language-"><code class="lang-Java">  initLoginView(LPDevice device, WebView webview, LPAlexaLoginListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">webview</td>
+<td style="text-align:left">WebView</td>
+<td style="text-align:left">Webview object&#xFF0C;which to show web</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaLoginListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java">  lpDeviceManager.initLoginView(currDevice,
+             webView, new LPAlexaLoginListener() {
+                 @Override
+                 public void startLogin() {
+
+                 }
+
+                 @Override
+                 public void loginFailed(Exception e) {
+
+                 }
+
+                 @Override
+                 public void cancel() {
+
+                 }
+
+                 @Override
+                 public void loginSuccess() {
+
+                 }
+             });
+</code></pre>
+</li>
+</ul>
+<h3 id="alexa-logout"><a name="alexa-logout" class="anchor-navigation-ex-anchor" href="#alexa-logout"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alexa-logout" class="plugin-anchor" href="#alexa-logout"><i class="fa fa-link" aria-hidden="true"></i></a>Alexa Logout</h3>
+<p>Logout device side Alexa account</p>
+<h4 id="logout"><a name="logout" class="anchor-navigation-ex-anchor" href="#logout"><i class="fa fa-link" aria-hidden="true"></i></a><a name="logout" class="plugin-anchor" href="#logout"><i class="fa fa-link" aria-hidden="true"></i></a>Logout</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  logout(LPDevice device, LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java">  lpDeviceManager.logout(currDevice, new LPAlexaListener() {
+          @Override
+          public void onSuccess(String result) {
+
+          }
+
+          @Override
+          public void onFail(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
+<h3 id="alexa-setting"><a name="alexa-setting" class="anchor-navigation-ex-anchor" href="#alexa-setting"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alexa-setting" class="plugin-anchor" href="#alexa-setting"><i class="fa fa-link" aria-hidden="true"></i></a>Alexa Setting</h3>
+<p>Implements Alexa related settings functions, includs logout, language settings, sound cues setting, etc.</p>
+<ul>
+<li><p><code>LP_CONNECT_AP_STATE</code></p>
+<p>  Alexa Language</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LANGUAGE_EN_US</td>
+<td>US English</td>
+</tr>
+<tr>
+<td>LANGUAGE_EN_GB</td>
+<td>Britain</td>
+</tr>
+<tr>
+<td>LANGUAGE_DE_DE</td>
+<td>German</td>
+</tr>
+<tr>
+<td>LANGUAGE_EN_CA</td>
+<td>Canda English</td>
+</tr>
+<tr>
+<td>LANGUAGE_JA_JP</td>
+<td>Japanese</td>
+</tr>
+<tr>
+<td>LANGUAGE_EN_IN</td>
+<td>India English</td>
+</tr>
+<tr>
+<td>LANGUAGE_EN_AUT</td>
+<td>Australia English</td>
+</tr>
+<tr>
+<td>LANGUAGE_FR_FR</td>
+<td>French</td>
+</tr>
+</tbody>
+</table>
+<h4 id="send-authcode"><a name="send-authcode" class="anchor-navigation-ex-anchor" href="#send-authcode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-authcode" class="plugin-anchor" href="#send-authcode"><i class="fa fa-link" aria-hidden="true"></i></a>Send AuthCode</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  setAuthcodeWithDevice(LPDevice device,  LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java">  lpDeviceManager.setAuthcode(currDevice, new LPAlexaListener() {
+          @Override
+          public void onSuccess(String result) {
+
+          }
+
+          @Override
+          public void onFail(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
+<h4 id="set-alexa-language"><a name="set-alexa-language" class="anchor-navigation-ex-anchor" href="#set-alexa-language"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-alexa-language" class="plugin-anchor" href="#set-alexa-language"><i class="fa fa-link" aria-hidden="true"></i></a>Set Alexa Language</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  setLanguage(LPDevice device, String lan,LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">lan</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">alexa language</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="get-alexa-language"><a name="get-alexa-language" class="anchor-navigation-ex-anchor" href="#get-alexa-language"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-alexa-language" class="plugin-anchor" href="#get-alexa-language"><i class="fa fa-link" aria-hidden="true"></i></a>Get Alexa Language</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  getLanguage(LPDevice device, LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="get-alexa-audio-ques-onoff"><a name="get-alexa-audio-ques-onoff" class="anchor-navigation-ex-anchor" href="#get-alexa-audio-ques-onoff"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-alexa-audio-ques-onoff" class="plugin-anchor" href="#get-alexa-audio-ques-onoff"><i class="fa fa-link" aria-hidden="true"></i></a>Get Alexa Audio Ques On/Off</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  getPromptStatus(LPDevice device, LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td style="text-align:left">LPAlexaListener</td>
+<td style="text-align:left">Callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="set-alexa-audio-ques-onoff"><a name="set-alexa-audio-ques-onoff" class="anchor-navigation-ex-anchor" href="#set-alexa-audio-ques-onoff"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-alexa-audio-ques-onoff" class="plugin-anchor" href="#set-alexa-audio-ques-onoff"><i class="fa fa-link" aria-hidden="true"></i></a>Set Alexa Audio Ques On/Off</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-Java">  setPromptStatus(LPDevice device, String status, LPAlexaListener listener)
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left">LPDevice</td>
+<td style="text-align:left">Device object</td>
+</tr>
+<tr>
+<td style="text-align:left">status</td>
+<td style="text-align:left">BOOL</td>
+<td style="text-align:left">On/off</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1235,12 +1699,12 @@
 
             
                 
-                <a href="../iOS/Alexa.html#alexa-setting" class="navigation navigation-prev " aria-label="Previous page: Alexa Setting">
+                <a href="MusicSetting.html#volume" class="navigation navigation-prev " aria-label="Previous page: Volume">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="DeviceSetup.html" class="navigation navigation-next " aria-label="Next page: Wi-Fi Setup">
+                <a href="Alexa.html#alexa-splash" class="navigation navigation-next " aria-label="Next page: Alexa Splash">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1251,7 +1715,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android","level":"1.3","depth":1,"next":{"title":"Wi-Fi Setup","level":"1.3.1","depth":2,"path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md","articles":[{"title":"BLE Setup","level":"1.3.1.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#ble-wi-fi-setup","articles":[]},{"title":"SoftAP Setup","level":"1.3.1.2","depth":3,"anchor":"#softap-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#softap-wi-fi-setup","articles":[]}]},"previous":{"title":"Alexa Setting","level":"1.2.8.4","depth":3,"anchor":"#alexa-setting","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#alexa-setting","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/README.md","mtime":"2020-07-02T07:45:38.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-03T10:19:04.859Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Alexa","level":"1.3.7","depth":2,"next":{"title":"Alexa Splash","level":"1.3.7.1","depth":3,"anchor":"#alexa-splash","path":"android/Alexa.md","ref":"android/Alexa.md#alexa-splash","articles":[]},"previous":{"title":"Volume","level":"1.3.6.4","depth":3,"anchor":"#volume","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#volume","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Alexa.md","mtime":"2020-07-02T07:45:38.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-03T10:19:04.859Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
