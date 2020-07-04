@@ -9,7 +9,7 @@ Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控
 你可以通过LPMultiroomManager 来管理多台设备同步播放音乐
 
 
-#### 多台设备 Multi-Room
+#### 不指定主设备的 Multi-Room
 
 - 接口说明
 
@@ -21,15 +21,16 @@ Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控
 
 - 参数
 
-| 名称          | 类型                      | 接口说明                                          |
-| :----------- | :-----------------------  | :----------------------------------------------  |
-| deviceList   | NSArray                   | 需要进行Multiroom组网的设备列表                     |
+| 名称         | 类型                                     | 接口说明                                        |
+| :----------- | :-----------------------                 | :---------------------------------------------- |
+| deviceList   | NSArray                                  | 需要进行Multiroom组网的设备列表                 |
+| handler      | void (^LPMultiroomBlock)(BOOL isSuccess) |                                                 |
 
 - 返回值
 
     无
 
-#### 选择设备为主的 Multi-Room
+#### 指定主设备的 Multi-Room
 
 - 接口说明
 
@@ -40,15 +41,16 @@ Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控
     如果传入的masterDevice 不为nil，则slaveDeviceList中的设备，会和masterDevice组成房间，同步播放音乐。<br>
 
     ``` ObjectiveC
-    - (void)deviceMultiroomWithDeviceList:(NSArray<LPDevice *> * _Nonnull)deviceList handler:(LPMultiroomBlock)handler;
+    - (void)deviceMultiroomWithSlaveDeviceList:(NSArray<LPDevice *> * _Nonnull)slaveDeviceList masterDevice:(LPDevice * _Nullable)masterDevice handler:(LPMultiroomBlock)handler;
     ```
 
 - 参数
 
-| 名称            | 类型           | 接口说明                                                                           |
-| :-----------   | :--------------| :------------------------------------------------------------------------------- |
-| slaveDeviceList | NSArray       | 如果masterDevice为nil,列表中的设备从房间内删除，否则，列表中的设备会和masterDevice组成房间  |
-| masterDevice    | LPDevice      | 设备对象                                                                            |
+| 名称            | 类型                                     | 接口说明                                                                                   |
+| :-----------    | :--------------                          | :-------------------------------------------------------------------------------           |
+| slaveDeviceList | NSArray                                  | 如果masterDevice为nil,列表中的设备从房间内删除，否则，列表中的设备会和masterDevice组成房间 |
+| masterDevice    | LPDevice                                 | 设备对象                                                                                   |
+| handler         | void (^LPMultiroomBlock)(BOOL isSuccess) |                                                                                            |
 
 - 返回值
 

@@ -9,7 +9,7 @@ Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控
 你可以通过LPMultiroomManager 来管理多台设备同步播放音乐
 
 
-#### 多台设备 Multi-Room
+#### 不指定主设备的 Multi-Room
 
 - 接口说明
 
@@ -49,7 +49,7 @@ Multi-Room Music 是指同一个局域网内的多台设备同步播放、操控
                        });
     ```
 
-#### 选择设备为主的 Multi-Room
+#### 指定主设备的 Multi-Room
 
 - 接口说明
 
