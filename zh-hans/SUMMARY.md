@@ -2,7 +2,7 @@
 
 -   [如何提交文章](README.md)
 -   [前言](introduction.md)
--   [iOS](iOS/README.md)
+-   [iOS](iOS/Integrated.md)
     -   [集成SDK](iOS/Integrated.md)
     -   [设备配网](iOS/DeviceSetup.md)
         -   [BLE 配网模式](iOS/DeviceSetup.md#ble-配网模式)
@@ -42,7 +42,7 @@
         -   [Alexa 网页登录](iOS/Alexa.md#alexa-网页登录)
         -   [Alexa 登出](iOS/Alexa.md#alexa-登出)
         -   [Alexa 设置](iOS/Alexa.md#alexa-设置)
-* [Android](android/README.md)
+* [Android](android/DeviceSetup.md)
     * [设备配网](android/DeviceSetup.md)
       - [BLE 配网模式](android/DeviceSetup.md#ble-配网模式)
       - [SoftAP 配网模式](android/DeviceSetup.md#softap-配网模式)
