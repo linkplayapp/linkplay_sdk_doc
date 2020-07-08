@@ -2,6 +2,7 @@
 
 -   [Introduction](README.md)
 -   [iOS](iOS/README.md)
+    -   [Integrate SDK](iOS/Integrated.md)
     -   [Wi-Fi Setup](iOS/DeviceSetup.md)
         -   [BLE Setup](iOS/DeviceSetup.md#ble-wi-fi-setup)
         -   [SoftAP Setup](iOS/DeviceSetup.md#softap-wi-fi-setup)
@@ -20,6 +21,8 @@
         -   [Name](iOS/DeviceInfoSetting.md#name)
         -   [Restore](iOS/DeviceInfoSetting.md#restore)
         -   [Switch input source](iOS/DeviceInfoSetting.md#switch-input-source)
+        -   [Network detection](iOS/DeviceInfoSetting.md#network-detection)
+        -   [EQ](iOS/DeviceInfoSetting.md#eq)
         -   [Schedule Shutdown](iOS/Device.md#schedule-shutdown)
     -   [Multi-Room Music](iOS/MultiRoom.md)
         -   [Without Master](iOS/MultiRoom.md#using-devicelist-without-master)

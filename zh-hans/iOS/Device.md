@@ -587,7 +587,8 @@ Timer SDK 提供了设置休眠倒计时时间，获取休眠倒计时时间的A
 
 ### 固件升级
 
-当固件有新版本更新的时候，可以通过OTA实现设备固件更新的功能。 <br>
+当固件有新版本更新的时候，可以通过OTA实现设备固件更新的功能。 <br><br>
+固件升级时，设备必须连接在Wi-Fi上，且Wi-Fi必须有网络才可以开启OTA功能。你可以通过 LPDeviceInfo 中 getDeviceInternetStatus 方法来判断当前设备是否有网络。对于设备来说，正常情况下，无论设备升级成功或者失败，都会回连到升级前的Wi-Fi上，如果因为某些原因导致升级失败，你可以等待设备回连后，再次尝试升级。<br><br>
  OTA  SDK 提供了检测固件是否有升级，升级的功能，OTA SDK 会经历固件下载、设备升级、设备重启三个阶段，分别对应 MV_UP_STATUS_DOWNLOAD_START、MV_UP_STATUS_WRITE_START、MV_UP_STATUS_REBOOT三个状态，每个阶段都会有超时判断，防止卡死在OTA流程中。 <br>
 
 

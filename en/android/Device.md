@@ -282,6 +282,8 @@ You can schedule shutdown timer.
 
 ### OTA
 
+When the firmware is upgraded, the device must be connected to Wi-Fi, and Wi-Fi must have a network to enable the OTA function. You can use the getDeviceInternetStatus method in LPDeviceInfo to determine whether the current device has a network. For the device, under normal circumstances, no matter whether the device upgrades successfully or fails, it will be connected to the Wi-Fi before the upgrade. If the upgrade fails for some reason, you can wait for the device to reconnect and try the upgrade again.<br><br>
+
  OTA SDK implments check, trigger function. When in OTA, there're 3 steps: download, updating, rebooting, which state is MV_UP_STATUS_DOWNLOAD_START, MV_UP_STATUS_WRITE_START, MV_UP_STATUS_REBOOT
 
 

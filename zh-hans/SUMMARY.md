@@ -23,6 +23,8 @@
         -   [设置设备名称](iOS/DeviceInfoSetting.md#设置设备名称)
         -   [恢复出厂设置](iOS/DeviceInfoSetting.md#恢复出厂设置)
         -   [设置设备输入源](iOS/DeviceInfoSetting.md#设置设备输入源)
+        -   [设备网络检测](iOS/DeviceInfoSetting.md#设备网络检测)
+        -   [EQ](iOS/DeviceInfoSetting.md#eq)
         -   [定时关机](iOS/Device.md#定时关机)
     -   [多设备同步播放音乐](iOS/MultiRoom.md)
         -   [不指定主设备的 Multi-Room](iOS/MultiRoom.md#不指定主设备的-multi-room)

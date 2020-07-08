@@ -2,87 +2,135 @@
 
 建议您使用CocosPods 集成SDK，当然您也可以下载SDK并手动配置项目以使用它。
 
-### 1.集成LPMusicKitSDK
+## SDK
 
-Linkplay Music Kit是Linkplay Home Audio方案的app端SDK；通过它，您可以快速的将我们的解决方案实现到您的产品里。
+### LPMusicKit SDK
 
-MusicKit主要解决了两方面的问题：
+LPMusicKit SDK 是Linkplay Home Audio方案的app端SDK；通过它，您可以快速的将我们的解决方案实现到您的产品里。
 
-维护与固件的通讯协议，使您可以简洁的与设备进行交互而不必关心琐碎的通讯技术问题
+MusicKit SDK 主要解决了两方面的问题：
 
-封装了网络服务（音乐服务、智能语音服务等）的复杂度，使您可以快速接入它们而不必关心实现细节
+- 维护与固件的通讯协议，使您可以简洁的与设备进行交互而不必关心琐碎的通讯技术问题
 
-#### 1.使用 CocoaPods 快速集成（ SDK 最低支持系统版本 10.0）
+- 封装了网络服务（音乐服务、智能语音服务等）的复杂度，使您可以快速接入它们而不必关心实现细节
 
-- 在 `Podfile` 文件中添加对应的SDK地址进行集成，如集成设备SDK：
+[下载 LPMusicKit SDK](https://github.com/linkplayapp/LPMusicKitiOS)
 
-```ruby
-platform :ios, '10.0'
+以下是 LPMusicKit SDK 的主要功能:
 
-target 'your_target_name' do
-
-   pod "LPMusicKitiOS", :git => "https://github.com/linkplayapp/LPMusicKitiOS.git"
-
-end
+- 设备发现
 ```
-然后在项目根目录下执行 `pod update` 命令进行集成。
+[[LPDeviceManager sharedInstance] search:@""];
+```
+- 设备上线和下线代理
+```ObjectiveC
+[[LPDeviceManager sharedInstance] addObserver:self];
+// delegate
+onLPDeviceOnline
+onLPDeviceOffline
+onLPDeviceUpdate
+```
 
-_CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)_
-_CocoaPods 建议更新至最新版本_
-
-- 申请Wi-Fi 权限
-![server_error](./images/5.jpg)
-- iOS13申请定位权限, Info.plist 文件中添加 NSLocationWhenInUseUsageDescription
-![server_error](./images/6.jpg)
-
-#### 2.手动配置项目
-- [下载 LPMusicKitiOS](https://github.com/linkplayapp/LPMusicKitiOS/archive/master.zip)
-- 导入 LPMusicKit.framework、LinkPlayBonjourSDK.framework两个Framework
-![server_error](./images/1.jpg)
-- 导入AFNetworking 和 LPMusicKitiOS/Third 中的三方库
-![server_error](./images/2.jpg)
-- Build Settings, 设置 Other Linker Flags 的值为  -ObjC
-![server_error](./images/3.jpg)
-- Header Search Paths: 添加 /usr/include/libxml2 路径
-![server_error](./images/4.jpg)
-- 申请Wi-Fi 权限
-![server_error](./images/5.jpg)
-- iOS13申请定位权限, Info.plist 文件中添加 NSLocationWhenInUseUsageDescription
-![server_error](./images/6.jpg)
-
-以下是LinkPlay 各个SDK的地址：
+- 设备的播控设置 ：
+ 通过 LPDevicePlayer 实现设备的播放处理
 
 
-[LPMusicKitiOS SDK](https://github.com/linkplayapp/LPMusicKitiOS):
+- 设备信息展示： 通过 LPDeviceInfo 和 LPDeviceStatus 展示设备的信息
 
-pod "LPMusicKitiOS", :git => "https://github.com/linkplayapp/LPMusicKitiOS.git"
 
-[LPBLESetupiOS SDK](https://github.com/linkplayapp/LPBLESetupiOS):
+- 设备媒体信息展示 ： 通过 LPMediaInfo 展示设备媒体信息
 
-pod "LPBLESetupiOS", :git => "https://github.com/linkplayapp/LPBLESetupiOS.git"
 
-[LPAlexaKitiOS SDK](https://github.com/linkplayapp/LPAlexaKitiOS):
+- 设备的预置、闹钟、定时休眠功能
 
-pod "LPAlexaKitiOS", :git => "https://github.com/linkplayapp/LPAlexaKitiOS.git"
+- 设备的OTA功能
 
-[LPMSNASiOS SDK](https://github.com/linkplayapp/LPMSNASiOS):
+### LPBLESetup SDK
 
-pod "LPMSNASiOS", :git => "https://github.com/linkplayapp/LPMSNASiOS.git"
+LPBLESetup SDK 是Linkplay BLE 配网方案的app端SDK；通过它，您可以快速的将我们的设备连接到路由器上。
 
-[LPMSMediaLibraryiOS SDK](https://github.com/linkplayapp/LPMSMediaLibraryiOS):
+LPBLESetup SDK 主要提供了两个功能：
 
-source 'https://github.com/linkplayapp/LPSpecsiOS.git'
-source 'https://github.com/CocoaPods/Specs.git'
+- 通过BLE的方式，将设备连接到路由器上，从而使设备和网络相关的功能正常使用
 
-target 'your_target_name' do
+- 封装了和设备之间通过BLE交互信息的方式，使得你可以方便的发送信息给设备
 
-   pod "LPMSMediaLibraryiOS", :git => "https://github.com/linkplayapp/LPMSMediaLibraryiOS.git"
+[下载 LPBLESetup SDK](https://github.com/linkplayapp/LPBLESetupiOS)
 
-end
+LPBLESetupiOS 主要是配合 LPMusicKitSDK 来使用, 主要的步骤如下：
+- 设备进入配网模式（此时SDK才可以通过BLE发现设备）
+- 调用 LPBLESetupiOS startScan 的接口，并实现 LPBLEManager 的 delegate
+- 调用 connectBLE 方法连接设备，连接成功后，可以通过BLE跟设备进行数据交互
+- 调用 getWLANList 方法 获取设备周边的Wi-Fi列表
+- 调用 connectWLAN 方法，发送选中Wi-Fi的名称和密码给设备，从而完成配网
 
-然后在项目根目录下执行 `pod update` 命令进行集成。
+设备完成配网后，才可以使用联网后的功能。
 
-_CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)_
-_CocoaPods 建议更新至最新版本_
 
-### 1.使用 CocoaPods 快速集成（ SDK 最低支持系统版本 10.0）
+### LPAlexaKit SDK
+
+LPAlexaKit SKD 是Linkplay Alexa操作方案的app端SDK；通过它，您可以实现设备Alexa的登录以及Alexa信息的设置。
+
+LPAlexaKit SKD 主要提供了两个功能：
+
+- 设备Alexa登录、登出
+
+- 设备Alexa信息设置，如语言、提示音等
+
+[下载 LPAlexaKit SDK](https://github.com/linkplayapp/LPAlexaKitiOS)
+
+对于Alexa 登录流程:
+- 调用 getAlexaStatus 判断设备是否登录 Alexa
+- 初始化 LPAlexaSplashView，展示 Splash 网页 （设备未登录）
+- 初始化 LPAlexaLoginView 展示 Alexa 登录页面
+- loginSuccess 代理触发后，调用 setAuthcodeWithDeivce 完成设备 Alexa 登录
+
+完成设备 Alexa 登录后，可以调用 LPAlexaManager 中的方法，设置设备Alexa 语言、提示音等属性
+
+
+### LPMSMediaLibrary SDK 
+
+LPMSMediaLibrary SDK 是Linkplay iPhone媒体库接入方案的app端SDK；通过它，您可以快速的将iPhone媒体库的音乐播放到您的产品里。
+
+LPMSMediaLibrary SDK 主要解决了两方面的问题：
+
+展示iPhone媒体库中的音乐
+
+播放iPhone媒体库中的音乐到您的产品里
+
+[下载 LPMSMediaLibrary SDK](https://github.com/linkplayapp/LPMSMediaLibraryiOS)
+
+### LPMSNAS SDK 
+
+LPMSNAS SDK 是Linkplay NAS接入方案的app端SDK；通过它，您可以快速的将NAS设备的音乐播放到您的产品里。
+
+LPMSNAS SDK 主要提供了两个功能：
+
+展示NAS设备中的音乐
+
+播放NAS设备中的音乐到您的产品里
+
+[下载 LPMSNAS SDK](https://github.com/linkplayapp/LPMSNASiOS)
+
+### LPMDPKit SDK 
+
+LPMDPKit SDK 是一个数据格式转换的中间插件SDK，因为设备SDK LPMusicKit 接口交互的数据格式为LinkPlay自定义的XML，XML的层级很复杂，如果使用者去尝试解析、拼接XML将会非常麻烦，以及后期升级维护XML，这对用户来说不友好。 所以，定义了一套标准的数据格式的模型，并开发了这个插件SDK.<br>
+同时，LinkPlay所提供的音源，如：本地音乐，TuneIn. 它们的API接口返回的数据格式都是基于标准模型的数据封装的，当你需要播放音乐的时候：
+- 调用中间层插件转化为设备SDKLPMusicKitiOS需要的XML,
+- 把此XML传给设备SDKLPMusicKitiOS的接口.
+通过 LPMDPKit SDK 的数据转换，可以轻松的完成播放功能。<br>
+
+LPMusicKit SDK 中的闹钟、预置等功能，同样需要使用 LPMDPKit SDK 做数据转换处理
+
+[下载 LPMDPKit SDK](https://github.com/linkplayapp/LPMDPKitiOS)
+
+
+## SDK Demo 
+
+### 使用CocosPods配置工程的demo
+
+- [LPMusicKitPodsDemo](https://github.com/linkplayapp/LPMusicKitPodsDemo)
+
+### 手动导入SDK的demo
+
+- [LPMusicKitDemo](https://github.com/linkplayapp/LPMusicKitDemo)
