@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Device System Settings · LinkPlay SDK</title>
+        <title>Integrate SDK · LinkPlay SDK</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -86,10 +86,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="DeviceInfoSetting.html" />
+    <link rel="next" href="DeviceSetup.html" />
     
     
-    <link rel="prev" href="Device.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -145,7 +145,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="Integrated.html">
+        <li class="chapter active" data-level="1.2.1" data-path="Integrated.html">
             
                 <a href="Integrated.html">
             
@@ -358,7 +358,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="DeviceInfoSetting.html">
+        <li class="chapter " data-level="1.2.5" data-path="DeviceInfoSetting.html">
             
                 <a href="DeviceInfoSetting.html">
             
@@ -1231,7 +1231,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Device System Settings</a>
+        <a href=".." >Integrate SDK</a>
     </h1>
 </div>
 
@@ -1246,215 +1246,116 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-system-settings"><b></b>Device System Settings</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#name"><b></b>Name</a></li><li><span class="title-icon "></span><a href="#restore"><b></b>Restore</a></li><li><span class="title-icon "></span><a href="#switch-input-source"><b></b>Switch input source</a></li><li><span class="title-icon "></span><a href="#network-detection"><b></b>Network detection</a></li><li><span class="title-icon "></span><a href="#eq"><b></b>EQ</a></li></ul></ul></ul></div><a href="#device-system-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-system-settings"><a name="device-system-settings" class="anchor-navigation-ex-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-system-settings" class="plugin-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Device System Settings</h1>
-<h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
-<p>Device system related settings, includes language, name, timezone etc.</p>
-<h3 id="name"><a name="name" class="anchor-navigation-ex-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a><a name="name" class="plugin-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a>Name</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#integrate-sdk"><b></b>Integrate SDK</a></li><ul><li><span class="title-icon "></span><a href="#sdk"><b></b>SDK</a></li><ul><li><span class="title-icon "></span><a href="#lpmusickit-sdk"><b></b>LPMusicKit SDK</a></li><li><span class="title-icon "></span><a href="#lpblesetup-sdk"><b></b>LPBLESetup SDK</a></li><li><span class="title-icon "></span><a href="#lpalexakit-sdk"><b></b>LPAlexaKit SDK</a></li><li><span class="title-icon "></span><a href="#lpmsmedialibrary-sdk"><b></b>LPMSMediaLibrary SDK</a></li><li><span class="title-icon "></span><a href="#lpmsnas-sdk"><b></b>LPMSNAS SDK</a></li><li><span class="title-icon "></span><a href="#lpmdpkit-sdk"><b></b>LPMDPKit SDK</a></li></ul><li><span class="title-icon "></span><a href="#sdk-demo"><b></b>SDK Demo</a></li><ul><li><span class="title-icon "></span><a href="#use-cocospods-to-configure-the-demo-of-the-project"><b></b>Use CocosPods to configure the demo of the project</a></li><li><span class="title-icon "></span><a href="#import-sdk-demo-manually"><b></b>Import SDK demo manually</a></li></ul></ul></ul></div><a href="#integrate-sdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="integrate-sdk"><a name="integrate-sdk" class="anchor-navigation-ex-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrate-sdk" class="plugin-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate SDK</h1>
+<p>The recommended way to include the SDK in your iOS project is to use CocoaPods, but you can also download the SDK and manually configure your project to use it.</p>
+<h2 id="sdk"><a name="sdk" class="anchor-navigation-ex-anchor" href="#sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sdk" class="plugin-anchor" href="#sdk"><i class="fa fa-link" aria-hidden="true"></i></a>SDK</h2>
+<h3 id="lpmusickit-sdk"><a name="lpmusickit-sdk" class="anchor-navigation-ex-anchor" href="#lpmusickit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmusickit-sdk" class="plugin-anchor" href="#lpmusickit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPMusicKit SDK</h3>
+<p>Linkplay Music Kit is the app side SDK for Linkplay Home Audio solution&#xFF1B;you can use it to implement our solution into your product.</p>
+<p>MusicKit mainly solves 2 issues:</p>
 <ul>
-<li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setDeviceName<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>deviceName deviceID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>UUID completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
+<li><p>Maintain the commnunication protocol with our firmware so that your app could interact with the device without concerning the comlexity of the lower layers.</p>
 </li>
-<li><p>Parameter</p>
+<li><p>Wrapper the complexity of cloud services (includes music services and voice services etc.) so that you can intergtate them rapidly and don&apos;t bother the details.</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">deviceName</td>
-<td style="text-align:left">NSString</td>
-<td style="text-align:left">Name</td>
-</tr>
-<tr>
-<td style="text-align:left">UUID</td>
-<td style="text-align:left">NSString</td>
-<td style="text-align:left">UUID</td>
-</tr>
-</tbody>
-</table>
+<p><a href="https://github.com/linkplayapp/LPMusicKitiOS" target="_blank">Download LPMusicKit SDK</a></p>
+<p>The following are the main functions of LPMusicKit SDK:</p>
 <ul>
-<li><p>Response</p>
-<p>N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceSettingsManager sharedInstance<span class="token punctuation">]</span> setDeviceName<span class="token punctuation">:</span><span class="token string">@&quot;Music&quot;</span> deviceID<span class="token punctuation">:</span>device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>UUID completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Set device name successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<li>Device discovery<pre class="language-"><code>[[LPDeviceManager sharedInstance] search:@&quot;&quot;];
+</code></pre></li>
+<li><p>Device online and offline delegate</p>
+<pre class="language-"><code>[[LPDeviceManager sharedInstance] addObserver:self];
+// delegate
+onLPDeviceOnline
+onLPDeviceOffline
+onLPDeviceUpdate
+</code></pre></li>
+<li><p>Device playback control:
+  Through LPDevicePlayer to realize the playback processing of the device</p>
 </li>
 </ul>
-<h3 id="restore"><a name="restore" class="anchor-navigation-ex-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a><a name="restore" class="plugin-anchor" href="#restore"><i class="fa fa-link" aria-hidden="true"></i></a>Restore</h3>
 <ul>
-<li><p>Description</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>resetDeviceWithHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
+<li>Device information display: Display device information through LPDeviceInfo and LPDeviceStatus</li>
+</ul>
+<ul>
+<li>Device media information display: display device media information through LPMediaInfo</li>
+</ul>
+<ul>
+<li><p>The device&apos;s preset, alarm clock, timed sleep function</p>
 </li>
-<li><p>Parameter</p>
-<p>N/A</p>
-</li>
-<li><p>Response</p>
-<p>N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings resetDeviceWithHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Reset device successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<li><p>OTA function of the device</p>
 </li>
 </ul>
-<h3 id="switch-input-source"><a name="switch-input-source" class="anchor-navigation-ex-anchor" href="#switch-input-source"><i class="fa fa-link" aria-hidden="true"></i></a><a name="switch-input-source" class="plugin-anchor" href="#switch-input-source"><i class="fa fa-link" aria-hidden="true"></i></a>Switch input source</h3>
+<h3 id="lpblesetup-sdk"><a name="lpblesetup-sdk" class="anchor-navigation-ex-anchor" href="#lpblesetup-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpblesetup-sdk" class="plugin-anchor" href="#lpblesetup-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPBLESetup SDK</h3>
+<p>LPBLESetup is the app side SDK for Linkplay BLE Setup solution&#xFF1B;you can quickly connect our device to the router.</p>
+<p>LPBLESetup mainly provides two functions&#xFF1A;</p>
 <ul>
-<li><p>Description</p>
-<p>Switch the input source of the device, such as Bluetooth, AUX, RCA</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>switchInputSource<span class="token punctuation">:</span><span class="token punctuation">(</span>LPInputSource<span class="token punctuation">)</span>source  completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
+<li><p>Connect the device to the router through BLE, so that the related functions of the device and the network can be used normally.</p>
 </li>
-<li><p>Parameter</p>
+<li><p>It encapsulates the way of communicating information with the device through BLE, so that you can easily send information to the device.</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">source</td>
-<td style="text-align:left">LPInputSource</td>
-<td style="text-align:left">Input source</td>
-</tr>
-</tbody>
-</table>
+<p><a href="https://github.com/linkplayapp/LPBLESetupiOS" target="_blank">Download LPBLESetup SDK</a></p>
+<p>LPBLESetupiOS is mainly used with LPMusicKitSDK, the main steps are as follows:</p>
 <ul>
-<li><p>Response</p>
-<p>N/A</p>
+<li>The device enters the distribution mode (at this time, the SDK can discover the device through BLE)</li>
+<li>Call the interface of LPBLESetupiOS startScan and implement the delegate of LPBLEManager</li>
+<li>Call the connectBLE method to connect the device. After the connection is successful, you can communicate with the device through BLE</li>
+<li>Call the getWLANList method to get the Wi-Fi list around the device</li>
+<li>Call the connectWLAN method and send the selected Wi-Fi name and password to the device to complete the network configuration</li>
+</ul>
+<p>Only after the device completes the network configuration can the functions after network connection be used.</p>
+<h3 id="lpalexakit-sdk"><a name="lpalexakit-sdk" class="anchor-navigation-ex-anchor" href="#lpalexakit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpalexakit-sdk" class="plugin-anchor" href="#lpalexakit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPAlexaKit SDK</h3>
+<p>LPAlexaKitiOS is the app side SDK for Linkplay Alexa operation solution&#xFF1B;you can use it to implement the device&apos;s Alexa login and Alexa information settings.</p>
+<p>LPAlexaKit mainly provides two functions&#xFF1A;</p>
+<ul>
+<li><p>Device Alexa login and logout.</p>
 </li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">LPInputSource <span class="token operator">*</span>sourc <span class="token operator">=</span> LPBluetooth<span class="token punctuation">;</span>
-<span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings switchInputSource<span class="token punctuation">:</span>source completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Switch deivce input source successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<li><p>Device Alexa information settings, such as language, prompt tone, etc.</p>
 </li>
 </ul>
-<h3 id="network-detection"><a name="network-detection" class="anchor-navigation-ex-anchor" href="#network-detection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="network-detection" class="plugin-anchor" href="#network-detection"><i class="fa fa-link" aria-hidden="true"></i></a>Network detection</h3>
+<p><a href="https://github.com/linkplayapp/LPAlexaKitiOS" target="_blank">Download LPAlexaKit SDK</a></p>
+<p>For the Alexa login process:</p>
 <ul>
-<li><p>Description</p>
-<p>Judge if the device has a network, if the device network changes, it will trigger the notification LPInternetAccessChange, at this time the value of isHaveInternet has been updated.</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token comment">// LPDeviceStatus</span>
-<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> assign<span class="token punctuation">)</span> BOOL isHaveInternet<span class="token punctuation">;</span>
-</code></pre>
+<li>Use getAlexaStatus to determine whether the device is logged in to Alexa</li>
+<li>Initialize LPAlexaSplashView and display Splash webpage (device not logged in)</li>
+<li>Initialize LPAlexaLoginView to display the Alexa login page</li>
+<li>loginSuccess &#x4EE3;&#x7406;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x8C03;&#x7528; setAuthcodeWithDeivce &#x5B8C;&#x6210;&#x8BBE;&#x5907; Alexa &#x767B;&#x5F55;</li>
+</ul>
+<p>After the loginSuccess delegate method is triggered, use setAuthcodeWithDeivce to complete the device Alexa login</p>
+<h3 id="lpmsmedialibrary-sdk"><a name="lpmsmedialibrary-sdk" class="anchor-navigation-ex-anchor" href="#lpmsmedialibrary-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmsmedialibrary-sdk" class="plugin-anchor" href="#lpmsmedialibrary-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPMSMediaLibrary SDK</h3>
+<p>LPMSMediaLibrary is the app side SDK for Linkplay iPhone media library access solution&#xFF1B;you can use it to quickly play music from iPhone media library to your products.</p>
+<p>LPMSMediaLibrary mainly provides two functions&#xFF1A;</p>
+<ul>
+<li><p>Show music in iPhone media library.</p>
 </li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token keyword">if</span> <span class="token punctuation">(</span>device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>isHaveInternet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Device has a network&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Device has no network&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token comment">// NSNotification</span>
-<span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>internetAccessChange<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span><span class="token string">@&quot;LPInternetAccessChange&quot;</span> object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>internetAccessChange<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notification <span class="token punctuation">{</span>
-    NSDictionary <span class="token operator">*</span>infoDict <span class="token operator">=</span> notification<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
-    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;UUID = %@ isHaveInternet = %@&quot;</span><span class="token punctuation">,</span> infoDict<span class="token punctuation">[</span><span class="token string">@&quot;UUID&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> infoDict<span class="token punctuation">[</span><span class="token string">@&quot;isHaveInternet&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<li><p>Play music from iPhone media library to your product.</p>
 </li>
 </ul>
-<h3 id="eq"><a name="eq" class="anchor-navigation-ex-anchor" href="#eq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="eq" class="plugin-anchor" href="#eq"><i class="fa fa-link" aria-hidden="true"></i></a>EQ</h3>
-<h4 id="get-eq"><a name="get-eq" class="anchor-navigation-ex-anchor" href="#get-eq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-eq" class="plugin-anchor" href="#get-eq"><i class="fa fa-link" aria-hidden="true"></i></a>Get EQ</h4>
+<p><a href="https://github.com/linkplayapp/LPMSMediaLibraryiOS" target="_blank">Download LPMSMediaLibrary SDK</a></p>
+<h3 id="lpmsnas-sdk"><a name="lpmsnas-sdk" class="anchor-navigation-ex-anchor" href="#lpmsnas-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmsnas-sdk" class="plugin-anchor" href="#lpmsnas-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPMSNAS SDK</h3>
+<p>LPMSNAS is the app side SDK for Linkplay NAS access solution&#xFF1B;you can use it to quickly play music from NAS devices to your products.</p>
+<p>LPMSNAS mainly provides two functions&#xFF1A;</p>
 <ul>
-<li><p>Description</p>
-<p>Get the supported EQ type and current Value.
-After modifying the value of EQ in other ways, you can synchronize the Value through the LPEQValueChangeNotification notification
- The data structure is as follows:</p>
-<pre class="language-"><code>{
-    &quot;Mode&quot;:&quot;POP&quot;,
-    &quot;Version&quot;:1,
-    &quot;EQValue&quot;: @[
-        @{@&quot;Name&quot;:@&quot;BandBASS&quot;, @&quot;Value&quot;:@&quot;0&quot;},
-        @{@&quot;Name&quot;:@&quot;BandLOW&quot;, @&quot;Value&quot;:@&quot;0&quot;},
-        @{@&quot;Name&quot;:@&quot;BandMID&quot;, @&quot;Value&quot;:@&quot;0&quot;},
-        @{@&quot;Name&quot;:@&quot;BandHIGH&quot;, @&quot;Value&quot;:@&quot;0&quot;},
-        @{@&quot;Name&quot;:@&quot;BandTREBLE&quot;, @&quot;Value&quot;:@&quot;0&quot;}
-        ...
-    ]
-}
-</code></pre><p>The array corresponding to the EQValue field is a collection of EQ types supported by the device. If there is a special EQ type, please contact Linkplay firmware personnel to configure the server data parameters.
-Generally, the value of Value is -5 to 5, please make sure that the value of Value is of type int.</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getSupportEQAndValues<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
+<li><p>Show music from NAS devices.</p>
 </li>
-<li><p>Parameter</p>
-<p>N/A</p>
-</li>
-<li><p>Response</p>
-<p>N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings getSupportEQAndValues<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>responseObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;SupportEQ = %@&quot;</span><span class="token punctuation">,</span> responseObject<span class="token punctuation">[</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
+<li><p>Play music from NAS device to your product.</p>
 </li>
 </ul>
-<h4 id="set-eq"><a name="set-eq" class="anchor-navigation-ex-anchor" href="#set-eq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-eq" class="plugin-anchor" href="#set-eq"><i class="fa fa-link" aria-hidden="true"></i></a>Set EQ</h4>
+<p><a href="https://github.com/linkplayapp/LPMSNASiOS" target="_blank">Download LPMSNAS SDK</a></p>
+<h3 id="lpmdpkit-sdk"><a name="lpmdpkit-sdk" class="anchor-navigation-ex-anchor" href="#lpmdpkit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmdpkit-sdk" class="plugin-anchor" href="#lpmdpkit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPMDPKit SDK</h3>
+<p>LPMDPKit SDK is an intermediate plug-in SDK for data format conversion, because the data format of the device SDK LPMusicKit interface interaction is LinkPlay&apos;s custom XML. The XML level is very complicated. If users try to parse and splice XML, it will be very troublesome and later Upgrading and maintaining XML is not user friendly. <br>
+Therefore, a set of standard data format models is defined and this plug-in SDK is developed. After you obtain XML from the device SDK LPMusicKit interface, call the corresponding interface provided by the middle-tier plug-in SDK to get the standard model data .</p>
+<p>Alarm clock, preset and other functions in LPMusicKit SDK also need to use LPMDPKit SDK for data conversion processing</p>
+<p><a href="https://github.com/linkplayapp/LPMDPKitiOS" target="_blank">Download LPMDPKit SDK</a></p>
+<h2 id="sdk-demo"><a name="sdk-demo" class="anchor-navigation-ex-anchor" href="#sdk-demo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sdk-demo" class="plugin-anchor" href="#sdk-demo"><i class="fa fa-link" aria-hidden="true"></i></a>SDK Demo</h2>
+<h3 id="use-cocospods-to-configure-the-demo-of-the-project"><a name="use-cocospods-to-configure-the-demo-of-the-project" class="anchor-navigation-ex-anchor" href="#use-cocospods-to-configure-the-demo-of-the-project"><i class="fa fa-link" aria-hidden="true"></i></a><a name="use-cocospods-to-configure-the-demo-of-the-project" class="plugin-anchor" href="#use-cocospods-to-configure-the-demo-of-the-project"><i class="fa fa-link" aria-hidden="true"></i></a>Use CocosPods to configure the demo of the project</h3>
 <ul>
-<li><p>Description</p>
-<p>Set the value of each EQ type</p>
-<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setEQValues<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>valuesDict completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
+<li><a href="https://github.com/linkplayapp/LPMusicKitPodsDemo" target="_blank">LPMusicKitPodsDemo</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">valuesDict</td>
-<td style="text-align:left">NSDictionary</td>
-<td style="text-align:left">The data structure of EQValue returned by the getSupportEQAndValues interface</td>
-</tr>
-</tbody>
-</table>
+<h3 id="import-sdk-demo-manually"><a name="import-sdk-demo-manually" class="anchor-navigation-ex-anchor" href="#import-sdk-demo-manually"><i class="fa fa-link" aria-hidden="true"></i></a><a name="import-sdk-demo-manually" class="plugin-anchor" href="#import-sdk-demo-manually"><i class="fa fa-link" aria-hidden="true"></i></a>Import SDK demo manually</h3>
 <ul>
-<li><p>Response</p>
-<p>N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">NSArray <span class="token operator">*</span>valuesArray <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandBASS&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-5&quot;</span><span class="token punctuation">}</span> <span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandLOW&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandMID&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;0&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandHIGH&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandTREBLE&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;5&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-NSDictionary <span class="token operator">*</span>EQValuesDict <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">:</span>valuesArray<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings setEQValues<span class="token punctuation">:</span>EQValuesDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
+<li><a href="https://github.com/linkplayapp/LPMusicKitDemo" target="_blank">LPMusicKitDemo</a></li>
 </ul>
 
                                 
@@ -1483,12 +1384,12 @@ NSDictionary <span class="token operator">*</span>EQValuesDict <span class="toke
 
             
                 
-                <a href="Device.html#mcu-passthrough" class="navigation navigation-prev " aria-label="Previous page: MCU Passthrough">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: iOS">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="DeviceInfoSetting.html#name" class="navigation navigation-next " aria-label="Next page: Name">
+                <a href="DeviceSetup.html" class="navigation navigation-next " aria-label="Next page: Wi-Fi Setup">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1499,7 +1400,7 @@ NSDictionary <span class="token operator">*</span>EQValuesDict <span class="toke
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device System Settings","level":"1.2.5","depth":2,"next":{"title":"Name","level":"1.2.5.1","depth":3,"anchor":"#name","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#name","articles":[]},"previous":{"title":"MCU Passthrough","level":"1.2.4.5","depth":3,"anchor":"#mcu-passthrough","path":"iOS/Device.md","ref":"iOS/Device.md#mcu-passthrough","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/DeviceInfoSetting.md","mtime":"2020-07-08T12:35:21.759Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T12:30:07.526Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.2.1","depth":2,"next":{"title":"Wi-Fi Setup","level":"1.2.2","depth":2,"path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md","articles":[{"title":"BLE Setup","level":"1.2.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md#ble-wi-fi-setup","articles":[]},{"title":"SoftAP Setup","level":"1.2.2.2","depth":3,"anchor":"#softap-wi-fi-setup","path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md#softap-wi-fi-setup","articles":[]}]},"previous":{"title":"iOS","level":"1.2","depth":1,"path":"iOS/README.md","ref":"iOS/README.md","articles":[{"title":"Integrate SDK","level":"1.2.1","depth":2,"path":"iOS/Integrated.md","ref":"iOS/Integrated.md","articles":[]},{"title":"Wi-Fi Setup","level":"1.2.2","depth":2,"path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md","articles":[{"title":"BLE Setup","level":"1.2.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md#ble-wi-fi-setup","articles":[]},{"title":"SoftAP Setup","level":"1.2.2.2","depth":3,"anchor":"#softap-wi-fi-setup","path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md#softap-wi-fi-setup","articles":[]}]},{"title":"Device Discover","level":"1.2.3","depth":2,"path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md","articles":[{"title":"Device Discover","level":"1.2.3.1","depth":3,"anchor":"#device-discover","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#device-discover","articles":[]},{"title":"Observer","level":"1.2.3.2","depth":3,"anchor":"#add-observer","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#add-observer","articles":[]},{"title":"Get Device","level":"1.2.3.3","depth":3,"anchor":"#get-device","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#get-device","articles":[]},{"title":"Online/Offline Delegate","level":"1.2.3.4","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]}]},{"title":"Device Control","level":"1.2.4","depth":2,"path":"iOS/Device.md","ref":"iOS/Device.md","articles":[{"title":"Play Control","level":"1.2.4.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},{"title":"Alarm","level":"1.2.4.2","depth":3,"anchor":"#alarm","path":"iOS/Device.md","ref":"iOS/Device.md#alarm","articles":[]},{"title":"Preset","level":"1.2.4.3","depth":3,"anchor":"#preset","path":"iOS/Device.md","ref":"iOS/Device.md#preset","articles":[]},{"title":"OTA","level":"1.2.4.4","depth":3,"anchor":"#ota","path":"iOS/Device.md","ref":"iOS/Device.md#ota","articles":[]},{"title":"MCU Passthrough","level":"1.2.4.5","depth":3,"anchor":"#mcu-passthrough","path":"iOS/Device.md","ref":"iOS/Device.md#mcu-passthrough","articles":[]}]},{"title":"Device System Settings","level":"1.2.5","depth":2,"path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md","articles":[{"title":"Name","level":"1.2.5.1","depth":3,"anchor":"#name","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#name","articles":[]},{"title":"Restore","level":"1.2.5.2","depth":3,"anchor":"#restore","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#restore","articles":[]},{"title":"Switch input source","level":"1.2.5.3","depth":3,"anchor":"#switch-input-source","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#switch-input-source","articles":[]},{"title":"Network detection","level":"1.2.5.4","depth":3,"anchor":"#network-detection","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#network-detection","articles":[]},{"title":"EQ","level":"1.2.5.5","depth":3,"anchor":"#eq","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#eq","articles":[]},{"title":"Schedule Shutdown","level":"1.2.5.6","depth":3,"anchor":"#schedule-shutdown","path":"iOS/Device.md","ref":"iOS/Device.md#schedule-shutdown","articles":[]}]},{"title":"Multi-Room Music","level":"1.2.6","depth":2,"path":"iOS/MultiRoom.md","ref":"iOS/MultiRoom.md","articles":[{"title":"Without Master","level":"1.2.6.1","depth":3,"anchor":"#using-devicelist-without-master","path":"iOS/MultiRoom.md","ref":"iOS/MultiRoom.md#using-devicelist-without-master","articles":[]},{"title":"With Master","level":"1.2.6.2","depth":3,"anchor":"#with-master-and-slave-devicelist","path":"iOS/MultiRoom.md","ref":"iOS/MultiRoom.md#with-master-and-slave-devicelist","articles":[]}]},{"title":"Play Settings","level":"1.2.7","depth":2,"path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md","articles":[{"title":"Progress","level":"1.2.7.1","depth":3,"anchor":"#progress","path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md#progress","articles":[]},{"title":"Channel","level":"1.2.7.2","depth":3,"anchor":"#channel","path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md#channel","articles":[]},{"title":"Play Mode","level":"1.2.7.3","depth":3,"anchor":"#play-mode","path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md#play-mode","articles":[]},{"title":"Spotify Play Mode","level":"1.2.7.4","depth":3,"anchor":"#spotify-play-mode","path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md#spotify-play-mode","articles":[]},{"title":"Volume","level":"1.2.7.5","depth":3,"anchor":"#volume","path":"iOS/MusicSetting.md","ref":"iOS/MusicSetting.md#volume","articles":[]}]},{"title":"HTTP Utility","level":"1.2.8","depth":2,"path":"iOS/DeviceNetworkRequest.md","ref":"iOS/DeviceNetworkRequest.md","articles":[{"title":"Get","level":"1.2.8.1","depth":3,"anchor":"#get","path":"iOS/DeviceNetworkRequest.md","ref":"iOS/DeviceNetworkRequest.md#get","articles":[]},{"title":"Post","level":"1.2.8.2","depth":3,"anchor":"#post","path":"iOS/DeviceNetworkRequest.md","ref":"iOS/DeviceNetworkRequest.md#post","articles":[]},{"title":"Post (With Header)","level":"1.2.8.3","depth":3,"anchor":"#post-with-header","path":"iOS/DeviceNetworkRequest.md","ref":"iOS/DeviceNetworkRequest.md#post-with-header","articles":[]}]},{"title":"Alexa","level":"1.2.9","depth":2,"path":"iOS/Alexa.md","ref":"iOS/Alexa.md","articles":[{"title":"Alexa Splash","level":"1.2.9.1","depth":3,"anchor":"#alexa-splash","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#alexa-splash","articles":[]},{"title":"Login with Amazon","level":"1.2.9.2","depth":3,"anchor":"#login-with-amazon","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#login-with-amazon","articles":[]},{"title":"Alexa Logout","level":"1.2.9.3","depth":3,"anchor":"#alexa-logout","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#alexa-logout","articles":[]},{"title":"Alexa Setting","level":"1.2.9.4","depth":3,"anchor":"#alexa-setting","path":"iOS/Alexa.md","ref":"iOS/Alexa.md#alexa-setting","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Integrated.md","mtime":"2020-07-08T12:27:51.847Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T12:30:07.526Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
