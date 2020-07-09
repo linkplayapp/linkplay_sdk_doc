@@ -45,6 +45,7 @@
         -   [Alexa 登出](iOS/Alexa.md#alexa-登出)
         -   [Alexa 设置](iOS/Alexa.md#alexa-设置)
 * [Android](android/DeviceSetup.md)
+    * [集成SDK](android/Integrated.md)
     * [设备配网](android/DeviceSetup.md)
       - [BLE 配网模式](android/DeviceSetup.md#ble-配网模式)
       - [SoftAP 配网模式](android/DeviceSetup.md#softap-配网模式)
