@@ -14,7 +14,7 @@
 #### 初始化
 - 接口说明
 
-初始化管理信息
+    初始化管理信息
 
     ``` Java
     init(LPDeviceManagerParam param)

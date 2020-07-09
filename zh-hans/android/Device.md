@@ -2,7 +2,7 @@
 
 # Overview 
 
-设备对象包含了播控、设备设置、预置、闹钟等有关设备的功能
+设备对象包含了播控、设备设置、闹钟、预置、闹钟等有关设备的功能
 
 
 ### 播放控制
@@ -155,6 +155,194 @@
         });
     ```
 
+### 闹钟
+
+闹钟SDK实现了设备本地闹钟的功能。通过时间、周期、音乐的设定，来实现定时音箱闹铃功能。<br>
+
+闹钟SDK可以设置闹铃，分为通过普通音乐和预置音乐，可以调整闹铃声音的大小，可以设置闹钟的周期。<br>
+
+闹钟SDK可以实现编辑闹钟、新增闹钟、删除闹钟和关闭或者打开闹钟的功能。关闭或打开闹钟，指的是闹钟还存在，只是单纯的关闭或者打开闹钟功能，并不是删除闹钟。<br>
+
+#### 闹钟列表
+- 接口说明
+
+    ``` Java
+    getAlarms(final LPAlarmListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| listener         | LPAlarmListener       | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+        LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+            lpDeviceAlarm.getAlarms(new LPAlarmListener() {
+                @Override
+                public void onSuccess(String result) {
+                    Log.e(TAG, "getAlarms = " + result);
+                }
+
+                @Override
+                public void onFail(Exception e) {
+                    e.printStackTrace();
+                    Log.e(TAG, "get alarms error = " + e.getMessage());
+                }
+            });
+    ```
+
+#### 增加新闹钟
+
+- 接口说明
+    ``` Java
+    addAlarm(String content, final LPAlarmListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| content          | String                     | 闹钟信息                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+    String content = "";
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+    lpDeviceAlarm.addAlarm(content, new LPAlarmListener() { 
+                @Override
+                public void onSuccess(String result) {
+                    Log.i(TAG, "alarm: " + result);
+                }
+                    @Override
+                public void onFail(Exception e) {
+                    Log.i(TAG, "alarm: e " + e);
+                }
+            });       
+    ```
+
+- 注意
+
+    如果闹铃的选择为在线音乐，当选中的音乐处于异常状态时(如在线音乐 token 过期)，会使用默认的音乐代替闹铃
+
+####  修改闹钟
+
+- 接口说明
+    ``` Java
+    editAlarm(String context, final LPAlarmListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| context          | String                     | 闹钟信息                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+        lpDeviceAlarm.editAlarm(content, new LPAlarmListener() {
+                    @Override
+                    public void onSuccess(String result) {
+                        Log.i(TAG, "alarm: " + result);
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+                        Log.i(TAG, "alarm: e " + e);
+
+                    }
+                });
+    ```
+
+####  删除闹钟
+- 接口说明
+    ``` Java
+    deleteAlarm(String alarmName, final LPAlarmListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| alarmName          | String                     | 闹钟名称                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+            lpDeviceAlarm.deleteAlarm(bean.getAlarmName(), new LPAlarmListener() {
+                @Override
+                public void onSuccess(String result) {
+                     Log.i(TAG, "delete alarm: " + result);
+                }
+
+                @Override
+                public void onFail(Exception e) {
+                    e.printStackTrace();
+                    Log.e(TAG, "delete error = " + e.getMessage());
+                }
+            });
+    ```
+
+####  打开/关闭闹钟
+
+- 接口说明
+``` Java
+    setAlarmSwitchOn(String context, LPAlarmListener listener)
+    ```
+
+- 参数
+
+| 名称             | 类型                       | 接口说明                                        |
+| :--------------- | :----------------------- - | :---------------------------------------------- |
+| context          | String                     | 闹钟详情                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+            lpDeviceAlarm.setAlarmSwitchOn(LPMDPKitManager.getInstance().setAlarmStatusWithOpen(isChecked, bean),
+                    new LPAlarmListener() {
+                        @Override
+                        public void onSuccess(String result) {
+                            Log.i(TAG, "swith result = " + result);
+                        }
+
+                        @Override
+                        public void onFail(Exception e) {
+                            e.printStackTrace();
+                            Log.e(TAG, "swith error = " + e.getMessage());
+                            alarmSwith.setChecked(!isChecked);
+                        }
+                    });
+    ```
+
 ### 预置
 
 预置是指将歌曲或者歌单信息保存到设备的存储空间中，可通过设备上的某些物理按键播放这些音乐，用户可以将喜爱的一些音乐通过预置保存在设备中，就可以更快速，更便捷的在设备上播放音乐。<br>
@@ -186,15 +374,14 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 - 接口说明
 
     ``` Java
-    setPreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    setPreset(String context, LPPresetListener listener)
     ```
 
 - 参数
 
 | 名称            | 类型                     | 接口说明                                        |
 | :-------------- | :----------------------- | :---------------------------------------------- |
-| presetItems     | List                     | 预置列表                                        |
-| index           | int                      | 预置索引                                        |
+| context         | String                   | 预置内容                                       |
 | listener        | LPPresetListener         | 回调                                            |
 
 - 返回值
@@ -206,15 +393,14 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 - 接口说明
 
     ``` Java
-    deletePreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    deletePreset(String context, LPPresetListener listener)
     ```
 
 - 参数
 
 | 名称            | 类型                     | 接口说明                                        |
 | :-------------- | :----------------------- | :---------------------------------------------- |
-| presetItems     | List                     | 预置列表                                        |
-| index           | int                      | 预置索引                                        |
+| context     | String                     | 预置列表内容                                        |
 | listener        | LPPresetListener         | 回调                                            |
 
 - 返回值

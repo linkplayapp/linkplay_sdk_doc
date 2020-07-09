@@ -151,6 +151,195 @@ This SDK implements most of the device related functions, includes play control,
         });
     ```
 
+### Alarm
+
+We wrapper the alarm related functions of the device here. <br>
+
+You can create, edit, remove, enable/disable alarms. <br>
+
+You can easily setting the time, interval, wakeup sound and other attributes of an alarm. <br>
+
+#### Alarm List
+
+- Description
+
+    ``` Java
+    getAlarms(final LPAlarmListener listener)
+    ```
+
+- Parameter
+
+    N/A
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+        lpDeviceAlarm.getAlarms(new LPAlarmListener() {
+            @Override
+            public void onSuccess(String result) {
+                Log.e(TAG, "getAlarms = " + result);
+            }
+
+            @Override
+            public void onFail(Exception e) {
+                e.printStackTrace();
+                Log.e(TAG, "get alarms error = " + e.getMessage());
+            }
+        });
+    ```
+
+#### Create Alarm
+
+- Description
+    ``` Java
+    addAlarm(String content, final LPAlarmListener listener)
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| content          | String                     | Alarm config                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` Java
+    String content = "";
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+    lpDeviceAlarm.addAlarm(content, new LPAlarmListener() { 
+                @Override
+                public void onSuccess(String result) {
+                    Log.i(TAG, "alarm: " + result);
+                }
+                    @Override
+                public void onFail(Exception e) {
+                    Log.i(TAG, "alarm: e " + e);
+                }
+            });       
+    ```
+
+- Note
+
+    If the wakeup sound is an online music, and device can't play it (for example the token is invalid), then the device would play with the default ring sound.
+
+#### Edit Alarm
+
+- Description
+    ``` Java
+    editAlarm(String context, final LPAlarmListener listener)
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| context          | String                     | Alarm config                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+
+- Response
+
+     N/A
+
+- Sample Code
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+        lpDeviceAlarm.editAlarm(content, new LPAlarmListener() {
+                    @Override
+                    public void onSuccess(String result) {
+                        Log.i(TAG, "alarm: " + result);
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+                        Log.i(TAG, "alarm: e " + e);
+
+                    }
+                });
+    ```
+
+#### Remove Alarm
+- Description
+    ``` Java
+    deleteAlarm(String alarmName, final LPAlarmListener listener)
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| alarmName          | String                     | Alarm name                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- Response
+
+    N/A
+
+- Sample Code
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+            lpDeviceAlarm.deleteAlarm(bean.getAlarmName(), new LPAlarmListener() {
+                @Override
+                public void onSuccess(String result) {
+                     Log.i(TAG, "delete alarm: " + result);
+                }
+
+                @Override
+                public void onFail(Exception e) {
+                    e.printStackTrace();
+                    Log.e(TAG, "delete error = " + e.getMessage());
+                }
+            });
+    ```
+
+####  Enable/Disable Alarm
+
+- Description
+``` Java
+    setAlarmSwitchOn(String context, LPAlarmListener listener)
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| context          | String                     | Alarm config                                        |
+| listener         | LPAlarmListener            | Callback                                        |
+
+- Response
+
+    N/A
+
+- Sample Code
+    ``` Java
+    LPDeviceAlarm lpDeviceAlarm = new LPDeviceAlarm(UIApplication.currDevice);
+            lpDeviceAlarm.setAlarmSwitchOn(LPMDPKitManager.getInstance().setAlarmStatusWithOpen(isChecked, bean),
+                    new LPAlarmListener() {
+                        @Override
+                        public void onSuccess(String result) {
+                            Log.i(TAG, "swith result = " + result);
+                        }
+
+                        @Override
+                        public void onFail(Exception e) {
+                            e.printStackTrace();
+                            Log.e(TAG, "swith error = " + e.getMessage());
+                            alarmSwith.setChecked(!isChecked);
+                        }
+                    });
+  
+
 ### Preset
 
 Preset is the function that store music or playlist in device's flash, so that user can play music without app, like using physical button on the device.
@@ -169,9 +358,10 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 
 - Parameter
 
-| Name             | Type                       | Description                                     |
-| :--------------- | :----------------------- - | :---------------------------------------------- |
-| listener         | LPPresetListListener       | Callback                                        |
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| listener      | LPPresetListListener             | Callback                               |
+
 
 - Response
 
@@ -182,15 +372,14 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 - Description
 
     ``` Java
-    setPreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    setPreset(String context, LPPresetListener listener)
     ```
 
 - Parameter
 
 | Name            | Type                     | Description                                     |
-| :-------------- | :----------------------- | :---------------------------------------------- |
-| presetItems     | List                     | Preset list                                     |
-| index           | int                      | Index to preset                                 |
+| :-------------- | :----------------------- | :---------------------------------------------- | 
+| context           | String                      | preset context                                 |
 | listener        | LPPresetListener         | Callback                                        |
 
 - Response
@@ -202,15 +391,14 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 - Description
 
     ``` Java
-    deletePreset(List<LPPresetItem> presetItems, int index, LPPresetListener listener)
+    deletePreset(String context, LPPresetListener listener)
     ```
 
 - Parameter
 
 | Name            | Type                     | Description                                     |
 | :-------------- | :----------------------- | :---------------------------------------------- |
-| presetItems     | List                     | Preset list                                     |
-| index           | int                      | Index to preset                                 |
+| context           | String                      | preset context                                  |
 | listener        | LPPresetListener         | Callback                                        |
 
 - Response

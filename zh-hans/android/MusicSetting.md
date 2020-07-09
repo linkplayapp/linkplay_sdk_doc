@@ -62,6 +62,72 @@
 
     无
 
+#### Spotify 播放模式
+
+- 接口说明
+
+    ``` Java
+    setSpotifyPlayMode(LPSpotifyPlayMode playMode, LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称           | 类型                     | 接口说明                                        |
+| :------------- | :----------------------- | :---------------------------------------------- |
+| playMode           | LPSpotifyPlayMode    | Spotify播放模式                                   |
+| listener       | LPDevicePlayerListener   | Callback                                        |
+
+- 返回值
+
+    无
+
+- 示例代码
+    ``` Java
+    if (UIApplication.currDevice.getMediaInfo().getMediaType().equals(LPPlayHeader.LPPlayMediaType.LP_SPOTIFY)) {
+
+                LPSpotifyPlayMode lpSpotifyPlayMode = UIApplication.currDevice.getDeviceInfo().getSpotifyPlayMode();
+
+                LPSpotifyPlayMode setLPSpotifyPlayMode = null;
+
+                switch (lpSpotifyPlayMode) {
+                    case LP_SPOTIFY_DEFAULT:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_LISTREPEAT;
+                        break;
+                    case LP_SPOTIFY_SHUFFLE:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_SINGLEREPEAT;
+                        break;
+                    case LP_SPOTIFY_LISTREPEAT:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_SHUFFLEREPEAT;
+                        break;
+                    case LP_SPOTIFY_SINGLEREPEAT:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_SINGLE_REPEAT_SHUFFLE;
+                        break;
+                    case LP_SPOTIFY_SHUFFLEREPEAT:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_SHUFFLE;
+                        break;
+                    case LP_SPOTIFY_SINGLE_REPEAT_SHUFFLE:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_DEFAULT;
+                        break;
+                    default:
+                        setLPSpotifyPlayMode = LPSpotifyPlayMode.LP_SPOTIFY_DEFAULT;
+                }
+
+                UIApplication.currDevice.getPlayer()
+                        .setSpotifyPlayMode(setLPSpotifyPlayMode,
+                                new LPDevicePlayerListener() {
+                                    @Override
+                                    public void onSuccess(String result) {
+                                        Log.i(TAG, "setMode success: " + result);
+                                    }
+
+                                    @Override
+                                    public void onFailure(Exception e) {
+                                        Log.i(TAG, "setMode fail: " + e.getMessage());
+                                    }
+                                });
+            }
+    ```
+    
 #### 音量
 
 - 接口说明
