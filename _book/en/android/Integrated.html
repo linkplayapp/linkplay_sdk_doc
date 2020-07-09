@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Wi-Fi Setup · LinkPlay SDK</title>
+        <title>Integrate SDK · LinkPlay SDK</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -89,7 +89,7 @@
     <link rel="next" href="DeviceSetup.html" />
     
     
-    <link rel="prev" href="Integrated.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -732,7 +732,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="Integrated.html">
+        <li class="chapter active" data-level="1.3.1" data-path="Integrated.html">
             
                 <a href="Integrated.html">
             
@@ -745,7 +745,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="DeviceSetup.html">
+        <li class="chapter " data-level="1.3.2" data-path="DeviceSetup.html">
             
                 <a href="DeviceSetup.html">
             
@@ -1328,7 +1328,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Wi-Fi Setup</a>
+        <a href=".." >Integrate SDK</a>
     </h1>
 </div>
 
@@ -1343,459 +1343,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wi-fi-setup"><b></b>Wi-Fi Setup</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><li><span class="title-icon "></span><a href="#ble-wi-fi-setup"><b></b>BLE Wi-Fi Setup</a></li><ul><li><span class="title-icon "></span><a href="#start-scan-ble-devices"><b></b>Start Scan BLE Devices</a></li><li><span class="title-icon "></span><a href="#stop-scan-ble-devices"><b></b>Stop Scan BLE Devices</a></li><li><span class="title-icon "></span><a href="#connect-ble-device"><b></b>Connect BLE Device</a></li><li><span class="title-icon "></span><a href="#disconnect-ble-connection"><b></b>Disconnect BLE Connection</a></li><li><span class="title-icon "></span><a href="#get-ap-list-from-device"><b></b>Get AP List from Device</a></li><li><span class="title-icon "></span><a href="#send-wi-fi-connect-command"><b></b>Send Wi-Fi Connect Command</a></li></ul><li><span class="title-icon "></span><a href="#softap-wi-fi-setup"><b></b>SoftAP Wi-Fi Setup</a></li><ul><li><span class="title-icon "></span><a href="#check-if-phone-connected-to-devices-ap"><b></b>Check if Phone Connected to Device&apos;s AP</a></li><li><span class="title-icon "></span><a href="#get-ap-list-from-device_1"><b></b>Get AP List from Device</a></li><li><span class="title-icon "></span><a href="#send-wi-fi-connect-command_1"><b></b>Send Wi-Fi Connect Command</a></li><li><span class="title-icon "></span><a href="#recheck-softap-wi-fi-setup-result"><b></b>Recheck SoftAP Wi-Fi Setup Result</a></li></ul></ul></ul></div><a href="#wi-fi-setup" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="wi-fi-setup"><a name="wi-fi-setup" class="anchor-navigation-ex-anchor" href="#wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wi-fi-setup" class="plugin-anchor" href="#wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Wi-Fi Setup</h1>
-<h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
-<p>Wi-Fi Setup is the first step to config the device. We supply 2 ways to do this, you should choose based on the hardware you&apos;re using:</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#integrate-sdk"><b></b>Integrate SDK</a></li><ul><li><span class="title-icon "></span><a href="#sdk"><b></b>SDK</a></li><ul><li><span class="title-icon "></span><a href="#lpmusickit-sdk"><b></b>LPMusicKit SDK</a></li></ul></ul></ul></div><a href="#integrate-sdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="integrate-sdk"><a name="integrate-sdk" class="anchor-navigation-ex-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrate-sdk" class="plugin-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate SDK</h1>
+<p>The recommended way to include the SDK in your iOS project is to use CocoaPods, but you can also download the SDK and manually configure your project to use it.</p>
+<h2 id="sdk"><a name="sdk" class="anchor-navigation-ex-anchor" href="#sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sdk" class="plugin-anchor" href="#sdk"><i class="fa fa-link" aria-hidden="true"></i></a>SDK</h2>
+<h3 id="lpmusickit-sdk"><a name="lpmusickit-sdk" class="anchor-navigation-ex-anchor" href="#lpmusickit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lpmusickit-sdk" class="plugin-anchor" href="#lpmusickit-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>LPMusicKit SDK</h3>
+<p>Linkplay Music Kit is the app side SDK for Linkplay Home Audio solution&#xFF1B;you can use it to implement our solution into your product.</p>
+<p>MusicKit mainly solves 2 issues:</p>
 <ul>
-<li><p>BLE Wi-Fi Setup</p>
+<li><p>Maintain the commnunication protocol with our firmware so that your app could interact with the device without concerning the comlexity of the lower layers.</p>
 </li>
-<li><p>SoftAP Wi-Fi Setup</p>
+<li><p>Wrapper the complexity of cloud services (includes music services and voice services etc.) so that you can intergtate them rapidly and don&apos;t bother the details.</p>
 </li>
 </ul>
-<blockquote>
-<p>SDK requires location privilege after Android10 to get the phone&apos;s connected SSID.</p>
-</blockquote>
-<h2 id="ble-wi-fi-setup"><a name="ble-wi-fi-setup" class="anchor-navigation-ex-anchor" href="#ble-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ble-wi-fi-setup" class="plugin-anchor" href="#ble-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>BLE Wi-Fi Setup</h2>
-<p>App setup device&apos;s Wi-Fi network through BLE connection.</p>
-<h3 id="start-scan-ble-devices"><a name="start-scan-ble-devices" class="anchor-navigation-ex-anchor" href="#start-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-scan-ble-devices" class="plugin-anchor" href="#start-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Start Scan BLE Devices</h3>
+<p><a href="https://github.com/linkplayapp/LPMusicKitAndroid" target="_blank">Download LPMusicKit SDK</a></p>
+<p>The following are the main functions of LPMusicKit SDK:</p>
 <ul>
-<li><p>Description</p>
-<p>  Start scanning for BLE devices</p>
-<pre class="language-"><code class="lang-Java">  startScan(LPBLEScanListener listener)
+<li>Device discovery<pre class="language-"><code>LPDeviceManager.getInstance().search(null);
+</code></pre></li>
+<li><p>Device online and offline delegate</p>
+<pre class="language-"><code class="lang-ObjectiveC">LPDeviceManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>LPDeviceManagerObserver observer<span class="token punctuation">)</span>
+<span class="token comment">// delegate</span>
+LPDeviceOnline
+LPDeviceRemove
+LPDeviceUpdate
 </code></pre>
 </li>
-<li><p>Parameter</p>
+<li><p>Device playback control:
+  Through LPDevicePlayer to realize the playback processing of the device</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPBLEScanListener</td>
-<td style="text-align:left">Founded BLE device</td>
-</tr>
-</tbody>
-</table>
 <ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
+<li>Device information display: Display device information through LPDeviceInfo and LPDeviceStatus</li>
 </ul>
-<h3 id="stop-scan-ble-devices"><a name="stop-scan-ble-devices" class="anchor-navigation-ex-anchor" href="#stop-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop-scan-ble-devices" class="plugin-anchor" href="#stop-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Stop Scan BLE Devices</h3>
 <ul>
-<li><p>Description</p>
-<p>  When scan finished or not required, use this function to stop BLE scan so that lower the power consumption.</p>
-<pre class="language-"><code class="lang-Java">  stopScan()
-</code></pre>
-</li>
-<li><p>Parameter</p>
-<p>  N/A</p>
-</li>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
+<li>Device media information display: display device media information through LPMediaInfo</li>
 </ul>
-<h3 id="connect-ble-device"><a name="connect-ble-device" class="anchor-navigation-ex-anchor" href="#connect-ble-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="connect-ble-device" class="plugin-anchor" href="#connect-ble-device"><i class="fa fa-link" aria-hidden="true"></i></a>Connect BLE Device</h3>
 <ul>
-<li><p>Description</p>
-<p>  Establish BLE connection with device.</p>
-<pre class="language-"><code class="lang-Java">  connectBLE(LPBluetoothDevice device&#xFF0C;LPConnectBLEListener listener)
-</code></pre>
+<li><p>The device&apos;s preset, alarm clock, timed sleep function</p>
 </li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left">LPBluetoothDevice</td>
-<td style="text-align:left">The device object get from BLE scan</td>
-</tr>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPConnectBLEListener</td>
-<td style="text-align:left">Result of BLE connection</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-Java">  LPBLEManager.getInstance().connectBLE(bluetoothDevice, new LPConnectBLEListener() {
-              @Override
-              public void onFailed(int i, String s) {
-                  Log.i(TAG, &quot;connectBLE onFailed&quot;);
-              }
-
-              @Override
-              public void onStartConnect() {
-                  Log.i(TAG, &quot;connectBLE onStartConnect&quot;);
-              }
-
-              @Override
-              public void onConnectFail(Exception e) {
-                  Log.i(TAG, &quot;connectBLE onConnectFail&quot;);
-              }
-
-              @Override
-              public void onConnectSuccess(BluetoothGatt bluetoothGatt, int i) {
-
-                  Log.i(TAG, &quot;connectBLE onConnectSuccess&quot;);
-              }
-
-              @Override
-              public void onDisConnected(boolean b, BluetoothGatt bluetoothGatt, int i) {
-                  Log.i(TAG, &quot;connectBLE onDisConnected&quot;);
-              }
-          });
-</code></pre>
-</li>
-</ul>
-<h3 id="disconnect-ble-connection"><a name="disconnect-ble-connection" class="anchor-navigation-ex-anchor" href="#disconnect-ble-connection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="disconnect-ble-connection" class="plugin-anchor" href="#disconnect-ble-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Disconnect BLE Connection</h3>
-<ul>
-<li><p>Description</p>
-<p>  Disconnect BLE connection with device</p>
-<pre class="language-"><code class="lang-Java">  disConnect()
-</code></pre>
-</li>
-<li><p>Parameter</p>
-<p>  N/A</p>
-</li>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-</ul>
-<h3 id="get-ap-list-from-device"><a name="get-ap-list-from-device" class="anchor-navigation-ex-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-ap-list-from-device" class="plugin-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a>Get AP List from Device</h3>
-<ul>
-<li><p>Description</p>
-<p>  Get AP list around from device through BLE</p>
-<pre class="language-"><code class="lang-Java">  getWLANList(LPBLEAPListListener listener)
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">apList</td>
-<td style="text-align:left">id</td>
-<td style="text-align:left">Listener for Wi-Fi list discovery</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-Java">  LPBLEManager.getInstance().getWLANList(new LPBLEAPListListener() {
-          @Override
-          public void onSuccess(List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BLEAPInfo</span><span class="token punctuation">&gt;</span></span> apItemList) {
-
-              Log.i(TAG, &quot;Get WiFi list success++&quot;);
-
-              adapter.clear();
-
-              ArrayList<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BLEAPInfo</span><span class="token punctuation">&gt;</span></span> arrayList = new ArrayList&lt;&gt;();
-
-              arrayList.addAll(apItemList);
-
-              ArrayList<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BLEAPInfo</span><span class="token punctuation">&gt;</span></span> finalAPLIst = arrayList;
-
-              refreshHandler.post(new Runnable() {
-                  @Override
-                  public void run() {
-
-                      adapter.setDeviceList(finalAPLIst);
-                      adapter.notifyDataSetChanged();
-                  }
-              });
-          }
-
-          @Override
-          public void onFailed(Exception e) {
-              Log.i(TAG, &quot;Get WiFi list failed++&quot;);
-          }
-      });
-</code></pre>
-</li>
-</ul>
-<h3 id="send-wi-fi-connect-command"><a name="send-wi-fi-connect-command" class="anchor-navigation-ex-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-wi-fi-connect-command" class="plugin-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a>Send Wi-Fi Connect Command</h3>
-<ul>
-<li><p>Description</p>
-<p>  Send Wi-Fi connect command.</p>
-<pre class="language-"><code class="lang-Java">  connectToWiFi(String ssid, String pwd, LPBLEConnectWifiListener listener)
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ssid</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">SSID to connect</td>
-</tr>
-<tr>
-<td style="text-align:left">password</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">Password for AP</td>
-</tr>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPConnectBLEListener</td>
-<td style="text-align:left">Callback</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-<li><p>Sample Code</p>
-<pre class="language-"><code class="lang-Java">  LPBLEManager.getInstance().connectWLAN(ssid, pwd,
-                          new LPConnectBLEListener() {
-                              @Override
-                              public void LPConnectSuccess(String ip, String uuid) {
-                                  //searching device online
-                                  connectSuccess(ip, uuid);
-                              }
-
-                              @Override
-                              public void LPConnectFailed(int errorCode) {
-                                  //connect failed
-                                  connectFail(errorCode);
-                              }
-                          });
-</code></pre>
-</li>
-</ul>
-<h2 id="softap-wi-fi-setup"><a name="softap-wi-fi-setup" class="anchor-navigation-ex-anchor" href="#softap-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="softap-wi-fi-setup" class="plugin-anchor" href="#softap-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>SoftAP Wi-Fi Setup</h2>
-<p>LPWiFiSetupManager implements the softAP Wi-Fi setup.</p>
-<ul>
-<li><p><code>LPApItem</code></p>
-<p>  Response object from getAPList</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SSID</td>
-<td>String</td>
-<td>SSID Name</td>
-</tr>
-<tr>
-<td>RSSI</td>
-<td>String</td>
-<td>Signal Strength</td>
-</tr>
-<tr>
-<td>BSSID</td>
-<td>String</td>
-<td>BSSID</td>
-</tr>
-<tr>
-<td>Channel</td>
-<td>String</td>
-<td>Channel</td>
-</tr>
-<tr>
-<td>Auth</td>
-<td>String</td>
-<td>Auth</td>
-</tr>
-<tr>
-<td>Encry</td>
-<td>String</td>
-<td>Encryption</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>LPWiFiSetupFailed</code> errorCode</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td>int</td>
-<td>Phone connects to different Wi-Fi from user&apos;s choice</td>
-</tr>
-<tr>
-<td>1002</td>
-<td>int</td>
-<td>Other errors</td>
-</tr>
-</tbody>
-</table>
-<h3 id="check-if-phone-connected-to-devices-ap"><a name="check-if-phone-connected-to-devices-ap" class="anchor-navigation-ex-anchor" href="#check-if-phone-connected-to-devices-ap"><i class="fa fa-link" aria-hidden="true"></i></a><a name="check-if-phone-connected-to-devices-ap" class="plugin-anchor" href="#check-if-phone-connected-to-devices-ap"><i class="fa fa-link" aria-hidden="true"></i></a>Check if Phone Connected to Device&apos;s AP</h3>
-<ul>
-<li><p>Description</p>
-<p>  SoftAP requires phone connected to device&apos;s hotspot, so you need a function to check this.</p>
-<pre class="language-"><code class="lang-Java">  isLinkplayHotspot()
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<p>N/A</p>
-<ul>
-<li><p>Response</p>
-<p>  BOOL</p>
-</li>
-</ul>
-<h3 id="get-ap-list-from-device_1"><a name="get-ap-list-from-device_1" class="anchor-navigation-ex-anchor" href="#get-ap-list-from-device_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-ap-list-from-device" class="plugin-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a>Get AP List from Device</h3>
-<ul>
-<li><p>Description</p>
-<p>  After connected to device&apos;s hotspot, call this function to get AP list around from device.</p>
-<pre class="language-"><code class="lang-Java">  getApList&#xFF08;LPApListListener listener&#xFF09;
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPAPListListener</td>
-<td style="text-align:left">Get AP list listener</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-</ul>
-<h3 id="send-wi-fi-connect-command_1"><a name="send-wi-fi-connect-command_1" class="anchor-navigation-ex-anchor" href="#send-wi-fi-connect-command_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-wi-fi-connect-command" class="plugin-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a>Send Wi-Fi Connect Command</h3>
-<ul>
-<li><p>Description</p>
-<pre class="language-"><code class="lang-Java">  connectToWiFi(LPApItem item, String pwd, LPWiFiSetupListener listener)
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">item</td>
-<td style="text-align:left">LPApItem</td>
-<td style="text-align:left">Wi-Fi object to connect</td>
-</tr>
-<tr>
-<td style="text-align:left">pwd</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">Password</td>
-</tr>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPWiFiSetupListener</td>
-<td style="text-align:left">Callback</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
-</li>
-</ul>
-<h3 id="recheck-softap-wi-fi-setup-result"><a name="recheck-softap-wi-fi-setup-result" class="anchor-navigation-ex-anchor" href="#recheck-softap-wi-fi-setup-result"><i class="fa fa-link" aria-hidden="true"></i></a><a name="recheck-softap-wi-fi-setup-result" class="plugin-anchor" href="#recheck-softap-wi-fi-setup-result"><i class="fa fa-link" aria-hidden="true"></i></a>Recheck SoftAP Wi-Fi Setup Result</h3>
-<ul>
-<li><p>Description</p>
-<p>  If SoftAP Wi-Fi setup failed and phone connected to different AP from destination AP, you could call this function to recheck the result</p>
-<pre class="language-"><code class="lang-Java">  retryCheckWithTime&#xFF08;int timeout, LPWiFiSetupListener listener&#xFF09;
-</code></pre>
-</li>
-<li><p>Parameter</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Type</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">timeout</td>
-<td style="text-align:left">int</td>
-<td style="text-align:left">Recheck timeout, default 30s</td>
-</tr>
-<tr>
-<td style="text-align:left">listener</td>
-<td style="text-align:left">LPApListListener</td>
-<td style="text-align:left">Callback</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>Response</p>
-<p>  N/A</p>
+<li><p>OTA function of the device</p>
 </li>
 </ul>
 
@@ -1825,12 +1411,12 @@
 
             
                 
-                <a href="Integrated.html" class="navigation navigation-prev " aria-label="Previous page: Integrate SDK">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Android">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="DeviceSetup.html#ble-wi-fi-setup" class="navigation navigation-next " aria-label="Next page: BLE Setup">
+                <a href="DeviceSetup.html" class="navigation navigation-next " aria-label="Next page: Wi-Fi Setup">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1841,7 +1427,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Wi-Fi Setup","level":"1.3.2","depth":2,"next":{"title":"BLE Setup","level":"1.3.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#ble-wi-fi-setup","articles":[]},"previous":{"title":"Integrate SDK","level":"1.3.1","depth":2,"path":"android/Integrated.md","ref":"android/Integrated.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/DeviceSetup.md","mtime":"2020-07-08T09:15:43.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-09T10:24:29.384Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3.1","depth":2,"next":{"title":"Wi-Fi Setup","level":"1.3.2","depth":2,"path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md","articles":[{"title":"BLE Setup","level":"1.3.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#ble-wi-fi-setup","articles":[]},{"title":"SoftAP Setup","level":"1.3.2.2","depth":3,"anchor":"#softap-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#softap-wi-fi-setup","articles":[]}]},"previous":{"title":"Android","level":"1.3","depth":1,"path":"android/README.md","ref":"android/README.md","articles":[{"title":"Integrate SDK","level":"1.3.1","depth":2,"path":"android/Integrated.md","ref":"android/Integrated.md","articles":[]},{"title":"Wi-Fi Setup","level":"1.3.2","depth":2,"path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md","articles":[{"title":"BLE Setup","level":"1.3.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#ble-wi-fi-setup","articles":[]},{"title":"SoftAP Setup","level":"1.3.2.2","depth":3,"anchor":"#softap-wi-fi-setup","path":"android/DeviceSetup.md","ref":"android/DeviceSetup.md#softap-wi-fi-setup","articles":[]}]},{"title":"Device Discover","level":"1.3.3","depth":2,"path":"android/Device_SDK.md","ref":"android/Device_SDK.md","articles":[{"title":"Device Discover","level":"1.3.3.1","depth":3,"anchor":"#device-discover","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#device-discover","articles":[]},{"title":"Observer","level":"1.3.3.2","depth":3,"anchor":"#add-observer","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#add-observer","articles":[]},{"title":"Get Device","level":"1.3.3.3","depth":3,"anchor":"#get-device","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#get-device","articles":[]},{"title":"Online/Offline Delegate","level":"1.3.3.4","depth":3,"anchor":"#onlineoffline-delegate","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#onlineoffline-delegate","articles":[]}]},{"title":"Device Control","level":"1.3.4","depth":2,"path":"android/Device.md","ref":"android/Device.md","articles":[{"title":"Play Control","level":"1.3.4.1","depth":3,"anchor":"#play-control","path":"android/Device.md","ref":"android/Device.md#play-control","articles":[]},{"title":"Alarm","level":"1.3.4.2","depth":3,"anchor":"#alarm","path":"android/Device.md","ref":"android/Device.md#alarm","articles":[]},{"title":"Preset","level":"1.3.4.3","depth":3,"anchor":"#preset","path":"android/Device.md","ref":"android/Device.md#preset","articles":[]},{"title":"OTA","level":"1.3.4.4","depth":3,"anchor":"#ota","path":"android/Device.md","ref":"android/Device.md#ota","articles":[]},{"title":"MCU Passthrough","level":"1.3.4.5","depth":3,"anchor":"#mcu-passthrough","path":"android/Device.md","ref":"android/Device.md#mcu-passthrough","articles":[]}]},{"title":"Device System Settings","level":"1.3.5","depth":2,"path":"android/DeviceInfoSetting.md","ref":"android/DeviceInfoSetting.md","articles":[{"title":"Name","level":"1.3.5.1","depth":3,"anchor":"#name","path":"android/DeviceInfoSetting.md","ref":"android/DeviceInfoSetting.md#name","articles":[]},{"title":"Switch input source","level":"1.3.5.2","depth":3,"anchor":"#switch-input-source","path":"android/DeviceInfoSetting.md","ref":"android/DeviceInfoSetting.md#switch-input-source","articles":[]},{"title":"Schedule Shutdown","level":"1.3.5.3","depth":3,"anchor":"#schedule-shutdown","path":"android/Device.md","ref":"android/Device.md#schedule-shutdown","articles":[]}]},{"title":"Multi-Room Music","level":"1.3.6","depth":2,"path":"android/MultiRoom.md","ref":"android/MultiRoom.md","articles":[{"title":"Without Master","level":"1.3.6.1","depth":3,"anchor":"#using-devicelist-without-master","path":"android/MultiRoom.md","ref":"android/MultiRoom.md#using-devicelist-without-master","articles":[]},{"title":"With Master","level":"1.3.6.2","depth":3,"anchor":"#with-master-and-slave-devicelist","path":"android/MultiRoom.md","ref":"android/MultiRoom.md#with-master-and-slave-devicelist","articles":[]}]},{"title":"Play Settings","level":"1.3.7","depth":2,"path":"android/MusicSetting.md","ref":"android/MusicSetting.md","articles":[{"title":"Progress","level":"1.3.7.1","depth":3,"anchor":"#progress","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#progress","articles":[]},{"title":"Channel","level":"1.3.7.2","depth":3,"anchor":"#channel","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#channel","articles":[]},{"title":"Play Mode","level":"1.3.7.3","depth":3,"anchor":"#play-mode","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#play-mode","articles":[]},{"title":"Spotify Play Mode","level":"1.3.7.4","depth":3,"anchor":"#spotify-play-mode","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#spotify-play-mode","articles":[]},{"title":"Volume","level":"1.3.7.5","depth":3,"anchor":"#volume","path":"android/MusicSetting.md","ref":"android/MusicSetting.md#volume","articles":[]}]},{"title":"HTTP Utility","level":"1.3.8","depth":2,"path":"android/DeviceNetworkRequest.md","ref":"android/DeviceNetworkRequest.md","articles":[{"title":"Get","level":"1.3.8.1","depth":3,"anchor":"#get","path":"android/DeviceNetworkRequest.md","ref":"android/DeviceNetworkRequest.md#get","articles":[]},{"title":"Post","level":"1.3.8.2","depth":3,"anchor":"#post","path":"android/DeviceNetworkRequest.md","ref":"android/DeviceNetworkRequest.md#post","articles":[]},{"title":"Listener","level":"1.3.8.3","depth":3,"anchor":"#Listener","path":"android/DeviceNetworkRequest.md","ref":"android/DeviceNetworkRequest.md#Listener","articles":[]}]},{"title":"Alexa","level":"1.3.9","depth":2,"path":"android/Alexa.md","ref":"android/Alexa.md","articles":[{"title":"Alexa Splash","level":"1.3.9.1","depth":3,"anchor":"#alexa-splash","path":"android/Alexa.md","ref":"android/Alexa.md#alexa-splash","articles":[]},{"title":"Login with Amazon","level":"1.3.9.2","depth":3,"anchor":"#login-with-amazon","path":"android/Alexa.md","ref":"android/Alexa.md#login-with-amazon","articles":[]},{"title":"Alexa Logout","level":"1.3.9.3","depth":3,"anchor":"#alexa-logout","path":"android/Alexa.md","ref":"android/Alexa.md#alexa-logout","articles":[]},{"title":"Alexa Setting","level":"1.3.9.4","depth":3,"anchor":"#alexa-setting","path":"android/Alexa.md","ref":"android/Alexa.md#alexa-setting","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Integrated.md","mtime":"2020-07-09T10:24:00.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-09T10:24:29.384Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

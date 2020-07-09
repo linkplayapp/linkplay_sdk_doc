@@ -43,6 +43,7 @@
         -   [Alexa Logout](iOS/Alexa.md#alexa-logout)
         -   [Alexa Setting](iOS/Alexa.md#alexa-setting)
 -   [Android](android/README.md)
+    -   [Integrate SDK](android/Integrated.md)
     -   [Wi-Fi Setup](android/DeviceSetup.md)
         -   [BLE Setup](android/DeviceSetup.md#ble-wi-fi-setup)
         -   [SoftAP Setup](android/DeviceSetup.md#softap-wi-fi-setup)
