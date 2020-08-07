@@ -1,7 +1,6 @@
 # Summary
 
--   [如何提交文章](README.md)
--   [前言](introduction.md)
+-   [前言](README.md)
 -   [iOS](iOS/Integrated.md)
     -   [集成SDK](iOS/Integrated.md)
     -   [设备配网](iOS/DeviceSetup.md)
