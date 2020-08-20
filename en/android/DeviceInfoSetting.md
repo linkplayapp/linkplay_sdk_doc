@@ -4,11 +4,11 @@
 
 Device system related settings, includes language, name, timezone etc.
 
-#### Name
+####  Name
 
 -   Description
 
-    ```ObjectiveC
+    ```Java
     setDeviceName(String name, final LPDeviceSettingsListener listener)
     ```
 
@@ -23,13 +23,47 @@ Device system related settings, includes language, name, timezone etc.
 
     N/A
 
+#### Restore
+
+-   Description 
+
+    ```Java
+    resetDeviceWithHandler(final LPDeviceSettingsListener listener)
+    ```
+
+-   Parameter
+
+| Name       | Type                     | Description |
+| :--------- | :-------                 | :------- |
+| listener   | LPDeviceSettingsListener | Callback |
+
+
+-   Response
+
+    N/A
+
+-   Sample Code
+    ```Java
+    currDevice.getDeviceSettings().resetDeviceWithHandler(new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+    ```
+
 #### Switch input source
 
 -   Description
 
     Switch the input source of the device, such as Bluetooth, AUX, RCA
 
-    ```ObjectiveC
+    ```Java
     switchInputSource(LPInputSource source, String uuid, final LPDeviceSettingsListener listener)
     ```
 
@@ -43,3 +77,99 @@ Device system related settings, includes language, name, timezone etc.
 -   Response
 
     N/A
+
+#### Network detection
+
+-   Description
+
+    Judge if the device has a network, if the device network changes, at this time the value of isHaveInternet has been updated.
+
+-   Sample Code
+    ```Java
+        currDevice.getDeviceStatus().isHaveInternet();
+    ```
+
+#### EQ
+#### Get EQ
+
+-   Description
+
+     Get the supported EQ type and current Value.
+    After modifying the value of EQ in other ways, you can synchronize the Value
+    The data structure is as follows:
+    ```Java
+    {
+        "Mode":"POP",
+        "Version":1,
+        "EQValue": "[
+        {"Name":"BandBASS", "Value":"0"},
+        {"Name":"BandLOW", "Value":"0"},
+        {"Name":"BandMID", "Value":"0"},
+        {"Name":"BandHIGH", "Value":"0"},
+        {"Name":"BandTREBLE", "Value":"0"}
+        ...
+        ]
+    }
+    ```
+    The array corresponding to the EQValue field is a collection of EQ types supported by the device. If there is a special EQ type, please contact Linkplay firmware personnel to configure the server data parameters.
+    Generally, the value of Value is -5 to 5, please make sure that the value of Value is of type int.
+
+    ```Java
+    getSupportEQAndValues(final LPDeviceSettingsListener listener)
+    ```
+
+-   Parameter
+
+| Name     | Type                     | Description  |
+| :-----   | :------------            | :--------- |
+| listener | LPDeviceSettingsListener | Callback   |
+
+-   Response
+
+    N/A
+
+-   Sample Code
+    ```Java
+        currDevice.getDeviceSettings().getSupportEQAndValues(new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+                        
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+    ```
+
+#### Set EQ
+- Description
+    ```Java
+        setEQValues(String value, LPDeviceSettingsListener listener)
+    ```
+-   Parameter
+
+| Name     | Type                     | Description   |
+| :-----   | :------------            | :--------- |
+| value    | String | value   |
+| listener | LPDeviceSettingsListener | Callback   |
+
+-   Response
+
+     N/A
+
+-   Sample Code
+    ```Java
+        currDevice.getDeviceSettings().setEQValues("0", new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+                        
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+    ```
