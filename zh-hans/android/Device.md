@@ -369,6 +369,20 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 
     无
 
+-   示例代码
+    ```Java
+    currDevice.getDevicePreset().getPresets(new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+                       
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
 ####  设置预置
 
 - 接口说明
@@ -388,6 +402,21 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 
     无
 
+- 示例代码
+    ```Java
+    currDevice.getDevicePreset().setPreset(prests,
+                        new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
 ####  删除预置
 
 - 接口说明
@@ -406,6 +435,22 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 - 返回值
 
     无
+
+-  示例代码
+    ```Java
+    currDevice.getDevicePreset().deletePreset(preset,
+                        new LPPresetListener() {
+                            @Override
+                            public void onSuccess(String s) {
+                                
+                            }
+
+                            @Override
+                            public void onFail(Exception e) {
+
+                            }
+                        });
+    ```
 
 ####  播放预置
 
@@ -426,6 +471,20 @@ SDK 需要配合 LPMDPKit SDK 使用，SDK返回的信息，需要传入的参�
 
     无
 
+-  示例代码
+    ```Java
+    currDevice.getDevicePreset().playPreset(1, new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+                        
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
 ### 定时关机
 
 Timer SDK 提供了设置休眠倒计时时间，获取休眠倒计时时间的API

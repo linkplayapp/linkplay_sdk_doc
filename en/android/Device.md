@@ -352,7 +352,7 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 
 - Description
 
-    ``` Java
+    ```Java
     getPresets(LPPresetListListener listener)
     ```
 
@@ -366,6 +366,22 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 - Response
 
     N/A
+
+-   Sample Code
+    
+    ```Java
+    currDevice.getDevicePreset().getPresets(new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+                       
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
 
 #### Update
 
@@ -386,6 +402,22 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 
     N/A
 
+- Sample Code
+    ```Java
+    currDevice.getDevicePreset().setPreset(prests,
+                        new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
+
 #### Remove
 
 - Description
@@ -405,6 +437,22 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 
     N/A
 
+-  Sample Code
+    ```Java
+    currDevice.getDevicePreset().deletePreset(preset,
+                        new LPPresetListener() {
+                            @Override
+                            public void onSuccess(String s) {
+                                
+                            }
+
+                            @Override
+                            public void onFail(Exception e) {
+
+                            }
+                        });
+    ```
+
 #### Play
 
 - Description
@@ -423,6 +471,22 @@ This SDK needs to cooperate with the LPMDPKit to use. <br>
 - Response
 
     N/A
+
+
+-  Sample Code
+    ```Java
+    currDevice.getDevicePreset().playPreset(1, new LPPresetListener() {
+                    @Override
+                    public void onSuccess(String s) {
+                        
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+
+                    }
+                });
+    ```
 
 ### Schedule Shutdown
 
