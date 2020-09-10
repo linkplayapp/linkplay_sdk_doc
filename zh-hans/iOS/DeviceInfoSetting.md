@@ -287,7 +287,7 @@
 
 -   接口说明
 
-    设置设备的SSID密码，请注意密码长度至少为8位数字
+    设置设备的SSID密码，请注意密码长度至少为8位
 
     ```ObjectiveC
     - (void)setSSIDPassword:(NSString *)password completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
