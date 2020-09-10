@@ -23,6 +23,7 @@
         -   [Switch input source](iOS/DeviceInfoSetting.md#switch-input-source)
         -   [Network detection](iOS/DeviceInfoSetting.md#network-detection)
         -   [EQ](iOS/DeviceInfoSetting.md#eq)
+        -   [SSID and password](iOS/DeviceInfoSetting.md#ssid-and-password)
         -   [Schedule Shutdown](iOS/Device.md#schedule-shutdown)
     -   [Multi-Room Music](iOS/MultiRoom.md)
         -   [Without Master](iOS/MultiRoom.md#using-devicelist-without-master)

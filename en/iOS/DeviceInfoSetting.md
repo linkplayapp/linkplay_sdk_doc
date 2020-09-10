@@ -193,13 +193,128 @@ Device system related settings, includes language, name, timezone etc.
 -   Sample Code
 
     ```ObjectiveC
+    //valuesArray: the device supported EQ types
     NSArray *valuesArray = @[@{@"Name":@"BandBASS", @"Value":@"-5"} ,@{@"Name":@"BandLOW", @"Value":@"-2"},@{@"Name":@"BandMID", @"Value":@"0"},@{@"Name":@"BandHIGH", @"Value":@"2"},@{@"Name":@"BandTREBLE", @"Value":@"5"}];
     NSDictionary *EQValuesDict = @{@"EQValue":valuesArray};
     [device.deviceSettings setEQValues:EQValuesDict completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        NSLog(@"EQValue = %@", responseObject[@"EQValue"]);
     }];
+    ```
+
+#### EQ NSNotification
+
+- NSNotification description
+
+  When the EQ is adjusted through settings or other mobile phones, this notification will be triggered to update the data synchronously
+
+  LPEQValueChangeNotification
+
+-   Sample Code
+
+    ```ObjectiveC
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(EQValueChangeNotification:) name:@"LPEQValueChangeNotification" object:nil];
+
+    - (void)EQValueChangeNotification:(NSNotification *)notification {
+        NSDictionary *infoDict = notification.object;
+        if ([[infoDict allKeys] containsObject:@"EQValue"]) {
+            NSLog(@"EQValue = %@", infoDict[@"EQValue"]);
+        }
+    }   
     ```
 
 
 
+### SSID and password
 
+#### Hide/Open SSID
+
+-   Description
+
+    Hide or open the SSID of the device. When you turn on the device SSID, if there is no password, it is best to prompt the user to set the password. You can judge whether the SSID has been hidden according to the isSSIDHidden attribute in deviceStatus
+
+    ```ObjectiveC
+    - (void)hideSSID:(BOOL)hide completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
+    ```
+
+-   Parameter
+
+| Name       | Type          | Description                                                                   |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| hide       | BOOL          | Hide or open the SSID of the device                                           |
+
+-   Response
+
+    N/A
+
+-   Sample Code
+
+    ```ObjectiveC
+     // Open the device SSID
+     BOOL isHidden = device.deviceStatus.isSSIDHidden;
+    [device.deviceSettings hideSSID:NO completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            // Open the device SSID successfully
+            // If the device SSID has not set a password, you need to prompt the user to set a password
+            if (device.deviceStatus.password.length == 0) {
+                [device.deviceSettings setSSIDPassword:@"12345678" completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+                    if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+                        NSLog(@"Successfully set the SSID password");
+                    }else {
+                        NSLog(@"Failed to set SSID password");
+                        // Hide device SSID again
+                        [device.deviceSettings hideSSID:YES completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+                            
+                        }];
+                    }
+                }];
+            }else {
+                NSLog(@"Choose whether to reset the password");
+            }
+        }else {
+            NSLog(@"Failed to open device SSID");
+        }
+    }];
+
+    // Hide the device SSID
+    [device.deviceSettings hideSSID:YES completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            NSLog(@"Device SSID is turned off");
+        }else {
+            NSLog(@"Device SSID turned off failed");
+        }
+    }];
+    ```
+
+
+#### Set SSID password
+
+-   Description
+
+    Set the device SSID password, please note that the password length is at least 8 digits.
+
+    ```ObjectiveC
+    - (void)setSSIDPassword:(NSString *)password completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
+    ```
+
+-   Parameter
+
+| Name       | Type          | Description                                                                   |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| password   | NSString      | SSID password, at least 8 digits in length                                    |
+
+-   Response
+
+    N/A
+
+-   Sample Code
+
+    ```ObjectiveC
+     // Set SSID password
+    [device.deviceSettings setSSIDPassword:@"12345678" completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            NSLog(@"Successfully set the SSID password");
+        }else {
+            NSLog(@"Failed to set SSID password");
+        }
+    }];
+    ```

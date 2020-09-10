@@ -190,10 +190,128 @@
 -   示例代码
 
     ```ObjectiveC
+    //valuesArray: the device supported EQ types
     NSArray *valuesArray = @[@{@"Name":@"BandBASS", @"Value":@"-5"} ,@{@"Name":@"BandLOW", @"Value":@"-2"},@{@"Name":@"BandMID", @"Value":@"0"},@{@"Name":@"BandHIGH", @"Value":@"2"},@{@"Name":@"BandTREBLE", @"Value":@"5"}];
     NSDictionary *EQValuesDict = @{@"EQValue":valuesArray};
     [device.deviceSettings setEQValues:EQValuesDict completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        NSLog(@"EQValue = %@", responseObject[@"EQValue"]);
     }];
     ```
    
+#### EQ 通知
+
+- 通知说明
+
+  当EQ通过设置或者别的手机调节的时候，会触发这个通知，从而同步更新数据
+
+  LPEQValueChangeNotification
+
+-   示例代码
+
+    ```ObjectiveC
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(EQValueChangeNotification:) name:@"LPEQValueChangeNotification" object:nil];
+
+    - (void)EQValueChangeNotification:(NSNotification *)notification {
+        NSDictionary *infoDict = notification.object;
+        if ([[infoDict allKeys] containsObject:@"EQValue"]) {
+            NSLog(@"EQValue = %@", infoDict[@"EQValue"]);
+        }
+    }   
+    ```
+
+
+### SSID和密码
+
+#### 隐藏/打开 SSID
+
+-   接口说明
+
+    隐藏或打开设备的SSID。 打开设备的SSID时，如果没有密码，最好提示用户去设置密码。你可以根据deviceStatus中isSSIDHidden属性，判断SSID是否已经隐藏
+
+    ```ObjectiveC
+    - (void)hideSSID:(BOOL)hide completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
+    ```
+
+-   参数
+
+| 名称         | 类型           | 接口说明                                             |
+| :---------  | :------------  | :-------------------------------------------------  |
+| hide        | BOOL           | 隐藏或打开设备的SSID                                  |
+
+
+-   返回值
+
+    无
+
+-   示例代码
+
+    ```ObjectiveC
+     // Open the device SSID
+     BOOL isHidden = device.deviceStatus.isSSIDHidden;
+    [device.deviceSettings hideSSID:NO completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            // Open the device SSID successfully
+            // If the device SSID has not set a password, you need to prompt the user to set a password
+            if (device.deviceStatus.password.length == 0) {
+                [device.deviceSettings setSSIDPassword:@"12345678" completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+                    if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+                        NSLog(@"Successfully set the SSID password");
+                    }else {
+                        NSLog(@"Failed to set SSID password");
+                        // Hide device SSID again
+                        [device.deviceSettings hideSSID:YES completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+                            
+                        }];
+                    }
+                }];
+            }else {
+                NSLog(@"Choose whether to reset the password");
+            }
+        }else {
+            NSLog(@"Failed to open device SSID");
+        }
+    }];
+
+    // Hide the device SSID
+    [device.deviceSettings hideSSID:YES completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            NSLog(@"Device SSID is turned off");
+        }else {
+            NSLog(@"Device SSID turned off failed");
+        }
+    }];
+    ```
+
+
+#### 设置SSID密码
+
+-   接口说明
+
+    设置设备的SSID密码，请注意密码长度至少为8位数字
+
+    ```ObjectiveC
+    - (void)setSSIDPassword:(NSString *)password completionHandler:(LPSDKReturnBlock _Nullable)completionHandler;
+    ```
+
+-   参数
+
+| 名称       | 类型            | 接口说明                                                                       |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| password   | NSString      | 设置的SSID密码，至少8位                                                          |
+
+-   返回值
+
+    无
+
+-   示例代码
+
+    ```ObjectiveC
+     // Set SSID password
+    [device.deviceSettings setSSIDPassword:@"12345678" completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            NSLog(@"Successfully set the SSID password");
+        }else {
+            NSLog(@"Failed to set SSID password");
+        }
+    }];
+    ```
