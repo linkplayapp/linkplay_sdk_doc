@@ -437,7 +437,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5.6" data-path="Device.html">
+        <li class="chapter " data-level="1.2.5.6" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#ssid-and-password">
+            
+                    
+                    SSID and password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="Device.html">
             
                 <a href="Device.html#schedule-shutdown">
             
@@ -1382,7 +1395,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-system-settings"><b></b>Device System Settings</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#name"><b></b>Name</a></li><li><span class="title-icon "></span><a href="#restore"><b></b>Restore</a></li><li><span class="title-icon "></span><a href="#switch-input-source"><b></b>Switch input source</a></li><li><span class="title-icon "></span><a href="#network-detection"><b></b>Network detection</a></li><li><span class="title-icon "></span><a href="#eq"><b></b>EQ</a></li></ul></ul></ul></div><a href="#device-system-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-system-settings"><a name="device-system-settings" class="anchor-navigation-ex-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-system-settings" class="plugin-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Device System Settings</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-system-settings"><b></b>Device System Settings</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#name"><b></b>Name</a></li><li><span class="title-icon "></span><a href="#restore"><b></b>Restore</a></li><li><span class="title-icon "></span><a href="#switch-input-source"><b></b>Switch input source</a></li><li><span class="title-icon "></span><a href="#network-detection"><b></b>Network detection</a></li><li><span class="title-icon "></span><a href="#eq"><b></b>EQ</a></li><li><span class="title-icon "></span><a href="#ssid-and-password"><b></b>SSID and password</a></li></ul></ul></ul></div><a href="#device-system-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-system-settings"><a name="device-system-settings" class="anchor-navigation-ex-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-system-settings" class="plugin-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Device System Settings</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>Device system related settings, includes language, name, timezone etc.</p>
 <h3 id="name"><a name="name" class="anchor-navigation-ex-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a><a name="name" class="plugin-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a>Name</h3>
@@ -1584,10 +1597,140 @@ Generally, the value of Value is -5 to 5, please make sure that the value of Val
 <p>N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">NSArray <span class="token operator">*</span>valuesArray <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandBASS&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-5&quot;</span><span class="token punctuation">}</span> <span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandLOW&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandMID&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;0&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandHIGH&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandTREBLE&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;5&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC"><span class="token comment">//valuesArray: the device supported EQ types</span>
+NSArray <span class="token operator">*</span>valuesArray <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandBASS&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-5&quot;</span><span class="token punctuation">}</span> <span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandLOW&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandMID&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;0&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandHIGH&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;Name&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;BandTREBLE&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;Value&quot;</span><span class="token punctuation">:</span><span class="token string">@&quot;5&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 NSDictionary <span class="token operator">*</span>EQValuesDict <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">{</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">:</span>valuesArray<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings setEQValues<span class="token punctuation">:</span>EQValuesDict completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;EQValue = %@&quot;</span><span class="token punctuation">,</span> responseObject<span class="token punctuation">[</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="eq-nsnotification"><a name="eq-nsnotification" class="anchor-navigation-ex-anchor" href="#eq-nsnotification"><i class="fa fa-link" aria-hidden="true"></i></a><a name="eq-nsnotification" class="plugin-anchor" href="#eq-nsnotification"><i class="fa fa-link" aria-hidden="true"></i></a>EQ NSNotification</h4>
+<ul>
+<li><p>NSNotification description</p>
+<p>When the EQ is adjusted through settings or other mobile phones, this notification will be triggered to update the data synchronously</p>
+<p>LPEQValueChangeNotification</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC"><span class="token punctuation">[</span><span class="token punctuation">[</span>NSNotificationCenter defaultCenter<span class="token punctuation">]</span> addObserver<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>EQValueChangeNotification<span class="token punctuation">:</span><span class="token punctuation">)</span> name<span class="token punctuation">:</span><span class="token string">@&quot;LPEQValueChangeNotification&quot;</span> object<span class="token punctuation">:</span>nil<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>EQValueChangeNotification<span class="token punctuation">:</span><span class="token punctuation">(</span>NSNotification <span class="token operator">*</span><span class="token punctuation">)</span>notification <span class="token punctuation">{</span>
+    NSDictionary <span class="token operator">*</span>infoDict <span class="token operator">=</span> notification<span class="token punctuation">.</span>object<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span>infoDict allKeys<span class="token punctuation">]</span> containsObject<span class="token punctuation">:</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;EQValue = %@&quot;</span><span class="token punctuation">,</span> infoDict<span class="token punctuation">[</span><span class="token string">@&quot;EQValue&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="ssid-and-password"><a name="ssid-and-password" class="anchor-navigation-ex-anchor" href="#ssid-and-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ssid-and-password" class="plugin-anchor" href="#ssid-and-password"><i class="fa fa-link" aria-hidden="true"></i></a>SSID and password</h3>
+<h4 id="hideopen-ssid"><a name="hideopen-ssid" class="anchor-navigation-ex-anchor" href="#hideopen-ssid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="hideopen-ssid" class="plugin-anchor" href="#hideopen-ssid"><i class="fa fa-link" aria-hidden="true"></i></a>Hide/Open SSID</h4>
+<ul>
+<li><p>Description</p>
+<p>Hide or open the SSID of the device. When you turn on the device SSID, if there is no password, it is best to prompt the user to set the password. You can judge whether the SSID has been hidden according to the isSSIDHidden attribute in deviceStatus</p>
+<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>hideSSID<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>hide completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">hide</td>
+<td style="text-align:left">BOOL</td>
+<td style="text-align:left">Hide or open the SSID of the device</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC"> <span class="token comment">// Open the device SSID</span>
+ BOOL isHidden <span class="token operator">=</span> device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>isSSIDHidden<span class="token punctuation">;</span>
+<span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings hideSSID<span class="token punctuation">:</span>NO completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Open the device SSID successfully</span>
+        <span class="token comment">// If the device SSID has not set a password, you need to prompt the user to set a password</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>device<span class="token punctuation">.</span>deviceStatus<span class="token punctuation">.</span>password<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings setSSIDPassword<span class="token punctuation">:</span><span class="token string">@&quot;12345678&quot;</span> completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Successfully set the SSID password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Failed to set SSID password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment">// Hide device SSID again</span>
+                    <span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings hideSSID<span class="token punctuation">:</span>YES completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Choose whether to reset the password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Failed to open device SSID&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Hide the device SSID</span>
+<span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings hideSSID<span class="token punctuation">:</span>YES completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Device SSID is turned off&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Device SSID turned off failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="set-ssid-password"><a name="set-ssid-password" class="anchor-navigation-ex-anchor" href="#set-ssid-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-ssid-password" class="plugin-anchor" href="#set-ssid-password"><i class="fa fa-link" aria-hidden="true"></i></a>Set SSID password</h4>
+<ul>
+<li><p>Description</p>
+<p>Set the device SSID password, please note that the password length is at least 8 digits.</p>
+<pre class="language-"><code class="lang-ObjectiveC"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>setSSIDPassword<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>password completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPSDKReturnBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">SSID password, at least 8 digits in length</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC"> <span class="token comment">// Set SSID password</span>
+<span class="token punctuation">[</span>device<span class="token punctuation">.</span>deviceSettings setSSIDPassword<span class="token punctuation">:</span><span class="token string">@&quot;12345678&quot;</span> completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSURLResponse <span class="token operator">*</span> _Nullable response<span class="token punctuation">,</span> id  _Nullable responseObject<span class="token punctuation">,</span> NSError <span class="token operator">*</span> _Nullable error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>responseObject<span class="token punctuation">[</span><span class="token string">@&quot;result&quot;</span><span class="token punctuation">]</span> isEqualToString<span class="token punctuation">:</span><span class="token string">@&quot;OK&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Successfully set the SSID password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Failed to set SSID password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
@@ -1635,7 +1778,7 @@ NSDictionary <span class="token operator">*</span>EQValuesDict <span class="toke
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device System Settings","level":"1.2.5","depth":2,"next":{"title":"Name","level":"1.2.5.1","depth":3,"anchor":"#name","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#name","articles":[]},"previous":{"title":"MCU Passthrough","level":"1.2.4.5","depth":3,"anchor":"#mcu-passthrough","path":"iOS/Device.md","ref":"iOS/Device.md#mcu-passthrough","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/DeviceInfoSetting.md","mtime":"2020-08-20T08:39:18.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-25T03:40:17.413Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device System Settings","level":"1.2.5","depth":2,"next":{"title":"Name","level":"1.2.5.1","depth":3,"anchor":"#name","path":"iOS/DeviceInfoSetting.md","ref":"iOS/DeviceInfoSetting.md#name","articles":[]},"previous":{"title":"MCU Passthrough","level":"1.2.4.5","depth":3,"anchor":"#mcu-passthrough","path":"iOS/Device.md","ref":"iOS/Device.md#mcu-passthrough","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/DeviceInfoSetting.md","mtime":"2020-09-09T11:46:11.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-10T06:47:34.529Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
