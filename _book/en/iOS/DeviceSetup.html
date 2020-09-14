@@ -1,0 +1,2033 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Wi-Fi Setup · LinkPlay SDK</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LinkPlay">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="../../styles/website.css" />
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="DeviceSetup.html" />
+    
+    
+    <link rel="prev" href="Integrated.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Integrated.html">
+            
+                <a href="Integrated.html">
+            
+                    
+                    Integrate SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="DeviceSetup.html">
+            
+                <a href="DeviceSetup.html">
+            
+                    
+                    Wi-Fi Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="DeviceSetup.html">
+            
+                <a href="DeviceSetup.html#ble-wi-fi-setup">
+            
+                    
+                    BLE Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="DeviceSetup.html">
+            
+                <a href="DeviceSetup.html#softap-wi-fi-setup">
+            
+                    
+                    SoftAP Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html">
+            
+                    
+                    Device Discover
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#device-discover">
+            
+                    
+                    Device Discover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#add-observer">
+            
+                    
+                    Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#get-device">
+            
+                    
+                    Get Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#onlineoffline-delegate">
+            
+                    
+                    Online/Offline Delegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Device.html">
+            
+                <a href="Device.html">
+            
+                    
+                    Device Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="Device.html">
+            
+                <a href="Device.html#play-control">
+            
+                    
+                    Play Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="Device.html">
+            
+                <a href="Device.html#alarm">
+            
+                    
+                    Alarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="Device.html">
+            
+                <a href="Device.html#preset">
+            
+                    
+                    Preset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="Device.html">
+            
+                <a href="Device.html#ota">
+            
+                    
+                    OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="Device.html">
+            
+                <a href="Device.html#mcu-passthrough">
+            
+                    
+                    MCU Passthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html">
+            
+                    
+                    Device System Settings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#name">
+            
+                    
+                    Name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#restore">
+            
+                    
+                    Restore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#switch-input-source">
+            
+                    
+                    Switch input source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#network-detection">
+            
+                    
+                    Network detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#eq">
+            
+                    
+                    EQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="Device.html">
+            
+                <a href="Device.html#schedule-shutdown">
+            
+                    
+                    Schedule Shutdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="MultiRoom.html">
+            
+                <a href="MultiRoom.html">
+            
+                    
+                    Multi-Room Music
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="MultiRoom.html">
+            
+                <a href="MultiRoom.html#using-devicelist-without-master">
+            
+                    
+                    Without Master
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="MultiRoom.html">
+            
+                <a href="MultiRoom.html#with-master-and-slave-devicelist">
+            
+                    
+                    With Master
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html">
+            
+                    
+                    Play Settings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html#progress">
+            
+                    
+                    Progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html#channel">
+            
+                    
+                    Channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html#play-mode">
+            
+                    
+                    Play Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html#spotify-play-mode">
+            
+                    
+                    Spotify Play Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="MusicSetting.html">
+            
+                <a href="MusicSetting.html#volume">
+            
+                    
+                    Volume
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="DeviceNetworkRequest.html">
+            
+                <a href="DeviceNetworkRequest.html">
+            
+                    
+                    HTTP Utility
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="DeviceNetworkRequest.html">
+            
+                <a href="DeviceNetworkRequest.html#get">
+            
+                    
+                    Get
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="DeviceNetworkRequest.html">
+            
+                <a href="DeviceNetworkRequest.html#post">
+            
+                    
+                    Post
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="DeviceNetworkRequest.html">
+            
+                <a href="DeviceNetworkRequest.html#post-with-header">
+            
+                    
+                    Post (With Header)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="Alexa.html">
+            
+                <a href="Alexa.html">
+            
+                    
+                    Alexa
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="Alexa.html">
+            
+                <a href="Alexa.html#alexa-splash">
+            
+                    
+                    Alexa Splash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="Alexa.html">
+            
+                <a href="Alexa.html#login-with-amazon">
+            
+                    
+                    Login with Amazon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="Alexa.html">
+            
+                <a href="Alexa.html#alexa-logout">
+            
+                    
+                    Alexa Logout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="Alexa.html">
+            
+                <a href="Alexa.html#alexa-setting">
+            
+                    
+                    Alexa Setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../android/">
+            
+                <a href="../android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../android/Integrated.html">
+            
+                <a href="../android/Integrated.html">
+            
+                    
+                    Integrate SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../android/DeviceSetup.html">
+            
+                <a href="../android/DeviceSetup.html">
+            
+                    
+                    Wi-Fi Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../android/DeviceSetup.html">
+            
+                <a href="../android/DeviceSetup.html#ble-wi-fi-setup">
+            
+                    
+                    BLE Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../android/DeviceSetup.html">
+            
+                <a href="../android/DeviceSetup.html#softap-wi-fi-setup">
+            
+                    
+                    SoftAP Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../android/Device_SDK.html">
+            
+                <a href="../android/Device_SDK.html">
+            
+                    
+                    Device Discover
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../android/Device_SDK.html">
+            
+                <a href="../android/Device_SDK.html#device-discover">
+            
+                    
+                    Device Discover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../android/Device_SDK.html">
+            
+                <a href="../android/Device_SDK.html#add-observer">
+            
+                    
+                    Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../android/Device_SDK.html">
+            
+                <a href="../android/Device_SDK.html#get-device">
+            
+                    
+                    Get Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../android/Device_SDK.html">
+            
+                <a href="../android/Device_SDK.html#onlineoffline-delegate">
+            
+                    
+                    Online/Offline Delegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html">
+            
+                    
+                    Device Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#play-control">
+            
+                    
+                    Play Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#alarm">
+            
+                    
+                    Alarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#preset">
+            
+                    
+                    Preset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#ota">
+            
+                    
+                    OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#mcu-passthrough">
+            
+                    
+                    MCU Passthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html">
+            
+                    
+                    Device System Settings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html#name">
+            
+                    
+                    Name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html#restore">
+            
+                    
+                    Restore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html#switch-input-source">
+            
+                    
+                    Switch input source
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html#network-detection">
+            
+                    
+                    Network detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../android/Device.html">
+            
+                <a href="../android/Device.html#schedule-shutdown">
+            
+                    
+                    Schedule Shutdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../android/DeviceInfoSetting.html">
+            
+                <a href="../android/DeviceInfoSetting.html#eq">
+            
+                    
+                    EQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../android/MultiRoom.html">
+            
+                <a href="../android/MultiRoom.html">
+            
+                    
+                    Multi-Room Music
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../android/MultiRoom.html">
+            
+                <a href="../android/MultiRoom.html#using-devicelist-without-master">
+            
+                    
+                    Without Master
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../android/MultiRoom.html">
+            
+                <a href="../android/MultiRoom.html#with-master-and-slave-devicelist">
+            
+                    
+                    With Master
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html">
+            
+                    
+                    Play Settings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html#progress">
+            
+                    
+                    Progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html#channel">
+            
+                    
+                    Channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html#play-mode">
+            
+                    
+                    Play Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html#spotify-play-mode">
+            
+                    
+                    Spotify Play Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="../android/MusicSetting.html">
+            
+                <a href="../android/MusicSetting.html#volume">
+            
+                    
+                    Volume
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../android/DeviceNetworkRequest.html">
+            
+                <a href="../android/DeviceNetworkRequest.html">
+            
+                    
+                    HTTP Utility
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../android/DeviceNetworkRequest.html">
+            
+                <a href="../android/DeviceNetworkRequest.html#get">
+            
+                    
+                    Get
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../android/DeviceNetworkRequest.html">
+            
+                <a href="../android/DeviceNetworkRequest.html#post">
+            
+                    
+                    Post
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../android/DeviceNetworkRequest.html">
+            
+                <a href="../android/DeviceNetworkRequest.html#Listener">
+            
+                    
+                    Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../android/Alexa.html">
+            
+                <a href="../android/Alexa.html">
+            
+                    
+                    Alexa
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../android/Alexa.html">
+            
+                <a href="../android/Alexa.html#alexa-splash">
+            
+                    
+                    Alexa Splash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../android/Alexa.html">
+            
+                <a href="../android/Alexa.html#login-with-amazon">
+            
+                    
+                    Login with Amazon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../android/Alexa.html">
+            
+                <a href="../android/Alexa.html#alexa-logout">
+            
+                    
+                    Alexa Logout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../android/Alexa.html">
+            
+                <a href="../android/Alexa.html#alexa-setting">
+            
+                    
+                    Alexa Setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../other/wifisetup.html">
+            
+                <a href="../other/wifisetup.html">
+            
+                    
+                    Wi-Fi Setup Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Wi-Fi Setup</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wi-fi-setup"><b></b>Wi-Fi Setup</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#ble-wi-fi-setup"><b></b>BLE Wi-Fi Setup</a></li><li><span class="title-icon "></span><a href="#softap-wi-fi-setup"><b></b>SoftAP Wi-Fi Setup</a></li></ul></ul></ul></div><a href="#wi-fi-setup" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="wi-fi-setup"><a name="wi-fi-setup" class="anchor-navigation-ex-anchor" href="#wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wi-fi-setup" class="plugin-anchor" href="#wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Wi-Fi Setup</h1>
+<h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
+<p>Wi-Fi Setup is the first step to config the device. We supply 2 ways to do this, you should choose based on the hardware you&apos;re using:</p>
+<ul>
+<li><p>BLE Wi-Fi Setup</p>
+</li>
+<li><p>SoftAP Wi-Fi Setup</p>
+</li>
+</ul>
+<blockquote>
+<p>SDK requires location privilege after iOS13 to get the phone&apos;s connected SSID.</p>
+</blockquote>
+<h3 id="ble-wi-fi-setup"><a name="ble-wi-fi-setup" class="anchor-navigation-ex-anchor" href="#ble-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ble-wi-fi-setup" class="plugin-anchor" href="#ble-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>BLE Wi-Fi Setup</h3>
+<p>App setup device&apos;s Wi-Fi network through BLE connection.</p>
+<ul>
+<li><code>LP_CONNECT_AP_STATE</code></li>
+</ul>
+<p>Wi-Fi setup response</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP_CONNECT_AP_SUCCESS</td>
+<td>BLE setup successfully</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_START</td>
+<td>Device starts to connect to AP</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_NO_SSID</td>
+<td>Device can&apos;t find the SSID</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_WIFI_TIMEOUT</td>
+<td>Connect AP DSPWriteTimeoutt</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_DHCP_TIMEOUT</td>
+<td>DHCP timeout</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_PASSWORD_ERROR</td>
+<td>Wrong password</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_NO_SUPPORT_SECRET</td>
+<td>Unsupported encryption type</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_PARAMETER_ERROR</td>
+<td>Parameter error</td>
+</tr>
+<tr>
+<td>LP_CONNECT_AP_OTHER_ERROR</td>
+<td>Other error</td>
+</tr>
+</tbody>
+</table>
+<h4 id="phone-ble-status"><a name="phone-ble-status" class="anchor-navigation-ex-anchor" href="#phone-ble-status"><i class="fa fa-link" aria-hidden="true"></i></a><a name="phone-ble-status" class="plugin-anchor" href="#phone-ble-status"><i class="fa fa-link" aria-hidden="true"></i></a>Phone BLE Status</h4>
+<ul>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span><span class="token punctuation">.</span>delegate <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+
+   <span class="token macro property">#<span class="token directive keyword">pragma</span> mark &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;LPBLEManagerDelegate &#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</span>
+
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>BLEManger<span class="token punctuation">:</span><span class="token punctuation">(</span>LPBLEManager <span class="token operator">*</span><span class="token punctuation">)</span>BLEManger BLEPoweredOff<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>isPoweredOff <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;BLE state change: %d&quot;</span><span class="token punctuation">,</span> isPoweredOff <span class="token operator">?</span> <span class="token number">0</span> <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>BLEMangerDidDisconnectPeripheral <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;BLE didDisconnect&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>BLEManger<span class="token punctuation">:</span><span class="token punctuation">(</span>LPBLEManager <span class="token operator">*</span><span class="token punctuation">)</span>BLEManger BLEState<span class="token punctuation">:</span><span class="token punctuation">(</span>CBCentralManagerState<span class="token punctuation">)</span>state <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;BLE state&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="start-scan-ble-devices"><a name="start-scan-ble-devices" class="anchor-navigation-ex-anchor" href="#start-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-scan-ble-devices" class="plugin-anchor" href="#start-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Start Scan BLE Devices</h4>
+<ul>
+<li><p>Description</p>
+<p>  Start scanning for BLE devices</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>startScan<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>LPPeripheral <span class="token operator">*</span>peripheral<span class="token punctuation">)</span><span class="token punctuation">)</span>callback<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">peripheral</td>
+<td style="text-align:left">LPPeripheral</td>
+<td style="text-align:left">Founded BLE device</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span><span class="token punctuation">.</span>state <span class="token operator">==</span> CBManagerStatePoweredOn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">[</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span> startScan<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPPeripheral <span class="token operator">*</span> _Nonnull peripheral<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>deviceArray addObject<span class="token punctuation">:</span>peripheral<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="stop-scan-ble-devices"><a name="stop-scan-ble-devices" class="anchor-navigation-ex-anchor" href="#stop-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop-scan-ble-devices" class="plugin-anchor" href="#stop-scan-ble-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Stop Scan BLE Devices</h4>
+<ul>
+<li><p>Description</p>
+<p>  When scan finished or not required, use this function to stop BLE scan so that lower the power consumption.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>stopScan<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="connect-ble-device"><a name="connect-ble-device" class="anchor-navigation-ex-anchor" href="#connect-ble-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="connect-ble-device" class="plugin-anchor" href="#connect-ble-device"><i class="fa fa-link" aria-hidden="true"></i></a>Connect BLE Device</h4>
+<ul>
+<li><p>Description</p>
+<p>  Establish BLE connection with device.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>connectBLE<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPeripheral <span class="token operator">*</span><span class="token punctuation">)</span>peripheral callback<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>LP_BLE_CONNECT_RESULT state<span class="token punctuation">)</span><span class="token punctuation">)</span>callback<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">peripheral</td>
+<td style="text-align:left">LPPeripheral</td>
+<td style="text-align:left">The device object get from BLE scan</td>
+</tr>
+<tr>
+<td style="text-align:left">state</td>
+<td style="text-align:left">LP_BLE_CONNECT_RESULT</td>
+<td style="text-align:left">Result of BLE connection</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span> connectBLE<span class="token punctuation">:</span>peripheral callback<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LP_BLE_CONNECT_RESULT state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>state <span class="token operator">==</span> LP_BLE_CONNECT_SUCCESS<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;BLE connection successful&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;BLE connection failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="disconnect-ble-connection"><a name="disconnect-ble-connection" class="anchor-navigation-ex-anchor" href="#disconnect-ble-connection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="disconnect-ble-connection" class="plugin-anchor" href="#disconnect-ble-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Disconnect BLE Connection</h4>
+<ul>
+<li><p>Description</p>
+<p>  Disconnect BLE connection with device</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>disconnectBLE<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="get-ap-list-from-device"><a name="get-ap-list-from-device" class="anchor-navigation-ex-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-ap-list-from-device" class="plugin-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a>Get AP List from Device</h4>
+<ul>
+<li><p>Description</p>
+<p>  Get AP list around from device through BLE</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getWLANListWithCallback<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>id _Nullable apList<span class="token punctuation">)</span><span class="token punctuation">)</span>callback<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">apList</td>
+<td style="text-align:left">id</td>
+<td style="text-align:left">AP list around</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span> getWLANList<span class="token punctuation">:</span>NO callback<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>id  _Nullable apList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Wi-Fi List = %@&quot;</span><span class="token punctuation">,</span> apList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="send-wi-fi-connect-command"><a name="send-wi-fi-connect-command" class="anchor-navigation-ex-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-wi-fi-connect-command" class="plugin-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a>Send Wi-Fi Connect Command</h4>
+<ul>
+<li><p>Description</p>
+<p>  Send Wi-Fi connect command.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>connectWLAN<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>ssid password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>password auth<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>auth encry<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>encry
+             callback<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>LP_CONNECT_AP_STATE code<span class="token punctuation">,</span> id _Nullable responseObj<span class="token punctuation">)</span><span class="token punctuation">)</span>callback<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ssid</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">SSID to connect</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">Password for AP</td>
+</tr>
+<tr>
+<td style="text-align:left">auth</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">auth</td>
+</tr>
+<tr>
+<td style="text-align:left">encry</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">encry</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  __block NSDictionary <span class="token operator">*</span>infoDict <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span> getWLANListWithCallback<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>id  _Nullable apList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      infoDict <span class="token operator">=</span> apList<span class="token punctuation">[</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">[</span><span class="token punctuation">[</span>LPBLEManager shareInstance<span class="token punctuation">]</span> connectWLAN<span class="token punctuation">:</span>infoDict<span class="token punctuation">[</span><span class="token string">@&quot;ssid&quot;</span><span class="token punctuation">]</span> password<span class="token punctuation">:</span>password auth<span class="token punctuation">:</span>infoDict<span class="token punctuation">[</span><span class="token string">@&quot;auth&quot;</span><span class="token punctuation">]</span> encry<span class="token punctuation">:</span>infoDict<span class="token punctuation">[</span><span class="token string">@&quot;encry&quot;</span><span class="token punctuation">]</span> callback<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LP_CONNECT_AP_STATE code<span class="token punctuation">,</span> id  _Nullable responseObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">==</span> LP_CONNECT_AP_SUCCESS <span class="token operator">&amp;&amp;</span> responseObj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;[BLE] success = %@&quot;</span><span class="token punctuation">,</span> responseObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   NSDictionary <span class="token operator">*</span> infoDic <span class="token operator">=</span> responseObj<span class="token punctuation">;</span>
+                   <span class="token keyword">self</span><span class="token punctuation">.</span>UUID <span class="token operator">=</span> infoDic<span class="token punctuation">[</span><span class="token string">@&quot;UUID&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                   LPDevice <span class="token operator">*</span>device <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPDeviceManager sharedInstance<span class="token punctuation">]</span> deviceForID<span class="token punctuation">:</span>infoDic<span class="token punctuation">[</span><span class="token string">@&quot;UUID&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                   <span class="token keyword">if</span> <span class="token punctuation">(</span>device<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                       <span class="token punctuation">[</span><span class="token keyword">self</span> success<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                   <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">self</span><span class="token operator">-&gt;</span>searchTimer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                           <span class="token keyword">self</span><span class="token operator">-&gt;</span>checkDate <span class="token operator">=</span> <span class="token punctuation">[</span>NSDate date<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                           <span class="token keyword">self</span><span class="token operator">-&gt;</span>searchTimer <span class="token operator">=</span> <span class="token punctuation">[</span>NSTimer timerWithTimeInterval<span class="token punctuation">:</span><span class="token number">2</span> target<span class="token punctuation">:</span><span class="token keyword">self</span> selector<span class="token punctuation">:</span><span class="token keyword">@selector</span><span class="token punctuation">(</span>waitForDeivceOnline<span class="token punctuation">)</span> userInfo<span class="token punctuation">:</span>nil repeats<span class="token punctuation">:</span>YES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                           <span class="token punctuation">[</span><span class="token punctuation">[</span>NSRunLoop mainRunLoop<span class="token punctuation">]</span> addTimer<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token operator">-&gt;</span>searchTimer forMode<span class="token punctuation">:</span>NSDefaultRunLoopMode<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                           <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token operator">-&gt;</span>searchTimer fire<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                       <span class="token punctuation">}</span>
+                   <span class="token punctuation">}</span>
+               <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">==</span> LP_CONNECT_AP_START<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;[BLE] connectWLAN start&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                   <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;[BLE] setup Failed = %@&quot;</span><span class="token punctuation">,</span> responseObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token punctuation">[</span><span class="token keyword">self</span> setupFailed<span class="token punctuation">]</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="softap-wi-fi-setup"><a name="softap-wi-fi-setup" class="anchor-navigation-ex-anchor" href="#softap-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="softap-wi-fi-setup" class="plugin-anchor" href="#softap-wi-fi-setup"><i class="fa fa-link" aria-hidden="true"></i></a>SoftAP Wi-Fi Setup</h3>
+<p>LPWiFiSetupManager implements the softAP Wi-Fi setup.</p>
+<ul>
+<li><p><code>LPApItem</code></p>
+<p>  Response object from getAPList</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>NSString</td>
+<td>SSID Name</td>
+</tr>
+<tr>
+<td>RSSI</td>
+<td>NSString</td>
+<td>Signal Strength</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>NSString</td>
+<td>BSSID</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>NSString</td>
+<td>Channel</td>
+</tr>
+<tr>
+<td>Auth</td>
+<td>NSString</td>
+<td>Auth</td>
+</tr>
+<tr>
+<td>Encry</td>
+<td>NSString</td>
+<td>Encryption</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>LPWiFiSetupFailed</code> errorCode</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>int</td>
+<td>Phone connects to different Wi-Fi from user&apos;s choice</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>int</td>
+<td>Other errors</td>
+</tr>
+</tbody>
+</table>
+<h4 id="check-if-phone-connected-to-devices-ap"><a name="check-if-phone-connected-to-devices-ap" class="anchor-navigation-ex-anchor" href="#check-if-phone-connected-to-devices-ap"><i class="fa fa-link" aria-hidden="true"></i></a><a name="check-if-phone-connected-to-devices-ap" class="plugin-anchor" href="#check-if-phone-connected-to-devices-ap"><i class="fa fa-link" aria-hidden="true"></i></a>Check if Phone Connected to Device&apos;s AP</h4>
+<ul>
+<li><p>Description</p>
+<p>  SoftAP requires phone connected to device&apos;s hotspot, so you need a function to check this.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>isLinkplayHotspotWithCheckTime<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>time block<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>BOOL isDirect<span class="token punctuation">)</span><span class="token punctuation">)</span>block<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Timeout to check</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  BOOL</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPWiFiSetupManager sharedInstance<span class="token punctuation">]</span> isLinkplayHotspotWithCheckTime<span class="token punctuation">:</span><span class="token number">10</span> block<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isDirect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isDirect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;The WiFi connected to the phone is not a hotspot from the device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;The WiFi connected to the phone is a hotspot from the device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="get-ap-list-from-device_1"><a name="get-ap-list-from-device_1" class="anchor-navigation-ex-anchor" href="#get-ap-list-from-device_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-ap-list-from-device" class="plugin-anchor" href="#get-ap-list-from-device"><i class="fa fa-link" aria-hidden="true"></i></a>Get AP List from Device</h4>
+<ul>
+<li><p>Description</p>
+<p>  After connected to device&apos;s hotspot, call this function to get AP list around from device.</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>getApList<span class="token punctuation">:</span><span class="token punctuation">(</span>LPApListBlock<span class="token punctuation">)</span>block<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+<p>  N/A</p>
+</li>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  __weak <span class="token function">__typeof</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">)</span>weakSelf <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPWiFiSetupManager sharedInstance<span class="token punctuation">]</span> getApList<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSMutableArray <span class="token operator">*</span> _Nonnull LPApList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      weakSelf<span class="token punctuation">.</span>wlanDetailsArray <span class="token operator">=</span> LPApList<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="send-wi-fi-connect-command_1"><a name="send-wi-fi-connect-command_1" class="anchor-navigation-ex-anchor" href="#send-wi-fi-connect-command_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-wi-fi-connect-command" class="plugin-anchor" href="#send-wi-fi-connect-command"><i class="fa fa-link" aria-hidden="true"></i></a>Send Wi-Fi Connect Command</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>connectToWiFi<span class="token punctuation">:</span><span class="token punctuation">(</span>LPApItem <span class="token operator">*</span><span class="token punctuation">)</span>apItem pass<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>pass success<span class="token punctuation">:</span><span class="token punctuation">(</span>LPWiFiSetupSuccess<span class="token punctuation">)</span>success failed<span class="token punctuation">:</span><span class="token punctuation">(</span>LPWiFiSetupFailed<span class="token punctuation">)</span>failed<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">item</td>
+<td style="text-align:left">LPApItem</td>
+<td style="text-align:left">Wi-Fi object to connect</td>
+</tr>
+<tr>
+<td style="text-align:left">pass</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">Password</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  LPApItem <span class="token operator">*</span>apItem <span class="token operator">=</span> <span class="token punctuation">[</span>_wlanDetailsArray objectAtIndex<span class="token punctuation">:</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPWiFiSetupManager sharedInstance<span class="token punctuation">]</span> connectToWiFi<span class="token punctuation">:</span>apItem pass<span class="token punctuation">:</span>passwordText<span class="token punctuation">.</span>text success<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPDevice <span class="token operator">*</span> _Nonnull device<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> failed<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token keyword">int</span> errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="recheck-softap-wi-fi-setup-result"><a name="recheck-softap-wi-fi-setup-result" class="anchor-navigation-ex-anchor" href="#recheck-softap-wi-fi-setup-result"><i class="fa fa-link" aria-hidden="true"></i></a><a name="recheck-softap-wi-fi-setup-result" class="plugin-anchor" href="#recheck-softap-wi-fi-setup-result"><i class="fa fa-link" aria-hidden="true"></i></a>Recheck SoftAP Wi-Fi Setup Result</h4>
+<ul>
+<li><p>Description</p>
+<p>  If SoftAP Wi-Fi setup failed and phone connected to different AP from destination AP, you could call this function to recheck the result</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>retryCheckWithTime<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>time success<span class="token punctuation">:</span><span class="token punctuation">(</span>LPWiFiSetupSuccess<span class="token punctuation">)</span>success failed<span class="token punctuation">:</span><span class="token punctuation">(</span>LPWiFiSetupFailed<span class="token punctuation">)</span>failed<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Recheck timeout, default 30s</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  LPApItem <span class="token operator">*</span>apItem <span class="token operator">=</span> <span class="token punctuation">[</span>_wlanDetailsArray objectAtIndex<span class="token punctuation">:</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token punctuation">[</span>LPWiFiSetupManager sharedInstance<span class="token punctuation">]</span> connectToWiFi<span class="token punctuation">:</span>apItem pass<span class="token punctuation">:</span>passwordText<span class="token punctuation">.</span>text success<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPDevice <span class="token operator">*</span> _Nonnull device<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> failed<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token keyword">int</span> errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>errorCode <span class="token operator">==</span> <span class="token number">1001</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+          <span class="token punctuation">[</span><span class="token punctuation">[</span>LPWiFiSetupManager sharedInstance<span class="token punctuation">]</span> retryCheckWithTime<span class="token punctuation">:</span><span class="token number">30</span> success<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>LPDevice <span class="token operator">*</span> _Nonnull device<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> failed<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token keyword">int</span> errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;LPWiFiConnect failed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Integrated.html" class="navigation navigation-prev " aria-label="Previous page: Integrate SDK">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="DeviceSetup.html#ble-wi-fi-setup" class="navigation navigation-next " aria-label="Next page: BLE Setup">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Wi-Fi Setup","level":"1.2.2","depth":2,"next":{"title":"BLE Setup","level":"1.2.2.1","depth":3,"anchor":"#ble-wi-fi-setup","path":"iOS/DeviceSetup.md","ref":"iOS/DeviceSetup.md#ble-wi-fi-setup","articles":[]},"previous":{"title":"Integrate SDK","level":"1.2.1","depth":2,"path":"iOS/Integrated.md","ref":"iOS/Integrated.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/DeviceSetup.md","mtime":"2020-08-20T08:39:18.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-25T03:40:17.413Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+
