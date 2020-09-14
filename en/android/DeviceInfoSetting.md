@@ -173,3 +173,97 @@ Device system related settings, includes language, name, timezone etc.
                     }
                 });
     ```
+
+### SSID and password
+
+#### Hide/Open SSID
+
+-   Description
+
+    Hide or open the SSID of the device. When you turn on the device SSID, if there is no password, it is best to prompt the user to set the password. You can judge whether the SSID has been hidden according to the hideSSID attribute in deviceStatus (0 is Open，1 is Hidden)
+
+    ```Java
+    -  public void hideSSID(boolean hide, LPDeviceSettingsListener listener);
+    ```
+
+-   Parameter
+
+| Name       | Type          | Description                                                                   |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| hide       | boolean          | Hide or open the SSID of the device                                           |
+
+-   Response
+
+    N/A
+
+-   Sample Code
+
+     ```Java
+     // Open the device SSID
+                currDevice.getDeviceSettings().hideSSID(false,
+                        new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+
+    // Hide the device SSID
+   currDevice.getDeviceSettings().hideSSID(true,
+                        new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+    ```
+
+
+#### Set SSID password
+
+-   Description
+
+    Set the device SSID password, please note that the password length is at least 8 digits.
+
+    ```Java
+    - public void setSSIDPassword(String password, LPDeviceSettingsListener listener);
+    ```
+
+
+-   Parameter
+
+| Name       | Type          | Description                                                                   |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| password   | String      | SSID password, at least 8 digits in length                                    |
+
+-   Response
+
+    N/A
+
+-   Sample Code
+
+    ```Java
+     // Set SSID password
+    currDevice.getDeviceSettings().setSSIDPassword("12345678",
+                        new LPDeviceSettingsListener() {
+                            @Override
+                            public void success(String s) {
+                                
+                            }
+
+                            @Override
+                            public void failure(Exception e) {
+
+                            }
+                        });
+    ```

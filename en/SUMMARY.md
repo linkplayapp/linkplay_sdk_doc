@@ -67,6 +67,7 @@
         -   [Network detection](android/DeviceInfoSetting.md#network-detection)
         -   [Schedule Shutdown](android/Device.md#schedule-shutdown)
         -   [EQ](android/DeviceInfoSetting.md#eq)
+        -   [SSID and password](android/DeviceInfoSetting.md#ssid-and-password)
     -   [Multi-Room Music](android/MultiRoom.md)
         -   [Without Master](android/MultiRoom.md#using-devicelist-without-master)
         -   [With Master](android/MultiRoom.md#with-master-and-slave-devicelist)

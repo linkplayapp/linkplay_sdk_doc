@@ -1063,6 +1063,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.5.7" data-path="DeviceInfoSetting.html">
+            
+                <a href="DeviceInfoSetting.html#ssid-and-password">
+            
+                    
+                    SSID and password
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1408,7 +1421,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-system-settings"><b></b>Device System Settings</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li></ul></div><a href="#device-system-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-system-settings"><a name="device-system-settings" class="anchor-navigation-ex-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-system-settings" class="plugin-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Device System Settings</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-system-settings"><b></b>Device System Settings</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#ssid-and-password"><b></b>SSID and password</a></li></ul></ul></ul></div><a href="#device-system-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-system-settings"><a name="device-system-settings" class="anchor-navigation-ex-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-system-settings" class="plugin-anchor" href="#device-system-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Device System Settings</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>Device system related settings, includes language, name, timezone etc.</p>
 <h4 id="name"><a name="name" class="anchor-navigation-ex-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a><a name="name" class="plugin-anchor" href="#name"><i class="fa fa-link" aria-hidden="true"></i></a>Name</h4>
@@ -1646,6 +1659,116 @@ Generally, the value of Value is -5 to 5, please make sure that the value of Val
 </code></pre>
 </li>
 </ul>
+<h3 id="ssid-and-password"><a name="ssid-and-password" class="anchor-navigation-ex-anchor" href="#ssid-and-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ssid-and-password" class="plugin-anchor" href="#ssid-and-password"><i class="fa fa-link" aria-hidden="true"></i></a>SSID and password</h3>
+<h4 id="hideopen-ssid"><a name="hideopen-ssid" class="anchor-navigation-ex-anchor" href="#hideopen-ssid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="hideopen-ssid" class="plugin-anchor" href="#hideopen-ssid"><i class="fa fa-link" aria-hidden="true"></i></a>Hide/Open SSID</h4>
+<ul>
+<li><p>Description</p>
+<p>Hide or open the SSID of the device. When you turn on the device SSID, if there is no password, it is best to prompt the user to set the password. You can judge whether the SSID has been hidden according to the hideSSID attribute in deviceStatus (0 is Open&#xFF0C;1 is Hidden)</p>
+<pre class="language-"><code class="lang-Java">-  public void hideSSID(boolean hide, LPDeviceSettingsListener listener);
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">hide</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Hide or open the SSID of the device</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java"> // Open the device SSID
+            currDevice.getDeviceSettings().hideSSID(false,
+                    new LPDeviceSettingsListener() {
+                @Override
+                public void success(String s) {
+
+                }
+
+                @Override
+                public void failure(Exception e) {
+
+                }
+            });
+
+// Hide the device SSID
+currDevice.getDeviceSettings().hideSSID(true,
+                    new LPDeviceSettingsListener() {
+                @Override
+                public void success(String s) {
+
+                }
+
+                @Override
+                public void failure(Exception e) {
+
+                }
+            });
+</code></pre>
+</li>
+</ul>
+<h4 id="set-ssid-password"><a name="set-ssid-password" class="anchor-navigation-ex-anchor" href="#set-ssid-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-ssid-password" class="plugin-anchor" href="#set-ssid-password"><i class="fa fa-link" aria-hidden="true"></i></a>Set SSID password</h4>
+<ul>
+<li><p>Description</p>
+<p>Set the device SSID password, please note that the password length is at least 8 digits.</p>
+<pre class="language-"><code class="lang-Java">- public void setSSIDPassword(String password, LPDeviceSettingsListener listener);
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>Parameter</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">SSID password, at least 8 digits in length</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-Java"> // Set SSID password
+currDevice.getDeviceSettings().setSSIDPassword(&quot;12345678&quot;,
+                    new LPDeviceSettingsListener() {
+                        @Override
+                        public void success(String s) {
+
+                        }
+
+                        @Override
+                        public void failure(Exception e) {
+
+                        }
+                    });
+</code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1689,7 +1812,7 @@ Generally, the value of Value is -5 to 5, please make sure that the value of Val
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device System Settings","level":"1.3.5","depth":2,"next":{"title":"Name","level":"1.3.5.1","depth":3,"anchor":"#name","path":"android/DeviceInfoSetting.md","ref":"android/DeviceInfoSetting.md#name","articles":[]},"previous":{"title":"MCU Passthrough","level":"1.3.4.5","depth":3,"anchor":"#mcu-passthrough","path":"android/Device.md","ref":"android/Device.md#mcu-passthrough","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/DeviceInfoSetting.md","mtime":"2020-09-10T07:12:38.704Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-14T10:40:23.442Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device System Settings","level":"1.3.5","depth":2,"next":{"title":"Name","level":"1.3.5.1","depth":3,"anchor":"#name","path":"android/DeviceInfoSetting.md","ref":"android/DeviceInfoSetting.md#name","articles":[]},"previous":{"title":"MCU Passthrough","level":"1.3.4.5","depth":3,"anchor":"#mcu-passthrough","path":"android/Device.md","ref":"android/Device.md#mcu-passthrough","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/DeviceInfoSetting.md","mtime":"2020-09-14T10:54:37.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-14T10:59:31.323Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

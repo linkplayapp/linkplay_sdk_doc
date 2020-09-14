@@ -197,3 +197,97 @@
                     }
                 });
     ```
+
+### SSID和密码
+
+#### 隐藏/打开 SSID
+
+-   接口说明
+
+    隐藏或打开设备的SSID。 打开设备的SSID时，如果没有密码，最好提示用户去设置密码。你可以根据deviceStatus中hideSSID属性，判断SSID是否已经隐藏(0为打开，1为隐藏)
+
+    ```Java
+    -  public void hideSSID(boolean hide, LPDeviceSettingsListener listener);
+    ```
+
+-   参数
+
+| 名称         | 类型           | 接口说明                                             |
+| :---------  | :------------  | :-------------------------------------------------  |
+| hide        | boolean           | 隐藏或打开设备的SSID                                  |
+
+
+-   返回值
+
+    无
+
+-   示例代码
+
+    ```Java
+     // Open the device SSID
+                currDevice.getDeviceSettings().hideSSID(false,
+                        new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+
+    // Hide the device SSID
+   currDevice.getDeviceSettings().hideSSID(true,
+                        new LPDeviceSettingsListener() {
+                    @Override
+                    public void success(String s) {
+
+                    }
+
+                    @Override
+                    public void failure(Exception e) {
+
+                    }
+                });
+    ```
+
+
+#### 设置SSID密码
+
+-   接口说明
+
+    设置设备的SSID密码，请注意密码长度至少为8位
+
+    ```Java
+    - public void setSSIDPassword(String password, LPDeviceSettingsListener listener);
+    ```
+
+-   参数
+
+| 名称       | 类型            | 接口说明                                                                       |
+| :--------- | :------------ | :-----------------------------------------------------------------------------|
+| password   | String      | 设置的SSID密码，至少8位                                                          |
+
+-   返回值
+
+    无
+
+-   示例代码
+
+    ```Java
+     // Set SSID password
+    currDevice.getDeviceSettings().setSSIDPassword("12345678",
+                        new LPDeviceSettingsListener() {
+                            @Override
+                            public void success(String s) {
+                                
+                            }
+
+                            @Override
+                            public void failure(Exception e) {
+
+                            }
+                        });
+    ```

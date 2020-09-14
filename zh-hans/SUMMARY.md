@@ -67,6 +67,7 @@
       - [切换输入源](android/DeviceInfoSetting.md#设置设备输入源)
       - [设备网络检测](android/DeviceInfoSetting.md#设备网络检测)
       - [EQ](android/DeviceInfoSetting.md#eq)
+      - [SSID和密码](android/DeviceInfoSetting.md#ssid和密码)
       - [定时关机](android/Device.md#定时关机)
     * [多设备同步播放音乐](android/MultiRoom.md)
       - [不指定主设备的 Multi-Room](android/MultiRoom.md#不指定主设备的-multi-room)
