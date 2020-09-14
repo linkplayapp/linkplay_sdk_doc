@@ -163,10 +163,81 @@
 - 示例代码
 
     ``` ObjectiveC
+    LPMSLibraryPlayItem *item = (LPMSLibraryPlayItem *)self.musicListObj.list[2];
     LPMediaSourceAction *action = [[LPMediaSourceAction alloc] init];
+    LPPlayMusicList *songObj = [[LPPlayMusicList alloc] init];
+     songObj.account = self.musicListObj.account;
+     songObj.header = self.musicListObj.header;
+     songObj.list = @[item];
+     songObj.index = 0;
+     songObj.customPresetName = self.musicListObj.customPresetName;
+    
     [[LPMDPKitManager shared] addToNextPlayWithDeviceId:self.uuid playMusicList:self.musicListObj deviceAction:action block:^(NSDictionary * _Nonnull dictionary) {
-        [self.devicePlayer nextPlay:dictionary completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-                    NSLog(@"");
+        if (dictionary) {
+            [self.devicePlayer nextPlay:dictionary completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+                if (isSuccess) {
+                    NSLog(@"Next Play successfully");
+                }
+            }];
+        }
+    }];
+    ```
+
+
+#### 播放USB歌曲
+
+- 接口说明
+
+    ``` ObjectiveC
+    - (void)playUSBSongsWithIndex:(int)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                           |
+| :--------------- | :----------------------- -| :----------------------------------------------  |
+| index            | int                       | 歌曲index                                         |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` ObjectiveC
+    self.musicListObj.index = (int)indexPath.row;
+    [self.devicePlayer playUSBSongsWithIndex:(int)indexPath.row completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+        if (isSuccess) {
+            NSLog(@"Play USB song successfully");
+        }
+    }];
+    ```
+
+#### 播放当前正在播放歌单中的歌曲
+
+- 接口说明
+
+    ``` ObjectiveC
+    - (void)playCurrentPlayListWithIndex:(int)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                               |
+| :--------------- | :----------------------- -| :--------------------------------------------------- |  
+| index            | int                       | 当前歌单中歌曲index，可以从(queryCurrentPlayList)获取歌单 |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` ObjectiveC
+    [self.devicePlayer queryCurrentPlayList:^(BOOL isSuccess, NSString * _Nullable result) {
+        LPPlayMusicList *musicListObj = [[LPMDPKitManager shared] getBrowseListWithString:result];
+        [self.devicePlayer playCurrentPlayListWithIndex:4 completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            NSLog(@"Play successfully");
         }];
     }];
     ```

@@ -422,6 +422,86 @@ This sdk implements the functions that discover devices in the same LAN, include
 | mediaInfo  | LPMediaInfo    | Media info object    |
 | deviceInfo | LPDeviceInfo   | Device info object   |
 
+
+## Device current info and browse
+### LPDeviceInfo 
+  Current information and queries played by the device
+
+### Property 
+
+| Name              | Type     | Description                |
+| ------------------| -------- | -------------------        |
+| playStatus        | NSString | Current play status |
+| playMode          | int      | Play mode           |
+| mediaType         | NSString | Media Type          |
+| trackSource       | NSString | Track source        |
+| ...               | ...      | ...                 |
+
+ - currentQueue
+
+   The name of the playlist queue currently being played, and the updateCurrentPlayInfo or browserQueue method needs to be called to assign a value
+ - currentPlayIndex
+
+   The index of the currently playing song in the currently playing playlist. Only when the updateCurrentPlayInfo or browserQueue method is called, will the value be assigned 
+
+### Function
+
+#### Update Current Play Info
+
+- Description
+
+    To set the current display device or switch the current display device, you need to call this method once. Can be used to update the values of currentQueue and currentPlayIndex in deviceInfo
+
+    ``` ObjectiveC
+    - (void)updateCurrentPlayInfo;
+    ```
+
+- Parameter
+
+    N/A
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` ObjectiveC
+    [device.deviceInfo updateCurrentPlayInfo];
+        
+    ```
+
+#### Browse Queue
+
+- Description
+
+    Browse device information, the result obtained can be converted to the data structure by [[LPMDPKitManager shared] getBrowseListWithString: result]
+
+    ``` ObjectiveC
+    - (void)browseQueue:(NSString *_Nullable)queueName skipContent:(BOOL)skip completionHandler:(LPBrowseBlock _Nullable)completionHandler;
+    ```
+
+- Parameter
+
+| Name          | Type         | Description                                                                            |
+| :------------ | :------------| :------------------------------------------------------------------------------------  |
+| queueName     | NSString     | The value is @"TotalQueue", @"CurrentQueue", @"USBDiskQueue" or the queue name of the  |
+| skip          | BOOL         | The default is NO                                                                      |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` ObjectiveC
+    [device.deviceInfo browseQueue:@"CurrentQueue" skipContent:NO completionHandler:^(id  _Nullable obj, NSString * _Nullable resultString) {
+        NSLog(@"currentQueue = %@", device.deviceInfo.currentQueue);
+        NSLog(@"currentPlayIndex = %d", device.deviceInfo.currentPlayIndex);
+        LPPlayMusicList *musicListObj = [[LPMDPKitManager shared] getBrowseListWithString:resultString];
+    }];
+    ```
+
 ## LPMediaInfo
 
 ### Function 
@@ -436,18 +516,6 @@ This sdk implements the functions that discover devices in the same LAN, include
 | artist | NSString | Artist      |
 | album  | NSString | Album       |
 | ...    | ...      | ...         |
-
-## LPDeviceInfo 
-
-### Property 
-
-| Name        | Type     | Description         |
-| ----------- | -------- | ------------------- |
-| playStatus  | NSString | Current play status |
-| playMode    | int      | Play mode           |
-| mediaType   | NSString | Media Type          |
-| trackSource | NSString | Track source        |
-| ...         | ...      | ...                 |
 
 
 ## LPDeviceStatus 

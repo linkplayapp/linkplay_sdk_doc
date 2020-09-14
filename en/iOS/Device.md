@@ -163,10 +163,80 @@ Insert song to next play
 - Sample Code
 
     ``` ObjectiveC
+    LPMSLibraryPlayItem *item = (LPMSLibraryPlayItem *)self.musicListObj.list[2];
     LPMediaSourceAction *action = [[LPMediaSourceAction alloc] init];
+    LPPlayMusicList *songObj = [[LPPlayMusicList alloc] init];
+     songObj.account = self.musicListObj.account;
+     songObj.header = self.musicListObj.header;
+     songObj.list = @[item];
+     songObj.index = 0;
+     songObj.customPresetName = self.musicListObj.customPresetName;
+    
     [[LPMDPKitManager shared] addToNextPlayWithDeviceId:self.uuid playMusicList:self.musicListObj deviceAction:action block:^(NSDictionary * _Nonnull dictionary) {
-        [self.devicePlayer nextPlay:dictionary completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
-                    NSLog(@"");
+        if (dictionary) {
+            [self.devicePlayer nextPlay:dictionary completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+                if (isSuccess) {
+                    NSLog(@"Next Play successfully");
+                }
+            }];
+        }
+    }];
+    ```
+
+#### Play USB songs
+
+- Description
+
+    ``` ObjectiveC
+    - (void)playUSBSongsWithIndex:(int)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
+    ```
+
+- Parameter
+
+| Name       | Type     | Description                                                          |
+| :----------| :--------| :------------------------------------------------------------------- |
+| index      | int      | Song index                                                           |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` ObjectiveC
+    self.musicListObj.index = (int)indexPath.row;
+    [self.devicePlayer playUSBSongsWithIndex:(int)indexPath.row completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+        if (isSuccess) {
+            NSLog(@"Play USB song successfully");
+        }
+    }];
+    ```
+
+#### Play Current Playlist Song
+
+- Description
+
+    ``` ObjectiveC
+    - (void)playCurrentPlayListWithIndex:(int)index completionHandler:(LPPlayerBlock _Nullable)completionHandler;
+    ```
+
+- Parameter
+
+| Name       | Type     | Description                                                                                         |
+| :----------| :--------| :-------------------------------------------------------------------------------------------------- |
+| index      | int      | The index of the song in the current playlist, you can get the playlist from (queryCurrentPlayList) |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` ObjectiveC
+    [self.devicePlayer queryCurrentPlayList:^(BOOL isSuccess, NSString * _Nullable result) {
+        LPPlayMusicList *musicListObj = [[LPMDPKitManager shared] getBrowseListWithString:result];
+        [self.devicePlayer playCurrentPlayListWithIndex:4 completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            NSLog(@"Play successfully");
         }];
     }];
     ```

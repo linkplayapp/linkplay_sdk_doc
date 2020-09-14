@@ -390,7 +390,7 @@
 
 - 返回值
 
-| 名称 | 类型          | 接口说明         |
+| 名称 | 类型          | 接口说明               |
 | ---- | ------------- | ------------------- |
 | mcu  | LPPassThrough | Pass through object |
 
@@ -406,13 +406,13 @@
 
 - 返回值
 
-| 类型        | 接口说明 |
+| 类型        | 接口说明      |
 | ----------- | ----------- |
 | LPDeviceOTA | OTA object  |
 
-#### Property
+#### 属性
 
-| 名称       | 类型           | 接口说明          |
+| 名称       | 类型           | 接口说明                |
 | ---------- | -------------- | -------------------- |
 | player     | LPDevicePlayer | Player object        |
 | preset     | LPDevicePreset | Preset object        |
@@ -423,13 +423,91 @@
 | deviceInfo | LPDeviceInfo   | Device info object   |
 
 
-## LPMediaInfo
+## 设备当前信息和查询
+### LPDeviceInfo 
+  设备播放的当前信息和查询
 
-### Function 
+### 属性 
+
+| 名称        | 类型     | 接口说明                     |
+| ------------------| -------- | ------------------- |
+| playStatus        | NSString | Current play status |
+| playMode          | int      | Play mode           |
+| mediaType         | NSString | Media Type          |
+| trackSource       | NSString | Track source        |
+| ...               | ...      | ...                 |
+
+ - currentQueue
+    
+    当前正在播放的歌单queue名称，需要调用updateCurrentPlayInfo或browserQueue方法，才会赋值
+ - currentPlayIndex
+
+    当前播放歌曲在当前播放歌单中的索引，需要调用updateCurrentPlayInfo或browserQueue方法，才会赋值
+
+### 方法
+
+#### 更新当前播放信息
+
+- 接口说明
+
+    设置当前的显示设备或切换当前的显示设备，您需要调用此方法一次。 可用于更新deviceInfo中的currentQueue和currentPlayIndex的值位
+
+    ```ObjectiveC
+    - (void)updateCurrentPlayInfo
+    ```
+- 参数
+
+    N/A
+
+- 返回值
+
+    N/A
+
+- 示例代码
+
+    ``` ObjectiveC
+    [device.deviceInfo updateCurrentPlayInfo];
+        
+    ```
+
+#### Browse Queue
+
+- 接口说明
+
+    查询设备信息，获得的结果可以通过[[LPMDPKitManager shared] getBrowseListWithString：result] 转换数据结构
+
+    ``` ObjectiveC
+    - (void)browseQueue:(NSString *_Nullable)queueName skipContent:(BOOL)skip completionHandler:(LPBrowseBlock _Nullable)completionHandler;
+    ```
+
+- 参数
+
+| 名称           | 类型         | 接口说明                                                                                |
+| :------------ | :------------| :------------------------------------------------------------------------------------  |
+| queueName     | NSString     | 值是 @"TotalQueue", @"CurrentQueue", @"USBDiskQueue" 或者歌单的queue 名称                 |
+| skip          | BOOL         | 默认值是 NO                                                                      |
+
+- 返回值
 
     无
 
-### Property 
+- 示例代码
+
+    ``` ObjectiveC
+    [device.deviceInfo browseQueue:@"CurrentQueue" skipContent:NO completionHandler:^(id  _Nullable obj, NSString * _Nullable resultString) {
+        NSLog(@"currentQueue = %@", device.deviceInfo.currentQueue);
+        NSLog(@"currentPlayIndex = %d", device.deviceInfo.currentPlayIndex);
+        LPPlayMusicList *musicListObj = [[LPMDPKitManager shared] getBrowseListWithString:resultString];
+    }];
+    ```
+
+## LPMediaInfo
+
+### 方法 
+
+    无
+
+### 属性 
 
 | 名称   | 类型     | 接口说明 |
 | ------ | -------- | ----------- |
@@ -438,26 +516,14 @@
 | album  | NSString | Album       |
 | ...    | ...      | ...         |
 
-## LPDeviceInfo 
-
-### Property 
-
-| 名称        | 类型     | 接口说明            |
-| ----------- | -------- | ------------------- |
-| playStatus  | NSString | Current play status |
-| playMode    | int      | Play mode           |
-| mediaType   | NSString | Media Type          |
-| trackSource | NSString | Track source        |
-| ...         | ...      | ...                 |
-
 
 ## LPDeviceStatus 
 
-### Function 
+### 方法
 
     无
 
-### Property 
+### 属性 
 
 | 名称         | 类型     | 接口说明               |
 | ------------ | -------- | ---------------------- |

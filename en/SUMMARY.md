@@ -11,6 +11,7 @@
         -   [Observer](iOS/Device_SDK.md#add-observer)
         -   [Get Device](iOS/Device_SDK.md#get-device)
         -   [Online/Offline Delegate](iOS/Device_SDK.md#onlineoffline-delegate)
+        -   [Device current info and browse](iOS/Device_SDK.md#device-current-info-and-browse)
     -   [Device Control](iOS/Device.md)
         -   [Play Control](iOS/Device.md#play-control)
         -   [Alarm](iOS/Device.md#alarm)

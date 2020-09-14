@@ -12,6 +12,7 @@
         -   [获取设备](iOS/Device_SDK.md#获取设备)
         -   [删除设备](iOS/Device_SDK.md#删除设备)
         -   [设备上下线代理](iOS/Device_SDK.md#设备上下线代理)
+        -   [设备当前信息和查询](iOS/Device_SDK.md#设备当前信息和查询)
     -   [设备控制](iOS/Device.md)
         -   [播放控制](iOS/Device.md#播放控制)
         -   [闹钟](iOS/Device.md#闹钟)

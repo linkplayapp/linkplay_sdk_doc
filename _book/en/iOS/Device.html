@@ -269,6 +269,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.3.5" data-path="Device_SDK.html">
+            
+                <a href="Device_SDK.html#device-current-info-and-browse">
+            
+                    
+                    Device current info and browse
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1564,10 +1577,100 @@
 <p>  N/A</p>
 </li>
 <li><p>Sample Code</p>
-<pre class="language-"><code class="lang-ObjectiveC">  LPMediaSourceAction <span class="token operator">*</span>action <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaSourceAction alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-ObjectiveC">  LPMSLibraryPlayItem <span class="token operator">*</span>item <span class="token operator">=</span> <span class="token punctuation">(</span>LPMSLibraryPlayItem <span class="token operator">*</span><span class="token punctuation">)</span><span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj<span class="token punctuation">.</span>list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPMediaSourceAction <span class="token operator">*</span>action <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMediaSourceAction alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  LPPlayMusicList <span class="token operator">*</span>songObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPPlayMusicList alloc<span class="token punctuation">]</span> init<span class="token punctuation">]</span><span class="token punctuation">;</span>
+   songObj<span class="token punctuation">.</span>account <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj<span class="token punctuation">.</span>account<span class="token punctuation">;</span>
+   songObj<span class="token punctuation">.</span>header <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj<span class="token punctuation">.</span>header<span class="token punctuation">;</span>
+   songObj<span class="token punctuation">.</span>list <span class="token operator">=</span> <span class="token operator">@</span><span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">;</span>
+   songObj<span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+   songObj<span class="token punctuation">.</span>customPresetName <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj<span class="token punctuation">.</span>customPresetName<span class="token punctuation">;</span>
+
   <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> addToNextPlayWithDeviceId<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>uuid playMusicList<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj deviceAction<span class="token punctuation">:</span>action block<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span> _Nonnull dictionary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer nextPlay<span class="token punctuation">:</span>dictionary completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>dictionary<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer nextPlay<span class="token punctuation">:</span>dictionary completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Next Play successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="play-usb-songs"><a name="play-usb-songs" class="anchor-navigation-ex-anchor" href="#play-usb-songs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-usb-songs" class="plugin-anchor" href="#play-usb-songs"><i class="fa fa-link" aria-hidden="true"></i></a>Play USB songs</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playUSBSongsWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Song index</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token keyword">self</span><span class="token punctuation">.</span>musicListObj<span class="token punctuation">.</span>index <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>indexPath<span class="token punctuation">.</span>row<span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer playUSBSongsWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>indexPath<span class="token punctuation">.</span>row completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isSuccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play USB song successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="play-current-playlist-song"><a name="play-current-playlist-song" class="anchor-navigation-ex-anchor" href="#play-current-playlist-song"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-current-playlist-song" class="plugin-anchor" href="#play-current-playlist-song"><i class="fa fa-link" aria-hidden="true"></i></a>Play Current Playlist Song</h4>
+<ul>
+<li><p>Description</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>playCurrentPlayListWithIndex<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>index completionHandler<span class="token punctuation">:</span><span class="token punctuation">(</span>LPPlayerBlock _Nullable<span class="token punctuation">)</span>completionHandler<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">The index of the song in the current playlist, you can get the playlist from (queryCurrentPlayList)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer queryCurrentPlayList<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      LPPlayMusicList <span class="token operator">*</span>musicListObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>LPMDPKitManager shared<span class="token punctuation">]</span> getBrowseListWithString<span class="token punctuation">:</span>result<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">[</span><span class="token keyword">self</span><span class="token punctuation">.</span>devicePlayer playCurrentPlayListWithIndex<span class="token punctuation">:</span><span class="token number">4</span> completionHandler<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL isSuccess<span class="token punctuation">,</span> NSString <span class="token operator">*</span> _Nullable result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Play successfully&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
@@ -2458,7 +2561,7 @@
 
             
                 
-                <a href="Device_SDK.html#onlineoffline-delegate" class="navigation navigation-prev " aria-label="Previous page: Online/Offline Delegate">
+                <a href="Device_SDK.html#device-current-info-and-browse" class="navigation navigation-prev " aria-label="Previous page: Device current info and browse">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -2474,7 +2577,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.4","depth":2,"next":{"title":"Play Control","level":"1.2.4.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Online/Offline Delegate","level":"1.2.3.4","depth":3,"anchor":"#onlineoffline-delegate","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#onlineoffline-delegate","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-09-10T07:11:02.035Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-10T07:11:16.587Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.4","depth":2,"next":{"title":"Play Control","level":"1.2.4.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Device current info and browse","level":"1.2.3.5","depth":3,"anchor":"#device-current-info-and-browse","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#device-current-info-and-browse","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2020-09-14T09:55:38.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-14T10:40:23.442Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
