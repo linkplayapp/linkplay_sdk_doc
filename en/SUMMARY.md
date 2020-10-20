@@ -21,6 +21,8 @@
     -   [Device System Settings](iOS/DeviceInfoSetting.md)
         -   [Name](iOS/DeviceInfoSetting.md#name)
         -   [Restore](iOS/DeviceInfoSetting.md#restore)
+        -   [Get current input mode](iOS/DeviceInfoSetting.md#get-current-input-mode)
+        -   [Get supported input sources](iOS/DeviceInfoSetting.md#get-supported-input-sources)
         -   [Switch input source](iOS/DeviceInfoSetting.md#switch-input-source)
         -   [Network detection](iOS/DeviceInfoSetting.md#network-detection)
         -   [EQ](iOS/DeviceInfoSetting.md#eq)

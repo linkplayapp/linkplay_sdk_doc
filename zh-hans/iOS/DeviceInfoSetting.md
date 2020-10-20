@@ -58,6 +58,48 @@
     }];
     ```
 
+### 获取当前输入源
+
+-   接口说明
+
+    获取设备当前的输入模式
+
+    ```ObjectiveC
+    LPInputSource currentDeviceInputMode = device.deviceStatus.currentInputMode;
+    ```
+
+### 获取支持的输入源列表 
+
+-   接口说明
+
+    设备支持的输入源列表，内容是LPInputSource 类型对应的数字
+
+    ```ObjectiveC
+    - (NSArray *)getSupportInputSource;
+    ```
+
+-   参数
+
+    无
+
+
+-   返回值
+
+| 类型           | 接口说明                                                     |
+| :------------ | :---------------------------------------------------------- |
+| NSArray       | 输入源数组, 内容是LPInputSource 类型对应的数字                   |
+
+-   示例代码
+
+    ```ObjectiveC
+    NSArray *inputModeArray = [device.deviceSettings getSupportInputSource];
+    for (NSNumber *inputMode in inputModeArray) {
+        LPInputSource source = [inputMode intValue];
+        NSLog(@"Input source supported by the device: = %d", source);
+    }
+    ```
+
+
 ### 设置设备输入源
 
 -   接口说明

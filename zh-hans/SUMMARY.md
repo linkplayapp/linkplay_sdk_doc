@@ -22,6 +22,8 @@
     -   [设备系统设置](iOS/DeviceInfoSetting.md)
         -   [设置设备名称](iOS/DeviceInfoSetting.md#设置设备名称)
         -   [恢复出厂设置](iOS/DeviceInfoSetting.md#恢复出厂设置)
+        -   [获取当前输入源](iOS/DeviceInfoSetting.md#获取当前输入源)
+        -   [获取支持的输入源列表](iOS/DeviceInfoSetting.md#获取支持的输入源列表)
         -   [设置设备输入源](iOS/DeviceInfoSetting.md#设置设备输入源)
         -   [设备网络检测](iOS/DeviceInfoSetting.md#设备网络检测)
         -   [EQ](iOS/DeviceInfoSetting.md#eq)

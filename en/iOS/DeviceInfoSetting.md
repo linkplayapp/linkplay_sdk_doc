@@ -59,6 +59,48 @@ Device system related settings, includes language, name, timezone etc.
     }];
     ```
 
+### Get current input mode
+
+-   Description
+
+    Get current input mode of the device
+
+    ```ObjectiveC
+    LPInputSource currentDeviceInputMode = device.deviceStatus.currentInputMode;
+    ```
+
+### Get supported input sources 
+
+-   Description
+
+    Input Mode array supported by the device, the content is the number corresponding to the LPInputSource type
+
+    ```ObjectiveC
+    - (NSArray *)getSupportInputSource;
+    ```
+
+-   Parameter
+
+    N/A
+
+
+-   Response
+
+| Type          | Description                                                  |
+| :------------ | :----------------------------------------------------------  |
+| NSArray       | Input Mode array, number corresponding to LPInputSource type |
+
+-   Sample Code
+
+    ```ObjectiveC
+    NSArray *inputModeArray = [device.deviceSettings getSupportInputSource];
+    for (NSNumber *inputMode in inputModeArray) {
+        LPInputSource source = [inputMode intValue];
+        NSLog(@"Input source supported by the device: = %d", source);
+    }
+    ```
+
+
 ### Switch input source
 
 -   Description
@@ -85,6 +127,7 @@ Device system related settings, includes language, name, timezone etc.
     LPInputSource *sourc = LPBluetooth;
     [device.deviceSettings switchInputSource:source completionHandler:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nullable error) {
         if ([responseObject[@"result"] isEqualToString:@"OK"]) {
+            LPInputSource source = device.deviceStatus.currentInputMode;
             NSLog(@"Switch deivce input source successfully");
         }
     }];
