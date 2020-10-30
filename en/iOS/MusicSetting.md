@@ -58,7 +58,7 @@ Play control, change settings like channel, play mode, progress etc.
 - Description
 
     ``` ObjectiveC
-    - (void)setPlayMode:(LPPlayMode)playMode;
+    - (void)setPlayMode:(LPPlayMode)playMode completionHandler:(LPPlayerBlock _Nullable)completionHandler;
     ```
 
 - Parameter
@@ -76,10 +76,14 @@ Play control, change settings like channel, play mode, progress etc.
     ``` ObjectiveC
     if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
         LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-        [[device getPlayer] setSpotifyPlayMode:mode];
+        [[self.boxInfo getPlayer] setSpotifyPlayMode:mode completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            
+        }];
     }else {
         LPPlayMode mode = LP_SHUFFLEREPEAT;
-        [[device getPlayer] setPlayMode:mode];
+        [[self.boxInfo getPlayer] setPlayMode:mode completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            
+        }];
     }
     ```
 
@@ -88,7 +92,7 @@ Play control, change settings like channel, play mode, progress etc.
 - Description
 
     ``` ObjectiveC
-    - (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode;
+    - (void)setSpotifyPlayMode:(LPSpotifyPlayMode)spotifyPlayMode completionHandler:(LPPlayerBlock _Nullable)completionHandler;
     ```
 
 - Parameter
@@ -106,10 +110,14 @@ Play control, change settings like channel, play mode, progress etc.
     ``` ObjectiveC
     if ([device.mediaInfo.mediaType isEqualToString:SPOTIFY_SOURCE]) {
         LPSpotifyPlayMode mode = LP_SPOTIFY_LISTREPEAT;
-        [[device getPlayer] setSpotifyPlayMode:mode];
+        [[self.boxInfo getPlayer] setSpotifyPlayMode:mode completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            
+        }];
     }else {
         LPPlayMode mode = LP_SHUFFLEREPEAT;
-        [[device getPlayer] setPlayMode:mode];
+        [[self.boxInfo getPlayer] setPlayMode:mode completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
+            
+        }];
     }
     ```
 
