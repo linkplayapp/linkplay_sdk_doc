@@ -56,6 +56,7 @@
         -   [Observer](android/Device_SDK.md#add-observer)
         -   [Get Device](android/Device_SDK.md#get-device)
         -   [Online/Offline Delegate](android/Device_SDK.md#onlineoffline-delegate)
+        -   [Device current info and browse](android/Device_SDK.md#device-current-info-and-browse)
     -   [Device Control](android/Device.md)
         -   [Play Control](android/Device.md#play-control)
         -   [Alarm](android/Device.md#alarm)

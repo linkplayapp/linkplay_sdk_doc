@@ -449,6 +449,59 @@ Init function
 | mediaInfo  | LPMediaInfo    | Media info object    |
 | deviceInfo | LPDeviceInfo   | Device info object   |
 
+
+## Device current info and browse
+### LPDeviceInfo 
+  Current information and queries played by the device
+
+### 属性 
+
+| Name              | Type     | Description                |
+| ------------------| -------- | ------------------- |
+| playStatus        | String | Current play status |
+| playMode          | int      | Play mode           |
+| mediaType         | String | Media Type          |
+| trackSource       | String | Track source        |
+| ...               | ...      | ...                 |
+
+ - currentQueue
+    
+   The name of the playlist queue currently being played, and the updateCurrentPlayInfo or browserQueue method needs to be called to assign a value
+
+ - currentPlayIndex
+
+   The index of the currently playing song in the currently playing playlist. Only when the updateCurrentPlayInfo or browserQueue method is called, will the value be assigned 
+
+### Function
+ 
+#### Browse Queue
+
+- Description
+
+    Browse device information
+
+    ``` Java
+    void browseQueue(String queueName LPDevicePlayerListener listener);
+    ```
+
+- Parameter
+
+| Name          | Type         | Description                                                                            |
+| :------------ | :------------| :------------------------------------------------------------------------------------  |
+| queueName     | String     | 值是 "TotalQueue", "CurrentQueue", "USBDiskQueue" or the queue name of the                 |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` Java
+    currDevice.getPlayer().browseQueue("CurrentQueue", new LPDevicePlayerListener(){
+        ...
+    })
+    ```
+
 ## LPMediaInfo
 
 ### Function 

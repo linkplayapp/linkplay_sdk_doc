@@ -57,6 +57,7 @@
       - [添加代理](android/Device_SDK.md#添加代理)
       - [获取设备](android/Device_SDK.md#获取设备)
       - [设备上下线代理](android/Device_SDK.md#设备上下线代理)
+      - [设备当前信息和查询](android/Device_SDK.md#设备当前信息和查询)
     * [设备控制](android/Device.md)
       - [播放控制](android/Device.md#播放控制)
       - [闹钟](android/Device.md#闹钟)

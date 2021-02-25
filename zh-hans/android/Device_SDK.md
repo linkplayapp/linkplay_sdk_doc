@@ -449,6 +449,59 @@
 | mediaInfo  | LPMediaInfo    | Media info object    |
 | deviceInfo | LPDeviceInfo   | Device info object   |
 
+
+## 设备当前信息和查询
+### LPDeviceInfo 
+  设备播放的当前信息和查询
+
+### 属性 
+
+| 名称        | 类型     | 接口说明                     |
+| ------------------| -------- | ------------------- |
+| playStatus        | String | Current play status |
+| playMode          | int      | Play mode           |
+| mediaType         | String | Media Type          |
+| trackSource       | String | Track source        |
+| ...               | ...      | ...                 |
+
+ - currentQueue
+    
+    当前正在播放的歌单queue名称，需要调用updateCurrentPlayInfo或browserQueue方法，才会赋值
+ - currentPlayIndex
+
+    当前播放歌曲在当前播放歌单中的索引，需要调用updateCurrentPlayInfo或browserQueue方法，才会赋值
+
+### 方法
+ 
+#### Browse Queue
+
+- 接口说明
+
+    查询设备信息
+
+    ``` Java
+    void browseQueue(String queueName LPDevicePlayerListener listener);
+    ```
+
+- 参数
+
+| 名称           | 类型         | 接口说明                                                                                |
+| :------------ | :------------| :------------------------------------------------------------------------------------  |
+| queueName     | String     | 值是 "TotalQueue", "CurrentQueue", "USBDiskQueue" 或者歌单的queue 名称                 |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+    currDevice.getPlayer().browseQueue("CurrentQueue", new LPDevicePlayerListener(){
+        ...
+    })
+    ```
+
+
 ## LPMediaInfo
 
 ### Function 
