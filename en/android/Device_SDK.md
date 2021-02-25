@@ -53,7 +53,7 @@ Init function
 
 | Name      | Type                     | Description                                               |
 | :-------- | :----------------------- | :----------------------------------------------------     |
-| key       | NSString                 | The key to search device, you can ignore this by default. |
+| key       | String                 | The key to search device, you can ignore this by default. |
 
 - Response
 
@@ -165,7 +165,7 @@ Init function
 
 | Name      | Type                     | Description                                     |
 | :-------- | :----------------------- | :---------------------------------------------- |
-| UUID      | NSString                 | Device UUID                                     |
+| UUID      | String                 | Device UUID                                     |
 
 - Response
 
@@ -215,7 +215,7 @@ Init function
 
 | Name      | Type                     | Description                                     |
 | :-------- | :----------------------- | :---------------------------------------------- |
-| IP        | NSString                 | Device IP                                       |
+| IP        | String                 | Device IP                                       |
 
 - Response
 
@@ -242,7 +242,7 @@ Init function
 
 | Name      | Type                     | Description                                     |
 | :-------- | :----------------------- | :---------------------------------------------- |
-| MAC       | NSString                 | Device MAC                                      |
+| MAC       | String                 | Device MAC                                      |
 
 
 - Response
@@ -269,7 +269,7 @@ Init function
 
 | Name      | Type                     | Description                                     |
 | :-------- | :----------------------- | :---------------------------------------------- |
-| UUID      | NSString                 | Device UUID                                     |
+| UUID      | String                 | Device UUID                                     |
 
 
 - Response
@@ -488,7 +488,7 @@ Init function
 
 | Name          | Type         | Description                                                                            |
 | :------------ | :------------| :------------------------------------------------------------------------------------  |
-| queueName     | String     | 值是 "TotalQueue", "CurrentQueue", "USBDiskQueue" or the queue name of the                 |
+| queueName     | String     |  "TotalQueue", "CurrentQueue", "USBDiskQueue" or the queue name of the                 |
 
 - Response
 
@@ -512,9 +512,9 @@ Init function
 
 | Name   | Type     | Description |
 | ------ | -------- | ----------- |
-| title  | NSString | Title       |
-| artist | NSString | Artist      |
-| album  | NSString | Album       |
+| title  | String | Title       |
+| artist | String | Artist      |
+| album  | String | Album       |
 | ...    | ...      | ...         |
 
 ## LPDeviceInfo 
@@ -523,10 +523,10 @@ Init function
 
 | Name        | Type     | Description         |
 | ----------- | -------- | ------------------- |
-| playStatus  | NSString | Current play status |
+| playStatus  | String | Current play status |
 | playMode    | int      | Play mode           |
-| mediaType   | NSString | Media Type          |
-| trackSource | NSString | Track source        |
+| mediaType   | String | Media Type          |
+| trackSource | String | Track source        |
 | ...         | ...      | ...                 |
 
 
@@ -540,15 +540,15 @@ Init function
 
 | Name         | Type     | Description            |
 | ------------ | -------- | ---------------------- |
-| UUID         | NSString | UUID                   |
+| UUID         | String | UUID                   |
 | IP           | int      | IP                     |
 | WiFiStrength | float    | Wi-Fi signal strength  |
-| MAC          | NSString | MAC                    |
-| SSID         | NSString | SSID                   |
-| friendlyName | NSString | Device's friendly Name |
-| version      | NSString | Firmware version       |
+| MAC          | String | MAC                    |
+| SSID         | String | SSID                   |
+| friendlyName | String | Device's friendly Name |
+| version      | String | Firmware version       |
 | language     | int      | Prompt tone language   |
-| release      | NSString | Compiled date          |
+| release      | String | Compiled date          |
 
 
 ## Other Definitions
