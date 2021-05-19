@@ -96,7 +96,7 @@ Show Alexa login page with related delegate.
     Load Alexa login page.
 
     ``` ObjectiveC
-    - (instancetype)initAlexaLoginViewWithFrame:(CGRect)frame device:(LPDevice *)device isBeta:(BOOL)isBeta;
+    - (instancetype)initAlexaLoginViewWithFrame:(CGRect)frame device:(LPDevice *)device isBeta:(BOOL)isBeta betaString:(NSString *)betaString;
     ```
 
 - Parameter
@@ -106,6 +106,7 @@ Show Alexa login page with related delegate.
 | device       | LPDevice                 | Device object                                   |
 | frame        | CGRect                   | UI frame                                        |
 | isBeta       | BOOL                     | Whether beta version for Amazon certification   |
+| betaString   | NSString                 | alexa beta string, default is "_BETA"           |
 
 - Response
 
@@ -114,7 +115,7 @@ Show Alexa login page with related delegate.
 - Sample Code
 
     ``` ObjectiveC
-    LPAlexaLoginView *loginView = [[LPAlexaLoginView alloc] initAlexaLoginViewWithFrame:[UIScreen mainScreen].bounds device:self.device isBeta:NO];
+    LPAlexaLoginView *loginView = [[LPAlexaLoginView alloc] initAlexaLoginViewWithFrame:[UIScreen mainScreen].bounds device:self.device isBeta:NO betaString:@""];
     loginView.delegate = self;
     [self.view addSubview:loginView];
     ```

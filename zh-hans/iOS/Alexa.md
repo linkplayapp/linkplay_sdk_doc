@@ -97,7 +97,7 @@ Splash 网页点击返回按键或者Skip按键对应的代理方法。
     加载Alexa Login网页
 
     ``` ObjectiveC
-    - (instancetype)initAlexaLoginViewWithFrame:(CGRect)frame device:(LPDevice *)device isBeta:(BOOL)isBeta;
+    - (instancetype)initAlexaLoginViewWithFrame:(CGRect)frame device:(LPDevice *)device isBeta:(BOOL)isBeta betaString:(NSString *)betaString;
     ```
 
 - 参数
@@ -106,7 +106,8 @@ Splash 网页点击返回按键或者Skip按键对应的代理方法。
 | :----------- | :----------------------- | :---------------------------------------------- |
 | device       | LPDevice                 | 设备                                            |
 | frame        | CGRect                   | 网页 frame                                      |
-| isBeta       | BOOL                     | 是否是Beta版本                                  |
+| isBeta       | BOOL                     | 是否是Beta版本                                   |
+| betaString   | NSString                 | alexa beta 字符串, 默认的值是 "_BETA"             |
 
 - 返回值
 
@@ -115,7 +116,7 @@ Splash 网页点击返回按键或者Skip按键对应的代理方法。
 - 示例代码
 
     ``` ObjectiveC
-    LPAlexaLoginView *loginView = [[LPAlexaLoginView alloc] initAlexaLoginViewWithFrame:[UIScreen mainScreen].bounds device:self.device isBeta:NO];
+    LPAlexaLoginView *loginView = [[LPAlexaLoginView alloc] initAlexaLoginViewWithFrame:[UIScreen mainScreen].bounds device:self.device isBeta:NO betaString:@""];
     loginView.delegate = self;
     [self.view addSubview:loginView];
     ```
