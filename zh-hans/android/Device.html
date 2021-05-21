@@ -1653,6 +1653,194 @@
 <p>  &#x65E0;</p>
 </li>
 </ul>
+<h4 id="&#x64AD;&#x653E;&#x97F3;&#x4E50;"><a name="&#x64AD;&#x653E;&#x97F3;&#x4E50;" class="anchor-navigation-ex-anchor" href="#&#x64AD;&#x653E;&#x97F3;&#x4E50;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64AD;&#x653E;&#x97F3;&#x4E50;" class="plugin-anchor" href="#&#x64AD;&#x653E;&#x97F3;&#x4E50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64AD;&#x653E;&#x97F3;&#x4E50;</h4>
+<p>&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x6307;&#x7684;&#x662F;&#x4ECE;&#x97F3;&#x6E90;SDK&#x4E2D;&#x83B7;&#x53D6;&#x8981;&#x64AD;&#x653E;&#x7684;&#x4FE1;&#x606F; musicDictionary, &#x7136;&#x540E;&#x4F20;&#x9012;&#x7ED9;&#x8BBE;&#x5907;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x8BBE;&#x5907;&#x64AD;&#x653E;&#x97F3;&#x6E90;&#x4FE1;&#x606F;&#xFF0C;&#x4ECE;&#x97F3;&#x6E90;&#x4E2D;&#x83B7;&#x5F97; LPPlayMusicList &#x5BF9;&#x8C61;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; LPMDPKitManager SDK &#x8F6C;&#x6362;&#x6210;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x7684;&#x64AD;&#x653E;&#x4FE1;&#x606F; musicDictionary</p>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-Java">  playAudio(String playlist, LPDevicePlayerListener listener)
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">playlist</td>
+<td>String</td>
+<td style="text-align:left">&#x64AD;&#x653E;&#x5A92;&#x4F53;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-Java">  currDevice.getPlayer().playAudio(playlist,
+              new LPDevicePlayerListener() {
+          @Override
+          public void onSuccess(String result) {
+
+          }
+
+          @Override
+          public void onFailure(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;"><a name="&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;" class="plugin-anchor" href="#&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0B;&#x4E00;&#x9996;&#x64AD;&#x653E;</h4>
+<p>&#x9009;&#x4E2D;&#x6B4C;&#x66F2;&#xFF0C;&#x4F5C;&#x4E3A;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x4E0B;&#x4E00;&#x9996;&#x97F3;&#x4E50;&#x64AD;&#x653E;</p>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-Java">  nextPlay(String playlist, LPMediaInfo mediaItem, LPDevicePlayerListener listener)
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">playlist</td>
+<td>String</td>
+<td style="text-align:left">&#x64AD;&#x653E;&#x5A92;&#x4F53;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:left">mediaItem</td>
+<td>LPMediaInfo</td>
+<td style="text-align:left">&#x97F3;&#x4E50;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">listener</td>
+<td>LPDevicePlayerListener</td>
+<td style="text-align:left">&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-Java">   currDevice.getPlayer().nextPlay(playlist, mediaItem,
+              new LPDevicePlayerListener() {
+          @Override
+          public void onSuccess(String result) {
+
+          }
+
+          @Override
+          public void onFailure(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x64AD;&#x653E;usb&#x6B4C;&#x66F2;"><a name="&#x64AD;&#x653E;usb&#x6B4C;&#x66F2;" class="anchor-navigation-ex-anchor" href="#&#x64AD;&#x653E;usb&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64AD;&#x653E;usb&#x6B4C;&#x66F2;" class="plugin-anchor" href="#&#x64AD;&#x653E;usb&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64AD;&#x653E;USB&#x6B4C;&#x66F2;</h4>
+<ul>
+<li><p>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</p>
+<pre class="language-"><code class="lang-Java">  playUSBSongsWithIndex(int index, LPDevicePlayerListener listener);
+</code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63A5;&#x53E3;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td>int</td>
+<td style="text-align:left">&#x6B4C;&#x66F2;index</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>&#x8FD4;&#x56DE;&#x503C;</p>
+<p>  &#x65E0;</p>
+</li>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-Java">    currDevice.getPlayer().playUSBSongsWithIndex(index,
+        new LPDevicePlayerListener() {
+         @Override
+        public void onSuccess(String result) {
+
+         }
+
+        @Override
+        public void onFailure(Exception e) {
+         }
+    });
+</code></pre>
+<h4 id="&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><a name="&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;" class="anchor-navigation-ex-anchor" href="#&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;" class="plugin-anchor" href="#&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64AD;&#x653E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;</h4>
+<ul>
+<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;<pre class="language-"><code class="lang-Java">  playCurrentPlayListWithIndex(int index, LPDevicePlayerListener listener)
+</code></pre>
+</li>
+<li>&#x53C2;&#x6570;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">index</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x6B4C;&#x5355;&#x4E2D;&#x6B4C;&#x66F2;index&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;(queryCurrentPlayList)&#x83B7;&#x53D6;&#x6B4C;&#x5355;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;
+  &#x65E0;</li>
+<li><p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-Java">  currDevice.getPlayer().playCurrentPlayListWithIndex(index,
+              new LPDevicePlayerListener() {
+          @Override
+          public void onSuccess(String result) {
+
+          }
+
+          @Override
+          public void onFailure(Exception e) {
+
+          }
+      });
+</code></pre>
+</li>
+</ul>
 <h4 id="&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><a name="&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x6B4C;&#x5355;&#x4E2D;&#x7684;&#x6B4C;&#x66F2;</h4>
 <p>&#x4ECE;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x7684;&#x6B4C;&#x5355;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x6B4C;&#x66F2;&#x3002;</p>
 <ul>
@@ -2507,7 +2695,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设备控制","level":"1.3.4","depth":2,"next":{"title":"播放控制","level":"1.3.4.1","depth":3,"anchor":"#播放控制","path":"android/Device.md","ref":"android/Device.md#播放控制","articles":[]},"previous":{"title":"设备当前信息和查询","level":"1.3.3.5","depth":3,"anchor":"#设备当前信息和查询","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#设备当前信息和查询","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"zh-hans","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Device.md","mtime":"2021-05-19T06:04:52.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-19T06:10:09.715Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"设备控制","level":"1.3.4","depth":2,"next":{"title":"播放控制","level":"1.3.4.1","depth":3,"anchor":"#播放控制","path":"android/Device.md","ref":"android/Device.md#播放控制","articles":[]},"previous":{"title":"设备当前信息和查询","level":"1.3.3.5","depth":3,"anchor":"#设备当前信息和查询","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#设备当前信息和查询","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"zh-hans","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Device.md","mtime":"2021-05-21T08:48:23.163Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-21T08:49:00.534Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
