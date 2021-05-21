@@ -67,7 +67,7 @@
 - 接口说明
 
     ``` Java
-    - (void)stop:(LPPlayerBlock _Nullable)completionHandler;
+    stop(LPDevicePlayerListener listener)
     ```
 
 - 参数
@@ -84,7 +84,7 @@
 
 - 接口说明
 
-    ``` Java
+    ```Java
     next(LPDevicePlayerListener listener)
     ```
 
@@ -115,6 +115,120 @@
 - 返回值
 
     无
+
+
+#### 播放音乐
+
+播放音乐指的是从音源SDK中获取要播放的信息 musicDictionary, 然后传递给设备，从而让设备播放音源信息，从音源中获得 LPPlayMusicList 对象后，可以通过 LPMDPKitManager SDK 转换成接口需要的播放信息 musicDictionary
+
+- 接口说明
+
+    ``` Java
+    playAudio(String playlist, LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                           |
+| :--------------- | :----------------------- -| :----------------------------------------------  |
+| playlist  | String              | 播放媒体内容                                       |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ```Java
+    currDevice.getPlayer().playAudio(playlist,
+                new LPDevicePlayerListener() {
+            @Override
+            public void onSuccess(String result) {
+ 
+            }
+ 
+            @Override
+            public void onFailure(Exception e) {
+ 
+            }
+        });
+    ```
+
+#### 下一首播放
+
+选中歌曲，作为歌单中的下一首音乐播放
+
+- 接口说明
+
+    ``` Java
+    nextPlay(String playlist, LPMediaInfo mediaItem, LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                           |
+| :--------------- | :----------------------- -| :----------------------------------------------  |
+| playlist         | String                    | 播放媒体内容                                       |
+| mediaItem        | LPMediaInfo               | 音乐信息                                           |
+| listener         | LPDevicePlayerListener    | 回调                                               |
+
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+     currDevice.getPlayer().nextPlay(playlist, mediaItem,
+                new LPDevicePlayerListener() {
+            @Override
+            public void onSuccess(String result) {
+ 
+            }
+ 
+            @Override
+            public void onFailure(Exception e) {
+ 
+            }
+        });
+    ```
+
+
+#### 播放USB歌曲
+
+- 接口说明
+
+     ``` Java
+    playUSBSongsWithIndex(int index, LPDevicePlayerListener listener);
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                           |
+| :--------------- | :----------------------- -| :----------------------------------------------  |
+| index            | int                       | 歌曲index                                         |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+```Java
+    currDevice.getPlayer().playUSBSongsWithIndex(index,
+        new LPDevicePlayerListener() {
+         @Override
+        public void onSuccess(String result) {
+ 
+         }
+ 
+        @Override
+        public void onFailure(Exception e) {
+
+         }
+    });
+```
 
 #### 播放当前正在播放歌单中的歌曲
 
