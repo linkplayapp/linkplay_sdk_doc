@@ -116,6 +116,40 @@
 
     无
 
+#### 播放当前正在播放歌单中的歌曲
+
+- 接口说明
+
+    ``` Java
+    playCurrentPlayListWithIndex(int index, LPDevicePlayerListener listener)
+    ```
+
+- 参数
+
+| 名称              | 类型                      | 接口说明                                               |
+| :--------------- | :----------------------- -| :--------------------------------------------------- |  
+| index            | int                       | 当前歌单中歌曲index，可以从(queryCurrentPlayList)获取歌单 |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+    currDevice.getPlayer().playCurrentPlayListWithIndex(index,
+                new LPDevicePlayerListener() {
+            @Override
+            public void onSuccess(String result) {
+ 
+            }
+ 
+            @Override
+            public void onFailure(Exception e) {
+ 
+            }
+        });
+    ```
 
 #### 删除当前播放歌单中的歌曲
 

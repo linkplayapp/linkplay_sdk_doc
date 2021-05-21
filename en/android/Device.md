@@ -115,6 +115,41 @@ This SDK implements most of the device related functions, includes play control,
 
     N/A
 
+#### Play Current Playlist Song
+
+- Description
+
+    ``` Java
+    playCurrentPlayListWithIndex(int index, LPDevicePlayerListener listener)
+    ```
+
+- Parameter
+
+| Name       | Type     | Description                                                                                         |
+| :----------| :--------| :-------------------------------------------------------------------------------------------------- |
+| index      | int      | The index of the song in the current playlist, you can get the playlist from (queryCurrentPlayList) |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+   ``` Java
+    currDevice.getPlayer().playCurrentPlayListWithIndex(index,
+                new LPDevicePlayerListener() {
+            @Override
+            public void onSuccess(String result) {
+ 
+            }
+ 
+            @Override
+            public void onFailure(Exception e) {
+ 
+            }
+        });
+    ```
+
 #### Remove Music from Current Playlist
 
 - Description
