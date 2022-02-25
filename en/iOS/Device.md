@@ -172,7 +172,7 @@ Insert song to next play
      songObj.index = 0;
      songObj.customPresetName = self.musicListObj.customPresetName;
     
-    [[LPMDPKitManager shared] addToNextPlayWithDeviceId:self.uuid playMusicList:self.musicListObj deviceAction:action block:^(NSDictionary * _Nonnull dictionary) {
+    [[LPMDPKitManager shared] addToNextPlayWithDeviceId:self.uuid playMusicList:songObj deviceAction:action block:^(NSDictionary * _Nonnull dictionary) {
         if (dictionary) {
             [self.devicePlayer nextPlay:dictionary completionHandler:^(BOOL isSuccess, NSString * _Nullable result) {
                 if (isSuccess) {
