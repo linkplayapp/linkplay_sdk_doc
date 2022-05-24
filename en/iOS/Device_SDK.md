@@ -24,7 +24,7 @@ This sdk implements the functions that discover devices in the same LAN, include
 
 | Name      | Type                     | Description                                               |
 | :-------- | :----------------------- | :----------------------------------------------------     |
-| key       | NSString                 | The key to search device, you can ignore this by default. |
+| key       | NSString                 | The key to search device, you can ignore this by default. If you need to pass ssdp/bonjour search key separately, you can use json ike {\"ssdp\": \"x\", \"bonjour\": \"y\"} |
 
 - Response
 
@@ -33,7 +33,7 @@ This sdk implements the functions that discover devices in the same LAN, include
 - Sample Code
 
     ``` ObjectiveC
-    [[LPDeviceManager sharedInstance] search:@""];
+    [[LPDeviceManager sharedInstance] search:@"{\"ssdp\": \"x\", \"bonjour\": \"y\"}"];
     ```
 
 #### Stop Search
