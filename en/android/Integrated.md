@@ -1,6 +1,6 @@
 # Integrate SDK
 
-The recommended way to include the SDK in your iOS project is to use CocoaPods, but you can also download the SDK and manually configure your project to use it.
+It is recommended that you refer to the sample to use the remote dependency integration SDK for subsequent updates.
 
 ## SDK
 
