@@ -454,7 +454,7 @@ Init function
 ### LPDeviceInfo 
   Current information and queries played by the device
 
-### 属性 
+### Property 
 
 | Name              | Type     | Description                |
 | ------------------| -------- | ------------------- |
