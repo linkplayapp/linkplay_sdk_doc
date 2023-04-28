@@ -18,6 +18,7 @@
         -   [Preset](iOS/Device.md#preset)
         -   [OTA](iOS/Device.md#ota)
         -   [MCU Passthrough](iOS/Device.md#mcu-passthrough)
+        -   [HTTP Passthrough](iOS/Device.md#http-passthrough)
     -   [Device System Settings](iOS/DeviceInfoSetting.md)
         -   [Name](iOS/DeviceInfoSetting.md#name)
         -   [Restore](iOS/DeviceInfoSetting.md#restore)

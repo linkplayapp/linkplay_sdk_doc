@@ -895,3 +895,71 @@ There're 2 notifications in Passthrough SDK, which for transport data and show t
 - Response
 
     N/A
+
+
+### HTTP Passthrough
+
+App and device PassThrough via HTTP.
+
+#### Passthrough Delegate
+
+- Description
+
+    Delegate method for firmware to send information to App
+
+    ``` ObjectiveC
+    - (void)receivedPassthroughNotify:(NSDictionary *)notifyDict soundBoxID:(NSString *)soundBoxID;
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| notifyDict      | NSDictionary             | Information sent by the device                  |
+| soundBoxID      | NSString                 | Device Id                                       |
+
+- Response
+
+    N/A
+
+#### Start Passthrough
+
+- Description
+    App sends Passthrough information to device
+
+    ``` ObjectiveC
+    - (void)passthroughViaHTTP:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters success:(void (^)(NSDictionary *responseObject))success failure:(void (^)(NSError *error))failure timeout:(NSTimeInterval)timeout;
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| url             | NSString                 | Requested url                                   |
+| method          | NSString                 | The requested method name                       |
+| parameters      | NSDictionary             | request parameters                              |
+| success         | Block                    | Success callback                                |
+| failure         | Block                    | Failure callback                                |
+| timeout         | NSTimeInterval           | Timeout                                         |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+    ``` ObjectiveC
+
+    device.getPassthroughViaHTTP.delegate = self;
+    [device.getPassthroughViaHTTP passthroughViaHTTP:[NSString stringWithFormat:@"https://%@/httpapi.asp?", device.deviceStatus.IP] method:@"passthrough" parameters:@{@"command":@"setPowerState", @"value":@(1)} success:^(NSDictionary * _Nonnull responseObject) {
+        
+    } failure:^(NSError * _Nonnull error) {
+        
+    } timeout:15];
+    
+    // PassThrough Delegate
+    - (void)receivedPassthroughNotify:(NSDictionary *)notifyDict soundBoxID:(NSString *)soundBoxID {
+    NSLog(@"received information = %@", notifyDict);
+    }
+    
+    ```

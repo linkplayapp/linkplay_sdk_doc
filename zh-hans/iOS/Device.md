@@ -903,3 +903,71 @@ Passthrough SDK 共有两个通知，用来传递数据和标识长连接状态�
 - 返回值
 
     无
+
+### HTTP Passthrough
+
+App和设备通过HTTP接口Passthrough.
+
+#### Passthrough 代理
+
+- 接口说明
+
+    设备向App发送Passthrough信息的代理方法
+
+    ``` ObjectiveC
+    - (void)receivedPassthroughNotify:(NSDictionary *)notifyDict soundBoxID:(NSString *)soundBoxID;
+    ```
+
+- 参数
+
+| 名称            | 类型                      | 参数说明                                     |
+| :-------------- | :----------------------- | :-------------------------------------------|
+| notifyDict      | NSDictionary             | 设备发送的信息                                |
+| soundBoxID      | NSString                 | 设备ID                                      |
+
+- 返回值
+
+    无
+
+#### HTTP发送Passthrough
+
+- 接口说明
+
+    App 发送Passthrough信息给设备
+
+    ``` ObjectiveC
+    - (void)passthroughViaHTTP:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters success:(void (^)(NSDictionary *responseObject))success failure:(void (^)(NSError *error))failure timeout:(NSTimeInterval)timeout;
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 参数说明                                     |
+| :-------------- | :----------------------- | :------------------------------------------|
+| url             | NSString                 | 请求url                                     |
+| method          | NSString                 | 请求的方法名                                  |
+| parameters      | NSDictionary             | 请求参数                                     |
+| success         | Block                    | 成功回调                                      |
+| failure         | Block                    | 失败回调                                      |
+| timeout         | NSTimeInterval           | 超时时间                                      |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` ObjectiveC
+
+    device.getPassthroughViaHTTP.delegate = self;
+    [device.getPassthroughViaHTTP passthroughViaHTTP:[NSString stringWithFormat:@"https://%@/httpapi.asp?", device.deviceStatus.IP] method:@"passthrough" parameters:@{@"command":@"setPowerState", @"value":@(1)} success:^(NSDictionary * _Nonnull responseObject) {
+        
+    } failure:^(NSError * _Nonnull error) {
+        
+    } timeout:15];
+    
+    // PassThrough Delegate
+    - (void)receivedPassthroughNotify:(NSDictionary *)notifyDict soundBoxID:(NSString *)soundBoxID {
+        NSLog(@"received information = %@", notifyDict);
+    }
+    
+    ```

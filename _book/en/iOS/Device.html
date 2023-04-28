@@ -366,6 +366,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.4.6" data-path="Device.html">
+            
+                <a href="Device.html#http-passthrough">
+            
+                    
+                    HTTP Passthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1460,7 +1473,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li><li><span class="title-icon "></span><a href="#http-passthrough"><b></b>HTTP Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>This SDK implements most of the device related functions, includes play control, settings, preset, alarm and so on.</p>
 <h3 id="play-control"><a name="play-control" class="anchor-navigation-ex-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-control" class="plugin-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a>Play Control</h3>
@@ -2586,6 +2599,115 @@
 <p>  N/A</p>
 </li>
 </ul>
+<h3 id="http-passthrough"><a name="http-passthrough" class="anchor-navigation-ex-anchor" href="#http-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http-passthrough" class="plugin-anchor" href="#http-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP Passthrough</h3>
+<p>App and device PassThrough via HTTP.</p>
+<h4 id="passthrough-delegate"><a name="passthrough-delegate" class="anchor-navigation-ex-anchor" href="#passthrough-delegate"><i class="fa fa-link" aria-hidden="true"></i></a><a name="passthrough-delegate" class="plugin-anchor" href="#passthrough-delegate"><i class="fa fa-link" aria-hidden="true"></i></a>Passthrough Delegate</h4>
+<ul>
+<li><p>Description</p>
+<p>  Delegate method for firmware to send information to App</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>receivedPassthroughNotify<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>notifyDict soundBoxID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>soundBoxID<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">notifyDict</td>
+<td style="text-align:left">NSDictionary</td>
+<td style="text-align:left">Information sent by the device</td>
+</tr>
+<tr>
+<td style="text-align:left">soundBoxID</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">Device Id</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="start-passthrough"><a name="start-passthrough" class="anchor-navigation-ex-anchor" href="#start-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-passthrough" class="plugin-anchor" href="#start-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a>Start Passthrough</h4>
+<ul>
+<li><p>Description
+  App sends Passthrough information to device</p>
+<pre class="language-"><code class="lang-ObjectiveC">  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>passthroughViaHTTP<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>url method<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>method parameters<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>parameters success<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span>responseObject<span class="token punctuation">)</span><span class="token punctuation">)</span>success failure<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token operator">^</span><span class="token punctuation">)</span><span class="token punctuation">(</span>NSError <span class="token operator">*</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span>failure timeout<span class="token punctuation">:</span><span class="token punctuation">(</span>NSTimeInterval<span class="token punctuation">)</span>timeout<span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">Requested url</td>
+</tr>
+<tr>
+<td style="text-align:left">method</td>
+<td style="text-align:left">NSString</td>
+<td style="text-align:left">The requested method name</td>
+</tr>
+<tr>
+<td style="text-align:left">parameters</td>
+<td style="text-align:left">NSDictionary</td>
+<td style="text-align:left">request parameters</td>
+</tr>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">Block</td>
+<td style="text-align:left">Success callback</td>
+</tr>
+<tr>
+<td style="text-align:left">failure</td>
+<td style="text-align:left">Block</td>
+<td style="text-align:left">Failure callback</td>
+</tr>
+<tr>
+<td style="text-align:left">timeout</td>
+<td style="text-align:left">NSTimeInterval</td>
+<td style="text-align:left">Timeout</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+<pre class="language-"><code class="lang-ObjectiveC">
+  device<span class="token punctuation">.</span>getPassthroughViaHTTP<span class="token punctuation">.</span>delegate <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>device<span class="token punctuation">.</span>getPassthroughViaHTTP passthroughViaHTTP<span class="token punctuation">:</span><span class="token punctuation">[</span>NSString stringWithFormat<span class="token punctuation">:</span><span class="token operator">@</span>&quot;https<span class="token punctuation">:</span><span class="token comment">//%@/httpapi.asp?&quot;, device.deviceStatus.IP] method:@&quot;passthrough&quot; parameters:@{@&quot;command&quot;:@&quot;setPowerState&quot;, @&quot;value&quot;:@(1)} success:^(NSDictionary * _Nonnull responseObject) {</span>
+
+  <span class="token punctuation">}</span> failure<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSError <span class="token operator">*</span> _Nonnull error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span> timeout<span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// PassThrough Delegate</span>
+  <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>receivedPassthroughNotify<span class="token punctuation">:</span><span class="token punctuation">(</span>NSDictionary <span class="token operator">*</span><span class="token punctuation">)</span>notifyDict soundBoxID<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span><span class="token punctuation">)</span>soundBoxID <span class="token punctuation">{</span>
+  <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;received information = %@&quot;</span><span class="token punctuation">,</span> notifyDict<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -2629,7 +2751,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.4","depth":2,"next":{"title":"Play Control","level":"1.2.4.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Device current info and browse","level":"1.2.3.5","depth":3,"anchor":"#device-current-info-and-browse","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#device-current-info-and-browse","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2022-05-24T06:39:19.755Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-24T06:43:27.202Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.2.4","depth":2,"next":{"title":"Play Control","level":"1.2.4.1","depth":3,"anchor":"#play-control","path":"iOS/Device.md","ref":"iOS/Device.md#play-control","articles":[]},"previous":{"title":"Device current info and browse","level":"1.2.3.5","depth":3,"anchor":"#device-current-info-and-browse","path":"iOS/Device_SDK.md","ref":"iOS/Device_SDK.md#device-current-info-and-browse","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"iOS/Device.md","mtime":"2023-04-28T08:34:21.510Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-28T08:24:55.869Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
