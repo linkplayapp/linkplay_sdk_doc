@@ -853,3 +853,76 @@ There're 2 listeners in Passthrough SDK, which for transport data and show the c
 - Response
 
     N/A
+
+
+### HTTP Passthrough
+
+App and device PassThrough via HTTP.
+
+#### Passthrough Delegate
+
+- Description
+
+    Delegate method for firmware to send information to App
+
+    ``` Java
+    - void passthroughViaHTTPNotify(String strPassThrough);
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| strPassThrough  | String                   | Information sent by the device                  |
+
+- Response
+
+    N/A
+
+#### Start Passthrough
+
+- Description
+    App sends Passthrough information to device
+
+    ``` Java
+    - void passthroughViaHTTP(String url, String method, String body_params, LPNetworkListener callback);
+    ```
+
+- Parameter
+
+| Name            | Type                     | Description                                     |
+| :-------------- | :----------------------- | :---------------------------------------------- |
+| url             | String                 | Requested url                                   |
+| method          | String                 | The requested method name                       |
+| body_params     | String                 | request parameters                              |
+| callback        | LPNetworkListener      | callback                                        |
+
+- Response
+
+    N/A
+
+- Sample Code
+
+
+    ``` Java
+
+   LPDevice device = UIApplication.currDevice;
+        String url = String.format("https://%s/httpapi.asp?", device.getIp());
+        String parameters = "{\"command\": \"setPowerState\", \"value\":1}";
+
+        device.getPassthroughViaHTTP().passthroughViaHTTP(url, "passthrough",
+                parameters, new LPNetworkListener() {
+            @Override
+            public void onSuccess(LPNetworkResponseItem response) {
+                super.onSuccess(response);
+                Log.i(TAG, "passthroughViaHTTP success: " + response.body);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                super.onFailure(e);
+                Log.i(TAG, "passthroughViaHTTP failure: " + e.getLocalizedMessage());
+            }
+        });
+    
+    ```

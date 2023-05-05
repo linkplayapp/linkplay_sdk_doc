@@ -64,6 +64,7 @@
         -   [Preset](android/Device.md#preset)
         -   [OTA](android/Device.md#ota)
         -   [MCU Passthrough](android/Device.md#mcu-passthrough)
+        -   [HTTP Passthrough](android/Device.md#http-passthrough)
     -   [Device System Settings](android/DeviceInfoSetting.md)
         -   [Name](android/DeviceInfoSetting.md#name)
         -   [Restore](android/DeviceInfoSetting.md#restore)

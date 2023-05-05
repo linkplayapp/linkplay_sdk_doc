@@ -65,6 +65,7 @@
       - [预置](android/Device.md#预置)
       - [固件升级](android/Device.md#固件升级)
       - [MCU 交互](android/Device.md#mcu-交互)
+      - [HTTP Passthrough](android/Device.md#http-passthrough)
     * [设备系统设置](android/DeviceInfoSetting.md)
       - [设置设备名称](android/DeviceInfoSetting.md#设置设备名称)
       - [恢复出厂设置](android/DeviceInfoSetting.md#恢复出厂设置)

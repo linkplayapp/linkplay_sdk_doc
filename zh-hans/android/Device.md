@@ -849,3 +849,75 @@ Passthrough SDK 共有两个监听，用来传递数据和标识长连接状态�
 - 返回值
 
     无
+
+### HTTP Passthrough
+
+App和设备通过HTTP接口Passthrough.
+
+#### Passthrough 代理
+
+- 接口说明
+
+    设备向App发送Passthrough信息的代理方法
+
+    ``` Java
+    - void passthroughViaHTTPNotify(String strPassThrough);
+    ```
+
+- 参数
+
+| 名称            | 类型                      | 参数说明                                     |
+| :-------------- | :----------------------- | :-------------------------------------------|
+| strPassThrough  | String                   | 设备发送的信息                                |
+
+- 返回值
+
+    无
+
+#### HTTP发送Passthrough
+
+- 接口说明
+
+    App 发送Passthrough信息给设备
+
+    ``` Java
+    - void passthroughViaHTTP(String url, String method, String body_params, LPNetworkListener callback);
+    ```
+
+- 参数
+
+| 名称            | 类型                     | 参数说明                                     |
+| :-------------- | :----------------------- | :------------------------------------------|
+| url             | String                   | 请求url                                     |
+| method          | String                   | 请求的方法名                                  |
+| body_params     | String                   | 请求参数                                     |
+| callback        | LPNetworkListener        | 回调                                         |
+
+- 返回值
+
+    无
+
+- 示例代码
+
+    ``` Java
+
+   LPDevice device = UIApplication.currDevice;
+        String url = String.format("https://%s/httpapi.asp?", device.getIp());
+        String parameters = "{\"command\": \"setPowerState\", \"value\":1}";
+
+        device.getPassthroughViaHTTP().passthroughViaHTTP(url, "passthrough",
+                parameters, new LPNetworkListener() {
+            @Override
+            public void onSuccess(LPNetworkResponseItem response) {
+                super.onSuccess(response);
+                Log.i(TAG, "passthroughViaHTTP success: " + response.body);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                super.onFailure(e);
+                Log.i(TAG, "passthroughViaHTTP failure: " + e.getLocalizedMessage());
+            }
+        });
+    
+    ```
