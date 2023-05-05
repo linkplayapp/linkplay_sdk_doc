@@ -866,7 +866,7 @@ App and device PassThrough via HTTP.
     Delegate method for firmware to send information to App
 
     ``` Java
-    - void passthroughViaHTTPNotify(String strPassThrough);
+    void passthroughViaHTTPNotify(String strPassThrough);
     ```
 
 - Parameter
@@ -885,7 +885,7 @@ App and device PassThrough via HTTP.
     App sends Passthrough information to device
 
     ``` Java
-    - void passthroughViaHTTP(String url, String method, String body_params, LPNetworkListener callback);
+    void passthroughViaHTTP(String url, String method, String body_params, LPNetworkListener callback);
     ```
 
 - Parameter
@@ -903,10 +903,8 @@ App and device PassThrough via HTTP.
 
 - Sample Code
 
-
     ``` Java
-
-   LPDevice device = UIApplication.currDevice;
+    LPDevice device = UIApplication.currDevice;
         String url = String.format("https://%s/httpapi.asp?", device.getIp());
         String parameters = "{\"command\": \"setPowerState\", \"value\":1}";
 
@@ -924,5 +922,4 @@ App and device PassThrough via HTTP.
                 Log.i(TAG, "passthroughViaHTTP failure: " + e.getLocalizedMessage());
             }
         });
-    
     ```
