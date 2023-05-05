@@ -850,7 +850,7 @@ Passthrough SDK 共有两个监听，用来传递数据和标识长连接状态�
 
     无
 
-### HTTP Passthrough
+### HTTP 交互
 
 App和设备通过HTTP接口Passthrough.
 
@@ -901,7 +901,7 @@ App和设备通过HTTP接口Passthrough.
 
     ``` Java
 
-   LPDevice device = UIApplication.currDevice;
+    LPDevice device = UIApplication.currDevice;
         String url = String.format("https://%s/httpapi.asp?", device.getIp());
         String parameters = "{\"command\": \"setPowerState\", \"value\":1}";
 
