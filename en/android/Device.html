@@ -1018,6 +1018,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.4.6" data-path="Device.html">
+            
+                <a href="Device.html#http-passthrough">
+            
+                    
+                    HTTP Passthrough
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1473,7 +1486,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#device-control"><b></b>Device Control</a></li><li><span class="title-icon "></span><a href="#overview"><b></b>Overview</a></li><ul><ul><li><span class="title-icon "></span><a href="#play-control"><b></b>Play Control</a></li><li><span class="title-icon "></span><a href="#alarm"><b></b>Alarm</a></li><li><span class="title-icon "></span><a href="#preset"><b></b>Preset</a></li><li><span class="title-icon "></span><a href="#schedule-shutdown"><b></b>Schedule Shutdown</a></li><li><span class="title-icon "></span><a href="#ota"><b></b>OTA</a></li><li><span class="title-icon "></span><a href="#mcu-passthrough"><b></b>MCU Passthrough</a></li><li><span class="title-icon "></span><a href="#http-passthrough"><b></b>HTTP Passthrough</a></li></ul></ul></ul></div><a href="#device-control" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="device-control"><a name="device-control" class="anchor-navigation-ex-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control" class="plugin-anchor" href="#device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control</h1>
 <h1 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h1>
 <p>This SDK implements most of the device related functions, includes play control, settings, preset, alarm and so on.</p>
 <h3 id="play-control"><a name="play-control" class="anchor-navigation-ex-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="play-control" class="plugin-anchor" href="#play-control"><i class="fa fa-link" aria-hidden="true"></i></a>Play Control</h3>
@@ -2639,7 +2652,108 @@
 <p>  N/A</p>
 </li>
 </ul>
+<h3 id="http-passthrough"><a name="http-passthrough" class="anchor-navigation-ex-anchor" href="#http-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http-passthrough" class="plugin-anchor" href="#http-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP Passthrough</h3>
+<p>App and device PassThrough via HTTP.</p>
+<h4 id="passthrough-delegate"><a name="passthrough-delegate" class="anchor-navigation-ex-anchor" href="#passthrough-delegate"><i class="fa fa-link" aria-hidden="true"></i></a><a name="passthrough-delegate" class="plugin-anchor" href="#passthrough-delegate"><i class="fa fa-link" aria-hidden="true"></i></a>Passthrough Delegate</h4>
+<ul>
+<li><p>Description</p>
+<p>  Delegate method for firmware to send information to App</p>
+<pre class="language-"><code class="lang-Java">  - void passthroughViaHTTPNotify(String strPassThrough);
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">strPassThrough</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Information sent by the device</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+</ul>
+<h4 id="start-passthrough"><a name="start-passthrough" class="anchor-navigation-ex-anchor" href="#start-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-passthrough" class="plugin-anchor" href="#start-passthrough"><i class="fa fa-link" aria-hidden="true"></i></a>Start Passthrough</h4>
+<ul>
+<li><p>Description
+  App sends Passthrough information to device</p>
+<pre class="language-"><code class="lang-Java">  - void passthroughViaHTTP(String url, String method, String body_params, LPNetworkListener callback);
+</code></pre>
+</li>
+<li><p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Requested url</td>
+</tr>
+<tr>
+<td style="text-align:left">method</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">The requested method name</td>
+</tr>
+<tr>
+<td style="text-align:left">body_params</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">request parameters</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">LPNetworkListener</td>
+<td style="text-align:left">callback</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Response</p>
+<p>  N/A</p>
+</li>
+<li><p>Sample Code</p>
+</li>
+</ul>
+<pre class="language-"><code>``` Java
+</code></pre><p>   LPDevice device = UIApplication.currDevice;
+        String url = String.format(&quot;<a href="https://%s/httpapi.asp?" target="_blank">https://%s/httpapi.asp?</a>&quot;, device.getIp());
+        String parameters = &quot;{\&quot;command\&quot;: \&quot;setPowerState\&quot;, \&quot;value\&quot;:1}&quot;;</p>
+<pre class="language-"><code>    device.getPassthroughViaHTTP().passthroughViaHTTP(url, &quot;passthrough&quot;,
+            parameters, new LPNetworkListener() {
+        @Override
+        public void onSuccess(LPNetworkResponseItem response) {
+            super.onSuccess(response);
+            Log.i(TAG, &quot;passthroughViaHTTP success: &quot; + response.body);
+        }
 
+        @Override
+        public void onFailure(Exception e) {
+            super.onFailure(e);
+            Log.i(TAG, &quot;passthroughViaHTTP failure: &quot; + e.getLocalizedMessage());
+        }
+    });
+
+```
+</code></pre>
                                 
                                 </section>
                             
@@ -2682,7 +2796,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.3.4","depth":2,"next":{"title":"Play Control","level":"1.3.4.1","depth":3,"anchor":"#play-control","path":"android/Device.md","ref":"android/Device.md#play-control","articles":[]},"previous":{"title":"Device current info and browse","level":"1.3.3.5","depth":3,"anchor":"#device-current-info-and-browse","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#device-current-info-and-browse","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Device.md","mtime":"2023-04-28T08:41:41.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-28T08:44:52.848Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.3.4","depth":2,"next":{"title":"Play Control","level":"1.3.4.1","depth":3,"anchor":"#play-control","path":"android/Device.md","ref":"android/Device.md#play-control","articles":[]},"previous":{"title":"Device current info and browse","level":"1.3.3.5","depth":3,"anchor":"#device-current-info-and-browse","path":"android/Device_SDK.md","ref":"android/Device_SDK.md#device-current-info-and-browse","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","anchor-navigation-ex","expandable-chapters-small","pageview-count","language-picker","-livereload","addcssjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"oc":"objectivec","objc":"objectivec","objective-c":"objectivec","ObjectiveC":"objectivec"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/linkplayapp/linkplay_sdk_doc"},"splitter":{},"search":{},"addcssjs":{"css":["../styles/website.css"],"js":[]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"pageview-count":{},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"LinkPlay","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LinkPlay SDK","language":"en","gitbook":"*","description":"LinkPlay SDK 文档"},"file":{"path":"android/Device.md","mtime":"2023-05-05T07:15:37.638Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-05T09:50:25.360Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
